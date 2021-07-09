@@ -8,6 +8,11 @@ import static org.junit.Assert.assertTrue;
 public class IdentifierTest {
 
     @Test
+    public void classTriangulo(){
+        Identifier i = new Identifier();
+    }
+
+    @Test
     public void testIDValido() {
         assertTrue(Identifier.validaIdentificador("abc"));
     }

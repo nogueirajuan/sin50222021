@@ -17,6 +17,11 @@ public class TrianguloTest {
     public ExpectedException thrown = ExpectedException.none();
 
     @Test
+    public void classTriangulo(){
+        Triangulo t = new Triangulo();
+    }
+
+    @Test
     public void testEquilatero() throws LadoInvalidoException {
         String resultado = Triangulo.classificaTriangulo(5, 5, 5);
         assertEquals("EQUILATERO", resultado);
