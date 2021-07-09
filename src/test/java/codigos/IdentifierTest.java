@@ -36,4 +36,14 @@ public class IdentifierTest {
     public void identificadorInvalidoIniciandoComCaracterEspecial() {
         assertFalse(Identifier.validaIdentificador("@abc12"));
     }
+
+    @Test
+    public void identificadorInvalidoIniciandoComCaracterEspecial2() {
+        assertFalse(Identifier.validaIdentificador(".abc12"));
+    }
+
+    @Test
+    public void idenfiticadorValidoTamanhoLimite() {
+        assertTrue(Identifier.validaIdentificador("abc123"));
+    }
 }
