@@ -6,47 +6,43 @@
 package codigos;
 
 import org.junit.Test;
-import static org.junit.Assert.*;
-import codigos.Words;
-import org.evosuite.runtime.EvoRunner;
-import org.evosuite.runtime.EvoRunnerParameters;
-import org.junit.runner.RunWith;
 
-@RunWith(EvoRunner.class) @EvoRunnerParameters(mockJVMNonDeterminism = true, useVFS = true, useVNET = true, resetStaticState = true, separateClassLoader = true, useJEE = true) 
-public class Words_ESTest extends Words_ESTest_scaffolding {
+import static org.junit.Assert.assertEquals;
 
-  @Test(timeout = 4000)
-  public void test0()  throws Throwable  {
-      Words words0 = new Words();
-      int int0 = words0.countWords("/&ca(TG4jv1");
-      assertEquals(0, int0);
-  }
+public class Words_ESTest {
 
-  @Test(timeout = 4000)
-  public void test1()  throws Throwable  {
-      Words words0 = new Words();
-      int int0 = words0.countWords("O8dFJJr(d8r<7t5r2");
-      assertEquals(1, int0);
-  }
+    @Test(timeout = 4000)
+    public void test0() throws Throwable {
+        Words words0 = new Words();
+        int int0 = words0.countWords("/&ca(TG4jv1");
+        assertEquals(0, int0);
+    }
 
-  @Test(timeout = 4000)
-  public void test2()  throws Throwable  {
-      Words words0 = new Words();
-      int int0 = words0.countWords("codiPos.Words");
-      assertEquals(2, int0);
-  }
+    @Test(timeout = 4000)
+    public void test1() throws Throwable {
+        Words words0 = new Words();
+        int int0 = words0.countWords("O8dFJJr(d8r<7t5r2");
+        assertEquals(1, int0);
+    }
 
-  @Test(timeout = 4000)
-  public void test3()  throws Throwable  {
-      Words words0 = new Words();
-      int int0 = words0.countWords("5Z");
-      assertEquals(0, int0);
-  }
+    @Test(timeout = 4000)
+    public void test2() throws Throwable {
+        Words words0 = new Words();
+        int int0 = words0.countWords("codiPos.Words");
+        assertEquals(2, int0);
+    }
 
-  @Test(timeout = 4000)
-  public void test4()  throws Throwable  {
-      Words words0 = new Words();
-      int int0 = words0.countWords((String) null);
-      assertEquals((-1), int0);
-  }
+    @Test(timeout = 4000)
+    public void test3() throws Throwable {
+        Words words0 = new Words();
+        int int0 = words0.countWords("5Z");
+        assertEquals(0, int0);
+    }
+
+    @Test(timeout = 4000)
+    public void test4() throws Throwable {
+        Words words0 = new Words();
+        int int0 = words0.countWords((String) null);
+        assertEquals((-1), int0);
+    }
 }

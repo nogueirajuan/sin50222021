@@ -6,17 +6,11 @@
 package codigos;
 
 import org.junit.Test;
-import static org.junit.Assert.*;
-import codigos.LadoInvalidoException;
-import org.evosuite.runtime.EvoRunner;
-import org.evosuite.runtime.EvoRunnerParameters;
-import org.junit.runner.RunWith;
 
-@RunWith(EvoRunner.class) @EvoRunnerParameters(mockJVMNonDeterminism = true, useVFS = true, useVNET = true, resetStaticState = true, separateClassLoader = true, useJEE = true) 
-public class LadoInvalidoException_ESTest extends LadoInvalidoException_ESTest_scaffolding {
+public class LadoInvalidoException_ESTest {
 
-  @Test(timeout = 4000)
-  public void test0()  throws Throwable  {
-      LadoInvalidoException ladoInvalidoException0 = new LadoInvalidoException("F^/:Y~");
-  }
+    @Test(timeout = 4000)
+    public void test0() throws Throwable {
+        LadoInvalidoException ladoInvalidoException0 = new LadoInvalidoException("F^/:Y~");
+    }
 }
