@@ -48,7 +48,7 @@ public class Triangulo_ESTest {
         assertEquals("NAO FORMA TRIANGULO", string0);
     }
 
-    @Test(timeout = 4000)
+    @Test(timeout = 4000, expected = LadoInvalidoException.class)
     public void test06() throws Throwable {
         try {
             Triangulo.classificaTriangulo(1, 0, 1);
@@ -59,10 +59,12 @@ public class Triangulo_ESTest {
             // lado invalido
             //
             //verifyException("codigos.Triangulo", e);
+            assertEquals("lado invalido", e.getMessage());
+            throw e;
         }
     }
 
-    @Test(timeout = 4000)
+    @Test(timeout = 4000, expected = LadoInvalidoException.class)
     public void test07() throws Throwable {
         try {
             Triangulo.classificaTriangulo(0, (-392), (-392));
@@ -73,6 +75,8 @@ public class Triangulo_ESTest {
             // lado invalido
             //
             //verifyException("codigos.Triangulo", e);
+            assertEquals("lado invalido", e.getMessage());
+            throw e;
         }
     }
 
@@ -106,7 +110,7 @@ public class Triangulo_ESTest {
         assertEquals("NAO FORMA TRIANGULO", string0);
     }
 
-    @Test(timeout = 4000)
+    @Test(timeout = 4000, expected = LadoInvalidoException.class)
     public void test13() throws Throwable {
         try {
             Triangulo.classificaTriangulo(1, 1, (-3218));
@@ -117,10 +121,12 @@ public class Triangulo_ESTest {
             // lado invalido
             //
             //verifyException("codigos.Triangulo", e);
+            assertEquals("lado invalido", e.getMessage());
+            throw e;
         }
     }
 
-    @Test(timeout = 4000)
+    @Test(timeout = 4000, expected = LadoInvalidoException.class)
     public void test14() throws Throwable {
         try {
             Triangulo.classificaTriangulo(1, (-1063), 1);
@@ -131,6 +137,8 @@ public class Triangulo_ESTest {
             // lado invalido
             //
             //verifyException("codigos.Triangulo", e);
+            assertEquals("lado invalido", e.getMessage());
+            throw e;
         }
     }
 
@@ -140,7 +148,7 @@ public class Triangulo_ESTest {
         assertEquals("ISOSCELES", string0);
     }
 
-    @Test(timeout = 4000)
+    @Test(timeout = 4000, expected = LadoInvalidoException.class)
     public void test16() throws Throwable {
         try {
             Triangulo.classificaTriangulo((-478), 233, 1);
@@ -151,6 +159,8 @@ public class Triangulo_ESTest {
             // lado invalido
             //
             //verifyException("codigos.Triangulo", e);
+            assertEquals("lado invalido", e.getMessage());
+            throw e;
         }
     }
 

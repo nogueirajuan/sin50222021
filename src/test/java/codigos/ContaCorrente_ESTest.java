@@ -6,13 +6,16 @@
 package codigos;
 
 import org.junit.Test;
+import org.junit.internal.AssumptionViolatedException;
+
+import java.lang.annotation.Annotation;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
 
 public class ContaCorrente_ESTest {
 
-    @Test(timeout = 4000)
+    @Test(timeout = 4000, expected = Exception.class)
     public void test00() throws Throwable {
         ContaCorrente contaCorrente0 = new ContaCorrente(0.0F, 0.0F);
         try {
@@ -24,6 +27,8 @@ public class ContaCorrente_ESTest {
             // Valor invalido
             //
             //verifyException("codigos.ContaCorrente", e);
+            assertEquals("Valor invalido", e.getMessage());
+            throw e;
         }
     }
 
@@ -74,7 +79,7 @@ public class ContaCorrente_ESTest {
         assertEquals((-2325.702F), contaCorrente0.getSaldo(), 0.01F);
     }
 
-    @Test(timeout = 4000)
+    @Test(expected = Exception.class)
     public void test07() throws Throwable {
         ContaCorrente contaCorrente0 = new ContaCorrente((-2325.702F), 1591.6908F);
         try {
@@ -86,10 +91,12 @@ public class ContaCorrente_ESTest {
             // Saldo Insuficiente
             //
             //verifyException("codigos.ContaCorrente", e);
+            assertEquals("Saldo Insuficiente", e.getMessage());
+            throw e;
         }
     }
 
-    @Test(timeout = 4000)
+    @Test(timeout = 4000, expected = Exception.class)
     public void test08() throws Throwable {
         ContaCorrente contaCorrente0 = new ContaCorrente(2786.119F, 2786.119F);
         try {
@@ -101,6 +108,8 @@ public class ContaCorrente_ESTest {
             // Valor invalido
             //
             //verifyException("codigos.ContaCorrente", e);
+            assertEquals("Valor invalido", e.getMessage());
+            throw e;
         }
     }
 
