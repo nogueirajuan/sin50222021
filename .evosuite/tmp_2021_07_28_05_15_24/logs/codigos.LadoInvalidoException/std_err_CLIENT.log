@@ -1,0 +1,9 @@
+[MASTER] 05:19:52.654 [TEST_EXECUTION_THREAD_0] ERROR FunctionalMockStatement - Cannot use Mockito on class java.io.PrintStream due to IAE: 
+ClassCastException occurred while creating the mockito mock :
+  class to mock : 'java.io.PrintStream', loaded by classloader : 'null'
+  created class : 'codegen.java.io.PrintStream$MockitoMock$1178313688', loaded by classloader : 'net.bytebuddy.dynamic.loading.MultipleParentClassLoader@426c0722'
+  proxy instance class : 'codegen.java.io.PrintStream$MockitoMock$1178313688', loaded by classloader : 'net.bytebuddy.dynamic.loading.MultipleParentClassLoader@426c0722'
+  instance creation by : ObjenesisInstantiator
+
+You might experience classloading issues, please ask the mockito mailing-list.
+
