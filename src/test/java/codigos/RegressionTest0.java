@@ -1057,22 +1057,34 @@ public class RegressionTest0 {
     public void test0072() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test0072");
-        boolean boolean1 = codigos.Identifier.validaIdentificador("codigos.LadoInvalidoException: codigos.LadoInvalidoException: hi!");
-        org.junit.Assert.assertTrue("'" + boolean1 + "' != '" + false + "'", boolean1 == false);
+        codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) 0, (float) 10L);
+        float float3 = contaCorrente2.getLimite();
+        contaCorrente2.setLimite((float) (byte) -1);
+        float float6 = contaCorrente2.getLimite();
+        org.junit.Assert.assertTrue("'" + float3 + "' != '" + 10.0f + "'", float3 == 10.0f);
+        org.junit.Assert.assertTrue("'" + float6 + "' != '" + (-1.0f) + "'", float6 == (-1.0f));
     }
 
     @Test
     public void test0073() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test0073");
-        java.lang.String str3 = codigos.Triangulo.classificaTriangulo(10, (int) ' ', (int) (short) 10);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "NAO FORMA TRIANGULO" + "'", str3, "NAO FORMA TRIANGULO");
+        boolean boolean1 = codigos.Identifier.validaIdentificador("codigos.LadoInvalidoException: codigos.LadoInvalidoException: hi!");
+        org.junit.Assert.assertTrue("'" + boolean1 + "' != '" + false + "'", boolean1 == false);
     }
 
     @Test
     public void test0074() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test0074");
+        java.lang.String str3 = codigos.Triangulo.classificaTriangulo(10, (int) ' ', (int) (short) 10);
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "NAO FORMA TRIANGULO" + "'", str3, "NAO FORMA TRIANGULO");
+    }
+
+    @Test
+    public void test0075() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test0075");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 100, (-1.0f));
         contaCorrente2.setLimite((float) 0L);
         contaCorrente2.setLimite((float) (short) 0);
@@ -1088,9 +1100,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0075() throws Throwable {
+    public void test0076() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0075");
+            System.out.format("%n%s%n", "RegressionTest0.test0076");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str3 = codigos.Triangulo.classificaTriangulo((int) (byte) 0, (int) 'a', 0);
@@ -1101,9 +1113,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0076() throws Throwable {
+    public void test0077() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0076");
+            System.out.format("%n%s%n", "RegressionTest0.test0077");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException3);
@@ -1126,9 +1138,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0077() throws Throwable {
+    public void test0078() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0077");
+            System.out.format("%n%s%n", "RegressionTest0.test0078");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str3 = codigos.Triangulo.classificaTriangulo(100, 0, 0);
@@ -1139,18 +1151,18 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0078() throws Throwable {
+    public void test0079() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0078");
+            System.out.format("%n%s%n", "RegressionTest0.test0079");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) 0L, (float) 10);
         java.lang.Class<?> wildcardClass3 = contaCorrente2.getClass();
         org.junit.Assert.assertNotNull(wildcardClass3);
     }
 
     @Test
-    public void test0079() throws Throwable {
+    public void test0080() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0079");
+            System.out.format("%n%s%n", "RegressionTest0.test0080");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 100, (-1.0f));
         float float3 = contaCorrente2.getSaldo();
         contaCorrente2.setSaldo(100.0f);
@@ -1169,9 +1181,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0080() throws Throwable {
+    public void test0081() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0080");
+            System.out.format("%n%s%n", "RegressionTest0.test0081");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 10, 0.0f);
         float float3 = contaCorrente2.getSaldo();
         float float4 = contaCorrente2.getLimite();
@@ -1182,9 +1194,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0081() throws Throwable {
+    public void test0082() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0081");
+            System.out.format("%n%s%n", "RegressionTest0.test0082");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 100, (-1.0f));
         contaCorrente2.setLimite((float) 0L);
         float float6 = contaCorrente2.saque((float) 10L);
@@ -1194,9 +1206,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0082() throws Throwable {
+    public void test0083() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0082");
+            System.out.format("%n%s%n", "RegressionTest0.test0083");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException5 = new codigos.LadoInvalidoException("");
@@ -1215,9 +1227,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0083() throws Throwable {
+    public void test0084() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0083");
+            System.out.format("%n%s%n", "RegressionTest0.test0084");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 100, (-1.0f));
         float float3 = contaCorrente2.getLimite();
         float float4 = contaCorrente2.getSaldo();
@@ -1239,9 +1251,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0084() throws Throwable {
+    public void test0085() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0084");
+            System.out.format("%n%s%n", "RegressionTest0.test0085");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente(99.0f, (float) 'a');
         float float3 = contaCorrente2.getLimite();
         contaCorrente2.setSaldo((float) '4');
@@ -1258,9 +1270,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0085() throws Throwable {
+    public void test0086() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0085");
+            System.out.format("%n%s%n", "RegressionTest0.test0086");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 100, (-1.0f));
         float float3 = contaCorrente2.getLimite();
         float float4 = contaCorrente2.getSaldo();
@@ -1274,9 +1286,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0086() throws Throwable {
+    public void test0087() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0086");
+            System.out.format("%n%s%n", "RegressionTest0.test0087");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str3 = codigos.Triangulo.classificaTriangulo((int) (short) 100, (-1), (int) (short) 100);
@@ -1287,9 +1299,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0087() throws Throwable {
+    public void test0088() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0087");
+            System.out.format("%n%s%n", "RegressionTest0.test0088");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 100, (-1.0f));
         float float3 = contaCorrente2.getLimite();
         float float4 = contaCorrente2.getSaldo();
@@ -1306,9 +1318,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0088() throws Throwable {
+    public void test0089() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0088");
+            System.out.format("%n%s%n", "RegressionTest0.test0089");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 100, (-1.0f));
         float float3 = contaCorrente2.getSaldo();
         contaCorrente2.setSaldo(100.0f);
@@ -1323,9 +1335,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0089() throws Throwable {
+    public void test0090() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0089");
+            System.out.format("%n%s%n", "RegressionTest0.test0090");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException3);
@@ -1352,9 +1364,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0090() throws Throwable {
+    public void test0091() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0090");
+            System.out.format("%n%s%n", "RegressionTest0.test0091");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 10, 0.0f);
         contaCorrente2.setSaldo((float) (byte) 0);
         float float5 = contaCorrente2.getSaldo();
@@ -1369,9 +1381,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0091() throws Throwable {
+    public void test0092() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0091");
+            System.out.format("%n%s%n", "RegressionTest0.test0092");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 100, (-1.0f));
         float float3 = contaCorrente2.getLimite();
         float float4 = contaCorrente2.getSaldo();
@@ -1395,9 +1407,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0092() throws Throwable {
+    public void test0093() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0092");
+            System.out.format("%n%s%n", "RegressionTest0.test0093");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException3);
@@ -1422,17 +1434,17 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0093() throws Throwable {
+    public void test0094() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0093");
+            System.out.format("%n%s%n", "RegressionTest0.test0094");
         java.lang.String str3 = codigos.Triangulo.classificaTriangulo(10, (int) (byte) 10, (int) '#');
         org.junit.Assert.assertEquals("'" + str3 + "' != '" + "NAO FORMA TRIANGULO" + "'", str3, "NAO FORMA TRIANGULO");
     }
 
     @Test
-    public void test0094() throws Throwable {
+    public void test0095() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0094");
+            System.out.format("%n%s%n", "RegressionTest0.test0095");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente(32.0f, (float) (byte) 0);
         // The following exception was thrown during execution in test generation
         try {
@@ -1444,9 +1456,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0095() throws Throwable {
+    public void test0096() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0095");
+            System.out.format("%n%s%n", "RegressionTest0.test0096");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("hi!");
         java.lang.Throwable[] throwableArray2 = ladoInvalidoException1.getSuppressed();
         java.lang.String str3 = ladoInvalidoException1.toString();
@@ -1455,9 +1467,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0096() throws Throwable {
+    public void test0097() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0096");
+            System.out.format("%n%s%n", "RegressionTest0.test0097");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str3 = codigos.Triangulo.classificaTriangulo(0, (int) ' ', 10);
@@ -1468,9 +1480,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0097() throws Throwable {
+    public void test0098() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0097");
+            System.out.format("%n%s%n", "RegressionTest0.test0098");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException3);
@@ -1529,9 +1541,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0098() throws Throwable {
+    public void test0099() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0098");
+            System.out.format("%n%s%n", "RegressionTest0.test0099");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 10, 0.0f);
         contaCorrente2.setSaldo((float) (byte) 0);
         float float5 = contaCorrente2.getSaldo();
@@ -1550,9 +1562,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0099() throws Throwable {
+    public void test0100() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0099");
+            System.out.format("%n%s%n", "RegressionTest0.test0100");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 100, (-1.0f));
         float float3 = contaCorrente2.getLimite();
         float float4 = contaCorrente2.getSaldo();
@@ -1570,9 +1582,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0100() throws Throwable {
+    public void test0101() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0100");
+            System.out.format("%n%s%n", "RegressionTest0.test0101");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException5 = new codigos.LadoInvalidoException("");
@@ -1591,9 +1603,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0101() throws Throwable {
+    public void test0102() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0101");
+            System.out.format("%n%s%n", "RegressionTest0.test0102");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("hi!");
         java.lang.Throwable[] throwableArray2 = ladoInvalidoException1.getSuppressed();
         java.lang.Class<?> wildcardClass3 = ladoInvalidoException1.getClass();
@@ -1602,9 +1614,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0102() throws Throwable {
+    public void test0103() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0102");
+            System.out.format("%n%s%n", "RegressionTest0.test0103");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("codigos.LadoInvalidoException: hi!");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("hi!");
         ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException3);
@@ -1641,9 +1653,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0103() throws Throwable {
+    public void test0104() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0103");
+            System.out.format("%n%s%n", "RegressionTest0.test0104");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 100, (-1.0f));
         float float3 = contaCorrente2.getLimite();
         float float4 = contaCorrente2.getSaldo();
@@ -1661,25 +1673,12 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0104() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0104");
-        // The following exception was thrown during execution in test generation
-        try {
-            java.lang.String str3 = codigos.Triangulo.classificaTriangulo((int) '#', 0, 100);
-            org.junit.Assert.fail("Expected exception of type codigos.LadoInvalidoException; message: lado invalido");
-        } catch (codigos.LadoInvalidoException e) {
-            // Expected exception.
-        }
-    }
-
-    @Test
     public void test0105() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test0105");
         // The following exception was thrown during execution in test generation
         try {
-            java.lang.String str3 = codigos.Triangulo.classificaTriangulo((int) (short) -1, 1, 1);
+            java.lang.String str3 = codigos.Triangulo.classificaTriangulo((int) '#', 0, 100);
             org.junit.Assert.fail("Expected exception of type codigos.LadoInvalidoException; message: lado invalido");
         } catch (codigos.LadoInvalidoException e) {
             // Expected exception.
@@ -1692,7 +1691,7 @@ public class RegressionTest0 {
             System.out.format("%n%s%n", "RegressionTest0.test0106");
         // The following exception was thrown during execution in test generation
         try {
-            java.lang.String str3 = codigos.Triangulo.classificaTriangulo(1, (int) (byte) -1, (int) (byte) -1);
+            java.lang.String str3 = codigos.Triangulo.classificaTriangulo((int) (short) -1, 1, 1);
             org.junit.Assert.fail("Expected exception of type codigos.LadoInvalidoException; message: lado invalido");
         } catch (codigos.LadoInvalidoException e) {
             // Expected exception.
@@ -1703,6 +1702,19 @@ public class RegressionTest0 {
     public void test0107() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test0107");
+        // The following exception was thrown during execution in test generation
+        try {
+            java.lang.String str3 = codigos.Triangulo.classificaTriangulo(1, (int) (byte) -1, (int) (byte) -1);
+            org.junit.Assert.fail("Expected exception of type codigos.LadoInvalidoException; message: lado invalido");
+        } catch (codigos.LadoInvalidoException e) {
+            // Expected exception.
+        }
+    }
+
+    @Test
+    public void test0108() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test0108");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException3);
@@ -1743,9 +1755,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0108() throws Throwable {
+    public void test0109() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0108");
+            System.out.format("%n%s%n", "RegressionTest0.test0109");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException3);
@@ -1806,9 +1818,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0109() throws Throwable {
+    public void test0110() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0109");
+            System.out.format("%n%s%n", "RegressionTest0.test0110");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 100, (-1.0f));
         float float3 = contaCorrente2.getSaldo();
         contaCorrente2.setSaldo(100.0f);
@@ -1829,9 +1841,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0110() throws Throwable {
+    public void test0111() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0110");
+            System.out.format("%n%s%n", "RegressionTest0.test0111");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str3 = codigos.Triangulo.classificaTriangulo((int) (byte) 0, (int) '#', (int) (short) 1);
@@ -1842,9 +1854,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0111() throws Throwable {
+    public void test0112() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0111");
+            System.out.format("%n%s%n", "RegressionTest0.test0112");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 100, (-1.0f));
         float float3 = contaCorrente2.getLimite();
         float float4 = contaCorrente2.getSaldo();
@@ -1862,9 +1874,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0112() throws Throwable {
+    public void test0113() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0112");
+            System.out.format("%n%s%n", "RegressionTest0.test0113");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente(99.0f, (float) 'a');
         float float3 = contaCorrente2.getLimite();
         contaCorrente2.setSaldo((float) '4');
@@ -1874,9 +1886,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0113() throws Throwable {
+    public void test0114() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0113");
+            System.out.format("%n%s%n", "RegressionTest0.test0114");
         codigos.Pedido pedido0 = new codigos.Pedido();
         float float4 = pedido0.calculaTaxaDesconto(true, "codigos.LadoInvalidoException: ", 1.0f);
         float float8 = pedido0.calculaTaxaDesconto(true, "", 0.0f);
@@ -1887,17 +1899,17 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0114() throws Throwable {
+    public void test0115() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0114");
+            System.out.format("%n%s%n", "RegressionTest0.test0115");
         java.lang.String str3 = codigos.Triangulo.classificaTriangulo((int) 'a', (int) (byte) 1, (int) (byte) 100);
         org.junit.Assert.assertEquals("'" + str3 + "' != '" + "NAO FORMA TRIANGULO" + "'", str3, "NAO FORMA TRIANGULO");
     }
 
     @Test
-    public void test0115() throws Throwable {
+    public void test0116() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0115");
+            System.out.format("%n%s%n", "RegressionTest0.test0116");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException3);
@@ -1958,18 +1970,36 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0116() throws Throwable {
+    public void test0117() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0116");
+            System.out.format("%n%s%n", "RegressionTest0.test0117");
+        codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 100, (-1.0f));
+        float float3 = contaCorrente2.getLimite();
+        float float4 = contaCorrente2.getSaldo();
+        float float5 = contaCorrente2.getLimite();
+        float float6 = contaCorrente2.getSaldo();
+        contaCorrente2.setLimite((float) (byte) 10);
+        contaCorrente2.setSaldo((float) 100L);
+        contaCorrente2.setLimite(100.0f);
+        org.junit.Assert.assertTrue("'" + float3 + "' != '" + (-1.0f) + "'", float3 == (-1.0f));
+        org.junit.Assert.assertTrue("'" + float4 + "' != '" + 100.0f + "'", float4 == 100.0f);
+        org.junit.Assert.assertTrue("'" + float5 + "' != '" + (-1.0f) + "'", float5 == (-1.0f));
+        org.junit.Assert.assertTrue("'" + float6 + "' != '" + 100.0f + "'", float6 == 100.0f);
+    }
+
+    @Test
+    public void test0118() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test0118");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("codigos.LadoInvalidoException: ");
         java.lang.String str2 = ladoInvalidoException1.toString();
         org.junit.Assert.assertEquals("'" + str2 + "' != '" + "codigos.LadoInvalidoException: codigos.LadoInvalidoException: " + "'", str2, "codigos.LadoInvalidoException: codigos.LadoInvalidoException: ");
     }
 
     @Test
-    public void test0117() throws Throwable {
+    public void test0119() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0117");
+            System.out.format("%n%s%n", "RegressionTest0.test0119");
         codigos.Words words0 = new codigos.Words();
         int int2 = words0.countWords("codigos.LadoInvalidoException: hi!");
         int int4 = words0.countWords("hi!");
@@ -1980,18 +2010,18 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0118() throws Throwable {
+    public void test0120() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0118");
+            System.out.format("%n%s%n", "RegressionTest0.test0120");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 0, (float) ' ');
         java.lang.Class<?> wildcardClass3 = contaCorrente2.getClass();
         org.junit.Assert.assertNotNull(wildcardClass3);
     }
 
     @Test
-    public void test0119() throws Throwable {
+    public void test0121() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0119");
+            System.out.format("%n%s%n", "RegressionTest0.test0121");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 100, (-1.0f));
         float float3 = contaCorrente2.getLimite();
         float float4 = contaCorrente2.getSaldo();
@@ -2002,9 +2032,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0120() throws Throwable {
+    public void test0122() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0120");
+            System.out.format("%n%s%n", "RegressionTest0.test0122");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException3);
@@ -2035,17 +2065,37 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0121() throws Throwable {
+    public void test0123() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0121");
+            System.out.format("%n%s%n", "RegressionTest0.test0123");
+        codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 100, (-1.0f));
+        float float3 = contaCorrente2.getSaldo();
+        contaCorrente2.setSaldo(100.0f);
+        contaCorrente2.setLimite(10.0f);
+        float float9 = contaCorrente2.saque((float) 1L);
+        float float10 = contaCorrente2.getLimite();
+        float float11 = contaCorrente2.getLimite();
+        float float12 = contaCorrente2.getSaldo();
+        contaCorrente2.setLimite(88.0f);
+        org.junit.Assert.assertTrue("'" + float3 + "' != '" + 100.0f + "'", float3 == 100.0f);
+        org.junit.Assert.assertTrue("'" + float9 + "' != '" + 99.0f + "'", float9 == 99.0f);
+        org.junit.Assert.assertTrue("'" + float10 + "' != '" + 10.0f + "'", float10 == 10.0f);
+        org.junit.Assert.assertTrue("'" + float11 + "' != '" + 10.0f + "'", float11 == 10.0f);
+        org.junit.Assert.assertTrue("'" + float12 + "' != '" + 99.0f + "'", float12 == 99.0f);
+    }
+
+    @Test
+    public void test0124() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test0124");
         java.lang.String str3 = codigos.Triangulo.classificaTriangulo(2, 1, (int) 'a');
         org.junit.Assert.assertEquals("'" + str3 + "' != '" + "NAO FORMA TRIANGULO" + "'", str3, "NAO FORMA TRIANGULO");
     }
 
     @Test
-    public void test0122() throws Throwable {
+    public void test0125() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0122");
+            System.out.format("%n%s%n", "RegressionTest0.test0125");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str3 = codigos.Triangulo.classificaTriangulo((int) (short) 0, (int) ' ', (-1));
@@ -2056,9 +2106,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0123() throws Throwable {
+    public void test0126() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0123");
+            System.out.format("%n%s%n", "RegressionTest0.test0126");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException3);
@@ -2115,9 +2165,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0124() throws Throwable {
+    public void test0127() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0124");
+            System.out.format("%n%s%n", "RegressionTest0.test0127");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 100, (-1.0f));
         float float3 = contaCorrente2.getSaldo();
         contaCorrente2.setSaldo(100.0f);
@@ -2131,9 +2181,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0125() throws Throwable {
+    public void test0128() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0125");
+            System.out.format("%n%s%n", "RegressionTest0.test0128");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException3);
@@ -2194,9 +2244,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0126() throws Throwable {
+    public void test0129() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0126");
+            System.out.format("%n%s%n", "RegressionTest0.test0129");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException3);
@@ -2219,9 +2269,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0127() throws Throwable {
+    public void test0130() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0127");
+            System.out.format("%n%s%n", "RegressionTest0.test0130");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (-1L), (float) (byte) -1);
         contaCorrente2.setLimite(90.0f);
         // The following exception was thrown during execution in test generation
@@ -2234,9 +2284,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0128() throws Throwable {
+    public void test0131() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0128");
+            System.out.format("%n%s%n", "RegressionTest0.test0131");
         codigos.Words words0 = new codigos.Words();
         int int2 = words0.countWords("codigos.LadoInvalidoException: hi!");
         int int4 = words0.countWords("hi!");
@@ -2247,9 +2297,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0129() throws Throwable {
+    public void test0132() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0129");
+            System.out.format("%n%s%n", "RegressionTest0.test0132");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 10, 0.0f);
         float float3 = contaCorrente2.getSaldo();
         float float4 = contaCorrente2.getLimite();
@@ -2260,18 +2310,18 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0130() throws Throwable {
+    public void test0133() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0130");
+            System.out.format("%n%s%n", "RegressionTest0.test0133");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente(32.0f, (float) (byte) 0);
         java.lang.Class<?> wildcardClass3 = contaCorrente2.getClass();
         org.junit.Assert.assertNotNull(wildcardClass3);
     }
 
     @Test
-    public void test0131() throws Throwable {
+    public void test0134() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0131");
+            System.out.format("%n%s%n", "RegressionTest0.test0134");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
         java.lang.Throwable[] throwableArray2 = ladoInvalidoException1.getSuppressed();
         java.lang.Class<?> wildcardClass3 = throwableArray2.getClass();
@@ -2280,9 +2330,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0132() throws Throwable {
+    public void test0135() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0132");
+            System.out.format("%n%s%n", "RegressionTest0.test0135");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException3);
@@ -2303,17 +2353,17 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0133() throws Throwable {
+    public void test0136() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0133");
+            System.out.format("%n%s%n", "RegressionTest0.test0136");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) '#', 2.0f);
         contaCorrente2.setLimite((float) (byte) -1);
     }
 
     @Test
-    public void test0134() throws Throwable {
+    public void test0137() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0134");
+            System.out.format("%n%s%n", "RegressionTest0.test0137");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str3 = codigos.Triangulo.classificaTriangulo((int) (short) 10, (int) (short) -1, 1);
@@ -2324,9 +2374,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0135() throws Throwable {
+    public void test0138() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0135");
+            System.out.format("%n%s%n", "RegressionTest0.test0138");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str3 = codigos.Triangulo.classificaTriangulo(0, (int) (short) 100, (int) (short) -1);
@@ -2337,18 +2387,18 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0136() throws Throwable {
+    public void test0139() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0136");
+            System.out.format("%n%s%n", "RegressionTest0.test0139");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente(0.0f, 100.0f);
         float float3 = contaCorrente2.getSaldo();
         org.junit.Assert.assertTrue("'" + float3 + "' != '" + 0.0f + "'", float3 == 0.0f);
     }
 
     @Test
-    public void test0137() throws Throwable {
+    public void test0140() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0137");
+            System.out.format("%n%s%n", "RegressionTest0.test0140");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 1, (float) 0L);
         // The following exception was thrown during execution in test generation
         try {
@@ -2360,17 +2410,17 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0138() throws Throwable {
+    public void test0141() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0138");
+            System.out.format("%n%s%n", "RegressionTest0.test0141");
         java.lang.String str3 = codigos.Triangulo.classificaTriangulo((int) ' ', (int) (byte) 1, (int) (short) 100);
         org.junit.Assert.assertEquals("'" + str3 + "' != '" + "NAO FORMA TRIANGULO" + "'", str3, "NAO FORMA TRIANGULO");
     }
 
     @Test
-    public void test0139() throws Throwable {
+    public void test0142() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0139");
+            System.out.format("%n%s%n", "RegressionTest0.test0142");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException3);
@@ -2423,9 +2473,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0140() throws Throwable {
+    public void test0143() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0140");
+            System.out.format("%n%s%n", "RegressionTest0.test0143");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException3);
@@ -2484,9 +2534,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0141() throws Throwable {
+    public void test0144() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0141");
+            System.out.format("%n%s%n", "RegressionTest0.test0144");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 100, (-1.0f));
         float float3 = contaCorrente2.getLimite();
         // The following exception was thrown during execution in test generation
@@ -2500,9 +2550,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0142() throws Throwable {
+    public void test0145() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0142");
+            System.out.format("%n%s%n", "RegressionTest0.test0145");
         codigos.Pedido pedido0 = new codigos.Pedido();
         float float4 = pedido0.calculaTaxaDesconto(false, "NAO FORMA TRIANGULO", (float) '4');
         java.lang.Class<?> wildcardClass5 = pedido0.getClass();
@@ -2511,9 +2561,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0143() throws Throwable {
+    public void test0146() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0143");
+            System.out.format("%n%s%n", "RegressionTest0.test0146");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str3 = codigos.Triangulo.classificaTriangulo((int) (byte) -1, (int) (byte) 100, (int) (byte) -1);
@@ -2524,9 +2574,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0144() throws Throwable {
+    public void test0147() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0144");
+            System.out.format("%n%s%n", "RegressionTest0.test0147");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("codigos.LadoInvalidoException: codigos.LadoInvalidoException: ");
         java.lang.Throwable[] throwableArray2 = ladoInvalidoException1.getSuppressed();
         java.lang.String str3 = ladoInvalidoException1.toString();
@@ -2535,9 +2585,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0145() throws Throwable {
+    public void test0148() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0145");
+            System.out.format("%n%s%n", "RegressionTest0.test0148");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 100, (-1.0f));
         float float3 = contaCorrente2.getLimite();
         float float4 = contaCorrente2.getSaldo();
@@ -2555,9 +2605,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0146() throws Throwable {
+    public void test0149() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0146");
+            System.out.format("%n%s%n", "RegressionTest0.test0149");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException3);
@@ -2642,18 +2692,18 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0147() throws Throwable {
+    public void test0150() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0147");
+            System.out.format("%n%s%n", "RegressionTest0.test0150");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente(0.0f, (float) '4');
         java.lang.Class<?> wildcardClass3 = contaCorrente2.getClass();
         org.junit.Assert.assertNotNull(wildcardClass3);
     }
 
     @Test
-    public void test0148() throws Throwable {
+    public void test0151() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0148");
+            System.out.format("%n%s%n", "RegressionTest0.test0151");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str3 = codigos.Triangulo.classificaTriangulo(2, (int) (short) 0, 0);
@@ -2664,9 +2714,17 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0149() throws Throwable {
+    public void test0152() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0149");
+            System.out.format("%n%s%n", "RegressionTest0.test0152");
+        codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) '#', 2.0f);
+        contaCorrente2.setSaldo((float) 100L);
+    }
+
+    @Test
+    public void test0153() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test0153");
         codigos.Pedido pedido0 = new codigos.Pedido();
         float float4 = pedido0.calculaTaxaDesconto(true, "codigos.LadoInvalidoException: ", (float) (short) -1);
         float float8 = pedido0.calculaTaxaDesconto(true, "NAO FORMA TRIANGULO", (float) (byte) 0);
@@ -2679,9 +2737,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0150() throws Throwable {
+    public void test0154() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0150");
+            System.out.format("%n%s%n", "RegressionTest0.test0154");
         codigos.Pedido pedido0 = new codigos.Pedido();
         float float4 = pedido0.calculaTaxaDesconto(true, "codigos.LadoInvalidoException: ", 1.0f);
         float float8 = pedido0.calculaTaxaDesconto(false, "NAO FORMA TRIANGULO", 10.0f);
@@ -2694,33 +2752,44 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0151() throws Throwable {
+    public void test0155() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0151");
+            System.out.format("%n%s%n", "RegressionTest0.test0155");
         java.lang.String str3 = codigos.Triangulo.classificaTriangulo((int) (short) 1, (int) (short) 1, (int) (byte) 100);
         org.junit.Assert.assertEquals("'" + str3 + "' != '" + "NAO FORMA TRIANGULO" + "'", str3, "NAO FORMA TRIANGULO");
     }
 
     @Test
-    public void test0152() throws Throwable {
+    public void test0156() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0152");
+            System.out.format("%n%s%n", "RegressionTest0.test0156");
+        codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente(0.0f, (float) 100L);
+        float float3 = contaCorrente2.getSaldo();
+        float float5 = contaCorrente2.saque(1.0f);
+        org.junit.Assert.assertTrue("'" + float3 + "' != '" + 0.0f + "'", float3 == 0.0f);
+        org.junit.Assert.assertTrue("'" + float5 + "' != '" + (-1.0f) + "'", float5 == (-1.0f));
+    }
+
+    @Test
+    public void test0157() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test0157");
         boolean boolean1 = codigos.Identifier.validaIdentificador("codigos.LadoInvalidoException: codigos.LadoInvalidoException: ");
         org.junit.Assert.assertTrue("'" + boolean1 + "' != '" + false + "'", boolean1 == false);
     }
 
     @Test
-    public void test0153() throws Throwable {
+    public void test0158() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0153");
+            System.out.format("%n%s%n", "RegressionTest0.test0158");
         boolean boolean1 = codigos.Identifier.validaIdentificador("codigos.LadoInvalidoException: codigos.LadoInvalidoException: codigos.LadoInvalidoException: ");
         org.junit.Assert.assertTrue("'" + boolean1 + "' != '" + false + "'", boolean1 == false);
     }
 
     @Test
-    public void test0154() throws Throwable {
+    public void test0159() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0154");
+            System.out.format("%n%s%n", "RegressionTest0.test0159");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 100, (-1.0f));
         float float3 = contaCorrente2.getSaldo();
         contaCorrente2.setSaldo(100.0f);
@@ -2734,9 +2803,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0155() throws Throwable {
+    public void test0160() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0155");
+            System.out.format("%n%s%n", "RegressionTest0.test0160");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException3);
@@ -2765,17 +2834,17 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0156() throws Throwable {
+    public void test0161() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0156");
+            System.out.format("%n%s%n", "RegressionTest0.test0161");
         java.lang.String str3 = codigos.Triangulo.classificaTriangulo((int) ' ', 2, 0);
         org.junit.Assert.assertEquals("'" + str3 + "' != '" + "NAO FORMA TRIANGULO" + "'", str3, "NAO FORMA TRIANGULO");
     }
 
     @Test
-    public void test0157() throws Throwable {
+    public void test0162() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0157");
+            System.out.format("%n%s%n", "RegressionTest0.test0162");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str3 = codigos.Triangulo.classificaTriangulo((int) (short) 0, (int) (short) 1, 0);
@@ -2786,16 +2855,16 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0158() throws Throwable {
+    public void test0163() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0158");
+            System.out.format("%n%s%n", "RegressionTest0.test0163");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente(99.0f, (float) 0L);
     }
 
     @Test
-    public void test0159() throws Throwable {
+    public void test0164() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0159");
+            System.out.format("%n%s%n", "RegressionTest0.test0164");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("hi!");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException5 = new codigos.LadoInvalidoException("");
@@ -2814,9 +2883,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0160() throws Throwable {
+    public void test0165() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0160");
+            System.out.format("%n%s%n", "RegressionTest0.test0165");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException3);
@@ -2857,9 +2926,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0161() throws Throwable {
+    public void test0166() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0161");
+            System.out.format("%n%s%n", "RegressionTest0.test0166");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str3 = codigos.Triangulo.classificaTriangulo((int) '#', (int) (short) 100, (int) (short) -1);
@@ -2870,9 +2939,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0162() throws Throwable {
+    public void test0167() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0162");
+            System.out.format("%n%s%n", "RegressionTest0.test0167");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) 0L, 1.0f);
         float float3 = contaCorrente2.getSaldo();
         // The following exception was thrown during execution in test generation
@@ -2886,9 +2955,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0163() throws Throwable {
+    public void test0168() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0163");
+            System.out.format("%n%s%n", "RegressionTest0.test0168");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str3 = codigos.Triangulo.classificaTriangulo((int) 'a', 0, (int) (byte) 10);
@@ -2899,9 +2968,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0164() throws Throwable {
+    public void test0169() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0164");
+            System.out.format("%n%s%n", "RegressionTest0.test0169");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException3);
@@ -2960,9 +3029,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0165() throws Throwable {
+    public void test0170() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0165");
+            System.out.format("%n%s%n", "RegressionTest0.test0170");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 100, (-1.0f));
         float float3 = contaCorrente2.getSaldo();
         contaCorrente2.setSaldo(100.0f);
@@ -2978,9 +3047,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0166() throws Throwable {
+    public void test0171() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0166");
+            System.out.format("%n%s%n", "RegressionTest0.test0171");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente(0.0f, 100.0f);
         float float3 = contaCorrente2.getLimite();
         float float5 = contaCorrente2.saque((float) 10);
@@ -2991,9 +3060,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0167() throws Throwable {
+    public void test0172() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0167");
+            System.out.format("%n%s%n", "RegressionTest0.test0172");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) 1, 32.0f);
         float float3 = contaCorrente2.getLimite();
         java.lang.Class<?> wildcardClass4 = contaCorrente2.getClass();
@@ -3002,9 +3071,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0168() throws Throwable {
+    public void test0173() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0168");
+            System.out.format("%n%s%n", "RegressionTest0.test0173");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str3 = codigos.Triangulo.classificaTriangulo((int) (short) 100, (int) (byte) 0, 0);
@@ -3015,9 +3084,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0169() throws Throwable {
+    public void test0174() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0169");
+            System.out.format("%n%s%n", "RegressionTest0.test0174");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 100, (-1.0f));
         contaCorrente2.setLimite((float) 0L);
         contaCorrente2.setLimite((float) (short) 0);
@@ -3028,9 +3097,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0170() throws Throwable {
+    public void test0175() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0170");
+            System.out.format("%n%s%n", "RegressionTest0.test0175");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) 0, (float) 10L);
         float float3 = contaCorrente2.getLimite();
         contaCorrente2.setLimite(100.0f);
@@ -3038,9 +3107,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0171() throws Throwable {
+    public void test0176() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0171");
+            System.out.format("%n%s%n", "RegressionTest0.test0176");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 100, (-1.0f));
         contaCorrente2.setLimite((float) 0L);
         contaCorrente2.setLimite((float) (short) 0);
@@ -3050,17 +3119,17 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0172() throws Throwable {
+    public void test0177() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0172");
+            System.out.format("%n%s%n", "RegressionTest0.test0177");
         java.lang.String str3 = codigos.Triangulo.classificaTriangulo((int) (byte) 100, (int) ' ', (int) 'a');
         org.junit.Assert.assertEquals("'" + str3 + "' != '" + "ESCALENO" + "'", str3, "ESCALENO");
     }
 
     @Test
-    public void test0173() throws Throwable {
+    public void test0178() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0173");
+            System.out.format("%n%s%n", "RegressionTest0.test0178");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 100, (-1.0f));
         float float3 = contaCorrente2.getSaldo();
         contaCorrente2.setSaldo(100.0f);
@@ -3079,17 +3148,17 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0174() throws Throwable {
+    public void test0179() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0174");
+            System.out.format("%n%s%n", "RegressionTest0.test0179");
         boolean boolean1 = codigos.Identifier.validaIdentificador("ESCALENO");
         org.junit.Assert.assertTrue("'" + boolean1 + "' != '" + false + "'", boolean1 == false);
     }
 
     @Test
-    public void test0175() throws Throwable {
+    public void test0180() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0175");
+            System.out.format("%n%s%n", "RegressionTest0.test0180");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str3 = codigos.Triangulo.classificaTriangulo(10, (int) (byte) 0, (int) (byte) 100);
@@ -3100,9 +3169,36 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0176() throws Throwable {
+    public void test0181() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0176");
+            System.out.format("%n%s%n", "RegressionTest0.test0181");
+        codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 0, (float) (byte) 1);
+    }
+
+    @Test
+    public void test0182() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test0182");
+        codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 100, (-1.0f));
+        float float3 = contaCorrente2.getLimite();
+        float float4 = contaCorrente2.getSaldo();
+        float float5 = contaCorrente2.getLimite();
+        contaCorrente2.setSaldo((-1.0f));
+        contaCorrente2.setSaldo(0.0f);
+        float float10 = contaCorrente2.getLimite();
+        contaCorrente2.setSaldo((float) (byte) -1);
+        contaCorrente2.setSaldo((-10.0f));
+        contaCorrente2.setSaldo((float) 100L);
+        org.junit.Assert.assertTrue("'" + float3 + "' != '" + (-1.0f) + "'", float3 == (-1.0f));
+        org.junit.Assert.assertTrue("'" + float4 + "' != '" + 100.0f + "'", float4 == 100.0f);
+        org.junit.Assert.assertTrue("'" + float5 + "' != '" + (-1.0f) + "'", float5 == (-1.0f));
+        org.junit.Assert.assertTrue("'" + float10 + "' != '" + (-1.0f) + "'", float10 == (-1.0f));
+    }
+
+    @Test
+    public void test0183() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test0183");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("hi!");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException5 = new codigos.LadoInvalidoException("");
@@ -3121,9 +3217,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0177() throws Throwable {
+    public void test0184() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0177");
+            System.out.format("%n%s%n", "RegressionTest0.test0184");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 10, 0.0f);
         contaCorrente2.setSaldo((float) (byte) 0);
         float float5 = contaCorrente2.getSaldo();
@@ -3140,9 +3236,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0178() throws Throwable {
+    public void test0185() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0178");
+            System.out.format("%n%s%n", "RegressionTest0.test0185");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException3);
@@ -3201,9 +3297,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0179() throws Throwable {
+    public void test0186() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0179");
+            System.out.format("%n%s%n", "RegressionTest0.test0186");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("codigos.LadoInvalidoException: hi!");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("hi!");
         ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException3);
@@ -3242,9 +3338,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0180() throws Throwable {
+    public void test0187() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0180");
+            System.out.format("%n%s%n", "RegressionTest0.test0187");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente(0.0f, (float) 100L);
         float float3 = contaCorrente2.getSaldo();
         java.lang.Class<?> wildcardClass4 = contaCorrente2.getClass();
@@ -3253,17 +3349,17 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0181() throws Throwable {
+    public void test0188() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0181");
+            System.out.format("%n%s%n", "RegressionTest0.test0188");
         java.lang.String str3 = codigos.Triangulo.classificaTriangulo((int) (short) 10, (int) (short) 100, (int) (short) 0);
         org.junit.Assert.assertEquals("'" + str3 + "' != '" + "NAO FORMA TRIANGULO" + "'", str3, "NAO FORMA TRIANGULO");
     }
 
     @Test
-    public void test0182() throws Throwable {
+    public void test0189() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0182");
+            System.out.format("%n%s%n", "RegressionTest0.test0189");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException5 = new codigos.LadoInvalidoException("");
@@ -3284,9 +3380,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0183() throws Throwable {
+    public void test0190() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0183");
+            System.out.format("%n%s%n", "RegressionTest0.test0190");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("codigos.LadoInvalidoException: hi!");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("hi!");
         ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException3);
@@ -3323,9 +3419,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0184() throws Throwable {
+    public void test0191() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0184");
+            System.out.format("%n%s%n", "RegressionTest0.test0191");
         codigos.Pedido pedido0 = new codigos.Pedido();
         float float4 = pedido0.calculaTaxaDesconto(true, "codigos.LadoInvalidoException: ", 1.0f);
         float float8 = pedido0.calculaTaxaDesconto(false, "codigos.LadoInvalidoException: hi!", (float) (short) 10);
@@ -3338,9 +3434,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0185() throws Throwable {
+    public void test0192() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0185");
+            System.out.format("%n%s%n", "RegressionTest0.test0192");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 100, (-1.0f));
         float float3 = contaCorrente2.getSaldo();
         contaCorrente2.setSaldo(100.0f);
@@ -3355,17 +3451,17 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0186() throws Throwable {
+    public void test0193() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0186");
+            System.out.format("%n%s%n", "RegressionTest0.test0193");
         java.lang.String str3 = codigos.Triangulo.classificaTriangulo((int) 'a', (int) (short) 100, (int) ' ');
         org.junit.Assert.assertEquals("'" + str3 + "' != '" + "ESCALENO" + "'", str3, "ESCALENO");
     }
 
     @Test
-    public void test0187() throws Throwable {
+    public void test0194() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0187");
+            System.out.format("%n%s%n", "RegressionTest0.test0194");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str3 = codigos.Triangulo.classificaTriangulo((int) '#', (int) (short) 0, 100);
@@ -3376,9 +3472,25 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0188() throws Throwable {
+    public void test0195() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0188");
+            System.out.format("%n%s%n", "RegressionTest0.test0195");
+        codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 100, (-1.0f));
+        float float3 = contaCorrente2.getSaldo();
+        contaCorrente2.setSaldo(100.0f);
+        contaCorrente2.setLimite(0.0f);
+        float float8 = contaCorrente2.getSaldo();
+        contaCorrente2.setLimite(68.0f);
+        float float11 = contaCorrente2.getLimite();
+        org.junit.Assert.assertTrue("'" + float3 + "' != '" + 100.0f + "'", float3 == 100.0f);
+        org.junit.Assert.assertTrue("'" + float8 + "' != '" + 100.0f + "'", float8 == 100.0f);
+        org.junit.Assert.assertTrue("'" + float11 + "' != '" + 68.0f + "'", float11 == 68.0f);
+    }
+
+    @Test
+    public void test0196() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test0196");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str3 = codigos.Triangulo.classificaTriangulo((int) (short) -1, (int) ' ', (int) (short) 1);
@@ -3389,9 +3501,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0189() throws Throwable {
+    public void test0197() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0189");
+            System.out.format("%n%s%n", "RegressionTest0.test0197");
         codigos.Pedido pedido0 = new codigos.Pedido();
         float float4 = pedido0.calculaTaxaDesconto(true, "codigos.LadoInvalidoException: ", 1.0f);
         float float8 = pedido0.calculaTaxaDesconto(false, "NAO FORMA TRIANGULO", 10.0f);
@@ -3402,9 +3514,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0190() throws Throwable {
+    public void test0198() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0190");
+            System.out.format("%n%s%n", "RegressionTest0.test0198");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 100, (-1.0f));
         float float3 = contaCorrente2.getSaldo();
         contaCorrente2.setSaldo(100.0f);
@@ -3421,17 +3533,17 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0191() throws Throwable {
+    public void test0199() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0191");
+            System.out.format("%n%s%n", "RegressionTest0.test0199");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 0, (float) ' ');
         contaCorrente2.setLimite((float) 10);
     }
 
     @Test
-    public void test0192() throws Throwable {
+    public void test0200() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0192");
+            System.out.format("%n%s%n", "RegressionTest0.test0200");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 0, (float) ' ');
         float float4 = contaCorrente2.saque((float) (byte) 1);
         float float5 = contaCorrente2.getLimite();
@@ -3440,9 +3552,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0193() throws Throwable {
+    public void test0201() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0193");
+            System.out.format("%n%s%n", "RegressionTest0.test0201");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str3 = codigos.Triangulo.classificaTriangulo(10, (int) (byte) 0, 0);
@@ -3453,9 +3565,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0194() throws Throwable {
+    public void test0202() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0194");
+            System.out.format("%n%s%n", "RegressionTest0.test0202");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 10, 0.0f);
         float float3 = contaCorrente2.getSaldo();
         float float5 = contaCorrente2.saque(1.0f);
@@ -3473,9 +3585,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0195() throws Throwable {
+    public void test0203() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0195");
+            System.out.format("%n%s%n", "RegressionTest0.test0203");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
         java.lang.Throwable[] throwableArray2 = ladoInvalidoException1.getSuppressed();
         java.lang.String str3 = ladoInvalidoException1.toString();
@@ -3484,9 +3596,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0196() throws Throwable {
+    public void test0204() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0196");
+            System.out.format("%n%s%n", "RegressionTest0.test0204");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str3 = codigos.Triangulo.classificaTriangulo(0, 100, (int) (short) -1);
@@ -3497,9 +3609,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0197() throws Throwable {
+    public void test0205() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0197");
+            System.out.format("%n%s%n", "RegressionTest0.test0205");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException3);
@@ -3560,9 +3672,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0198() throws Throwable {
+    public void test0206() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0198");
+            System.out.format("%n%s%n", "RegressionTest0.test0206");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 10, 0.0f);
         float float3 = contaCorrente2.getSaldo();
         float float5 = contaCorrente2.saque(1.0f);
@@ -3573,26 +3685,26 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0199() throws Throwable {
+    public void test0207() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0199");
+            System.out.format("%n%s%n", "RegressionTest0.test0207");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("ESCALENO");
         java.lang.Class<?> wildcardClass2 = ladoInvalidoException1.getClass();
         org.junit.Assert.assertNotNull(wildcardClass2);
     }
 
     @Test
-    public void test0200() throws Throwable {
+    public void test0208() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0200");
+            System.out.format("%n%s%n", "RegressionTest0.test0208");
         java.lang.String str3 = codigos.Triangulo.classificaTriangulo(3, (int) ' ', (int) (short) 1);
         org.junit.Assert.assertEquals("'" + str3 + "' != '" + "NAO FORMA TRIANGULO" + "'", str3, "NAO FORMA TRIANGULO");
     }
 
     @Test
-    public void test0201() throws Throwable {
+    public void test0209() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0201");
+            System.out.format("%n%s%n", "RegressionTest0.test0209");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 100, (-1.0f));
         float float3 = contaCorrente2.getSaldo();
         contaCorrente2.setSaldo(100.0f);
@@ -3616,9 +3728,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0202() throws Throwable {
+    public void test0210() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0202");
+            System.out.format("%n%s%n", "RegressionTest0.test0210");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException3);
@@ -3661,9 +3773,22 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0203() throws Throwable {
+    public void test0211() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0203");
+            System.out.format("%n%s%n", "RegressionTest0.test0211");
+        codigos.Pedido pedido0 = new codigos.Pedido();
+        float float4 = pedido0.calculaTaxaDesconto(false, "NAO FORMA TRIANGULO", (float) '4');
+        float float8 = pedido0.calculaTaxaDesconto(false, "codigos.LadoInvalidoException: hi!", 0.0f);
+        float float12 = pedido0.calculaTaxaDesconto(true, "codigos.LadoInvalidoException: codigos.LadoInvalidoException: hi!", 1.0f);
+        org.junit.Assert.assertTrue("'" + float4 + "' != '" + 0.0f + "'", float4 == 0.0f);
+        org.junit.Assert.assertTrue("'" + float8 + "' != '" + 0.0f + "'", float8 == 0.0f);
+        org.junit.Assert.assertTrue("'" + float12 + "' != '" + 10.0f + "'", float12 == 10.0f);
+    }
+
+    @Test
+    public void test0212() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test0212");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str3 = codigos.Triangulo.classificaTriangulo((int) (short) -1, (int) (byte) 100, (int) 'a');
@@ -3674,9 +3799,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0204() throws Throwable {
+    public void test0213() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0204");
+            System.out.format("%n%s%n", "RegressionTest0.test0213");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 10, 0.0f);
         float float3 = contaCorrente2.getSaldo();
         contaCorrente2.setSaldo(10.0f);
@@ -3691,17 +3816,17 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0205() throws Throwable {
+    public void test0214() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0205");
+            System.out.format("%n%s%n", "RegressionTest0.test0214");
         java.lang.String str3 = codigos.Triangulo.classificaTriangulo(100, (int) (byte) 10, (int) 'a');
         org.junit.Assert.assertEquals("'" + str3 + "' != '" + "ESCALENO" + "'", str3, "ESCALENO");
     }
 
     @Test
-    public void test0206() throws Throwable {
+    public void test0215() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0206");
+            System.out.format("%n%s%n", "RegressionTest0.test0215");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException3);
@@ -3764,9 +3889,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0207() throws Throwable {
+    public void test0216() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0207");
+            System.out.format("%n%s%n", "RegressionTest0.test0216");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException3);
@@ -3789,18 +3914,26 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0208() throws Throwable {
+    public void test0217() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0208");
+            System.out.format("%n%s%n", "RegressionTest0.test0217");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("ESCALENO");
         java.lang.String str2 = ladoInvalidoException1.toString();
         org.junit.Assert.assertEquals("'" + str2 + "' != '" + "codigos.LadoInvalidoException: ESCALENO" + "'", str2, "codigos.LadoInvalidoException: ESCALENO");
     }
 
     @Test
-    public void test0209() throws Throwable {
+    public void test0218() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0209");
+            System.out.format("%n%s%n", "RegressionTest0.test0218");
+        codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente(10.0f, (float) ' ');
+        contaCorrente2.setSaldo((-10.0f));
+    }
+
+    @Test
+    public void test0219() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test0219");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str3 = codigos.Triangulo.classificaTriangulo((int) 'a', (int) (short) 0, 3);
@@ -3811,9 +3944,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0210() throws Throwable {
+    public void test0220() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0210");
+            System.out.format("%n%s%n", "RegressionTest0.test0220");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str3 = codigos.Triangulo.classificaTriangulo(0, (int) (byte) 0, (-1));
@@ -3824,9 +3957,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0211() throws Throwable {
+    public void test0221() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0211");
+            System.out.format("%n%s%n", "RegressionTest0.test0221");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 100, (-1.0f));
         float float3 = contaCorrente2.getSaldo();
         contaCorrente2.setSaldo(100.0f);
@@ -3843,9 +3976,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0212() throws Throwable {
+    public void test0222() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0212");
+            System.out.format("%n%s%n", "RegressionTest0.test0222");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str3 = codigos.Triangulo.classificaTriangulo((int) '4', 0, (int) (short) 1);
@@ -3856,18 +3989,18 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0213() throws Throwable {
+    public void test0223() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0213");
+            System.out.format("%n%s%n", "RegressionTest0.test0223");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((-10.0f), (float) (byte) -1);
         java.lang.Class<?> wildcardClass3 = contaCorrente2.getClass();
         org.junit.Assert.assertNotNull(wildcardClass3);
     }
 
     @Test
-    public void test0214() throws Throwable {
+    public void test0224() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0214");
+            System.out.format("%n%s%n", "RegressionTest0.test0224");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 0, (float) ' ');
         float float3 = contaCorrente2.getSaldo();
         float float4 = contaCorrente2.getLimite();
@@ -3878,17 +4011,17 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0215() throws Throwable {
+    public void test0225() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0215");
+            System.out.format("%n%s%n", "RegressionTest0.test0225");
         java.lang.String str3 = codigos.Triangulo.classificaTriangulo((int) (byte) 100, (int) (byte) 1, 1);
         org.junit.Assert.assertEquals("'" + str3 + "' != '" + "NAO FORMA TRIANGULO" + "'", str3, "NAO FORMA TRIANGULO");
     }
 
     @Test
-    public void test0216() throws Throwable {
+    public void test0226() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0216");
+            System.out.format("%n%s%n", "RegressionTest0.test0226");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str3 = codigos.Triangulo.classificaTriangulo((int) (short) 100, (int) (short) 0, (int) (byte) 10);
@@ -3899,9 +4032,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0217() throws Throwable {
+    public void test0227() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0217");
+            System.out.format("%n%s%n", "RegressionTest0.test0227");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente(0.0f, 100.0f);
         contaCorrente2.setSaldo((float) (short) 10);
         // The following exception was thrown during execution in test generation
@@ -3914,9 +4047,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0218() throws Throwable {
+    public void test0228() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0218");
+            System.out.format("%n%s%n", "RegressionTest0.test0228");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) '#', 100.0f);
         contaCorrente2.setLimite((float) (byte) 1);
         // The following exception was thrown during execution in test generation
@@ -3929,9 +4062,18 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0219() throws Throwable {
+    public void test0229() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0219");
+            System.out.format("%n%s%n", "RegressionTest0.test0229");
+        codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente(9.0f, 32.0f);
+        float float4 = contaCorrente2.saque(9.0f);
+        org.junit.Assert.assertTrue("'" + float4 + "' != '" + 0.0f + "'", float4 == 0.0f);
+    }
+
+    @Test
+    public void test0230() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test0230");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 100, (-1.0f));
         float float3 = contaCorrente2.getLimite();
         float float4 = contaCorrente2.getSaldo();
@@ -3947,17 +4089,17 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0220() throws Throwable {
+    public void test0231() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0220");
+            System.out.format("%n%s%n", "RegressionTest0.test0231");
         java.lang.String str3 = codigos.Triangulo.classificaTriangulo(3, 3, (int) (short) 100);
         org.junit.Assert.assertEquals("'" + str3 + "' != '" + "NAO FORMA TRIANGULO" + "'", str3, "NAO FORMA TRIANGULO");
     }
 
     @Test
-    public void test0221() throws Throwable {
+    public void test0232() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0221");
+            System.out.format("%n%s%n", "RegressionTest0.test0232");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str3 = codigos.Triangulo.classificaTriangulo((int) (short) -1, 2, 10);
@@ -3968,17 +4110,17 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0222() throws Throwable {
+    public void test0233() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0222");
+            System.out.format("%n%s%n", "RegressionTest0.test0233");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) 0L, 1.0f);
         contaCorrente2.setLimite((float) '4');
     }
 
     @Test
-    public void test0223() throws Throwable {
+    public void test0234() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0223");
+            System.out.format("%n%s%n", "RegressionTest0.test0234");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str3 = codigos.Triangulo.classificaTriangulo((-1), (int) '#', (int) (byte) 1);
@@ -3989,9 +4131,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0224() throws Throwable {
+    public void test0235() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0224");
+            System.out.format("%n%s%n", "RegressionTest0.test0235");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException3);
@@ -4004,9 +4146,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0225() throws Throwable {
+    public void test0236() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0225");
+            System.out.format("%n%s%n", "RegressionTest0.test0236");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException5 = new codigos.LadoInvalidoException("");
@@ -4049,9 +4191,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0226() throws Throwable {
+    public void test0237() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0226");
+            System.out.format("%n%s%n", "RegressionTest0.test0237");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException3);
@@ -4080,17 +4222,17 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0227() throws Throwable {
+    public void test0238() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0227");
+            System.out.format("%n%s%n", "RegressionTest0.test0238");
         boolean boolean1 = codigos.Identifier.validaIdentificador("codigos.LadoInvalidoException: ESCALENO");
         org.junit.Assert.assertTrue("'" + boolean1 + "' != '" + false + "'", boolean1 == false);
     }
 
     @Test
-    public void test0228() throws Throwable {
+    public void test0239() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0228");
+            System.out.format("%n%s%n", "RegressionTest0.test0239");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("codigos.LadoInvalidoException: codigos.LadoInvalidoException: codigos.LadoInvalidoException: ");
         java.lang.Throwable[] throwableArray2 = ladoInvalidoException1.getSuppressed();
         java.lang.String str3 = ladoInvalidoException1.toString();
@@ -4099,9 +4241,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0229() throws Throwable {
+    public void test0240() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0229");
+            System.out.format("%n%s%n", "RegressionTest0.test0240");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException3);
@@ -4112,9 +4254,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0230() throws Throwable {
+    public void test0241() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0230");
+            System.out.format("%n%s%n", "RegressionTest0.test0241");
         codigos.Words words0 = new codigos.Words();
         int int2 = words0.countWords("");
         int int4 = words0.countWords("NAO FORMA TRIANGULO");
@@ -4125,17 +4267,17 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0231() throws Throwable {
+    public void test0242() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0231");
+            System.out.format("%n%s%n", "RegressionTest0.test0242");
         boolean boolean1 = codigos.Identifier.validaIdentificador("codigos.LadoInvalidoException: codigos.LadoInvalidoException: codigos.LadoInvalidoException: codigos.LadoInvalidoException: ");
         org.junit.Assert.assertTrue("'" + boolean1 + "' != '" + false + "'", boolean1 == false);
     }
 
     @Test
-    public void test0232() throws Throwable {
+    public void test0243() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0232");
+            System.out.format("%n%s%n", "RegressionTest0.test0243");
         codigos.Words words0 = new codigos.Words();
         int int2 = words0.countWords("codigos.LadoInvalidoException: hi!");
         int int4 = words0.countWords("NAO FORMA TRIANGULO");
@@ -4148,9 +4290,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0233() throws Throwable {
+    public void test0244() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0233");
+            System.out.format("%n%s%n", "RegressionTest0.test0244");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str3 = codigos.Triangulo.classificaTriangulo((int) (byte) -1, (int) (byte) 0, (int) (byte) 0);
@@ -4161,9 +4303,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0234() throws Throwable {
+    public void test0245() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0234");
+            System.out.format("%n%s%n", "RegressionTest0.test0245");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (-1), 2.0f);
         // The following exception was thrown during execution in test generation
         try {
@@ -4175,9 +4317,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0235() throws Throwable {
+    public void test0246() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0235");
+            System.out.format("%n%s%n", "RegressionTest0.test0246");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException3);
@@ -4264,9 +4406,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0236() throws Throwable {
+    public void test0247() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0236");
+            System.out.format("%n%s%n", "RegressionTest0.test0247");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str3 = codigos.Triangulo.classificaTriangulo((-1), (-1), (int) (byte) 1);
@@ -4277,17 +4419,17 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0237() throws Throwable {
+    public void test0248() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0237");
+            System.out.format("%n%s%n", "RegressionTest0.test0248");
         java.lang.String str3 = codigos.Triangulo.classificaTriangulo((int) 'a', (int) '#', (int) ' ');
         org.junit.Assert.assertEquals("'" + str3 + "' != '" + "NAO FORMA TRIANGULO" + "'", str3, "NAO FORMA TRIANGULO");
     }
 
     @Test
-    public void test0238() throws Throwable {
+    public void test0249() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0238");
+            System.out.format("%n%s%n", "RegressionTest0.test0249");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente(99.0f, (float) 'a');
         float float3 = contaCorrente2.getLimite();
         contaCorrente2.setSaldo((float) '4');
@@ -4298,9 +4440,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0239() throws Throwable {
+    public void test0250() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0239");
+            System.out.format("%n%s%n", "RegressionTest0.test0250");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("codigos.LadoInvalidoException: codigos.LadoInvalidoException: hi!");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException5 = new codigos.LadoInvalidoException("");
@@ -4353,9 +4495,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0240() throws Throwable {
+    public void test0251() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0240");
+            System.out.format("%n%s%n", "RegressionTest0.test0251");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException3);
@@ -4442,9 +4584,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0241() throws Throwable {
+    public void test0252() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0241");
+            System.out.format("%n%s%n", "RegressionTest0.test0252");
         codigos.Pedido pedido0 = new codigos.Pedido();
         float float4 = pedido0.calculaTaxaDesconto(true, "codigos.LadoInvalidoException: ", (float) (short) -1);
         float float8 = pedido0.calculaTaxaDesconto(true, "NAO FORMA TRIANGULO", (float) (byte) 0);
@@ -4461,9 +4603,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0242() throws Throwable {
+    public void test0253() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0242");
+            System.out.format("%n%s%n", "RegressionTest0.test0253");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException3);
@@ -4548,9 +4690,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0243() throws Throwable {
+    public void test0254() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0243");
+            System.out.format("%n%s%n", "RegressionTest0.test0254");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str3 = codigos.Triangulo.classificaTriangulo(0, (int) (byte) 0, 3);
@@ -4561,9 +4703,31 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0244() throws Throwable {
+    public void test0255() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0244");
+            System.out.format("%n%s%n", "RegressionTest0.test0255");
+        codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 100, (-1.0f));
+        float float3 = contaCorrente2.getLimite();
+        float float4 = contaCorrente2.getSaldo();
+        float float5 = contaCorrente2.getLimite();
+        float float6 = contaCorrente2.getSaldo();
+        contaCorrente2.setLimite((float) (byte) 10);
+        contaCorrente2.setSaldo((float) 100L);
+        contaCorrente2.setSaldo((float) (byte) 10);
+        contaCorrente2.setLimite((float) (byte) 100);
+        float float15 = contaCorrente2.getLimite();
+        contaCorrente2.setSaldo((float) 100);
+        org.junit.Assert.assertTrue("'" + float3 + "' != '" + (-1.0f) + "'", float3 == (-1.0f));
+        org.junit.Assert.assertTrue("'" + float4 + "' != '" + 100.0f + "'", float4 == 100.0f);
+        org.junit.Assert.assertTrue("'" + float5 + "' != '" + (-1.0f) + "'", float5 == (-1.0f));
+        org.junit.Assert.assertTrue("'" + float6 + "' != '" + 100.0f + "'", float6 == 100.0f);
+        org.junit.Assert.assertTrue("'" + float15 + "' != '" + 100.0f + "'", float15 == 100.0f);
+    }
+
+    @Test
+    public void test0256() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test0256");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str3 = codigos.Triangulo.classificaTriangulo(0, 0, (int) '4');
@@ -4574,9 +4738,26 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0245() throws Throwable {
+    public void test0257() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0245");
+            System.out.format("%n%s%n", "RegressionTest0.test0257");
+        codigos.Pedido pedido0 = new codigos.Pedido();
+        float float4 = pedido0.calculaTaxaDesconto(true, "codigos.LadoInvalidoException: ", 1.0f);
+        float float8 = pedido0.calculaTaxaDesconto(false, "", (float) 1);
+        float float12 = pedido0.calculaTaxaDesconto(false, "hi!", (float) (short) 100);
+        float float16 = pedido0.calculaTaxaDesconto(true, "", (float) ' ');
+        float float20 = pedido0.calculaTaxaDesconto(false, "codigos.LadoInvalidoException: codigos.LadoInvalidoException: codigos.LadoInvalidoException: codigos.LadoInvalidoException: ", (float) 1);
+        org.junit.Assert.assertTrue("'" + float4 + "' != '" + 10.0f + "'", float4 == 10.0f);
+        org.junit.Assert.assertTrue("'" + float8 + "' != '" + 0.0f + "'", float8 == 0.0f);
+        org.junit.Assert.assertTrue("'" + float12 + "' != '" + 0.0f + "'", float12 == 0.0f);
+        org.junit.Assert.assertTrue("'" + float16 + "' != '" + 10.0f + "'", float16 == 10.0f);
+        org.junit.Assert.assertTrue("'" + float20 + "' != '" + 0.0f + "'", float20 == 0.0f);
+    }
+
+    @Test
+    public void test0258() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test0258");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 100, (-1.0f));
         float float3 = contaCorrente2.getLimite();
         float float4 = contaCorrente2.getSaldo();
@@ -4593,9 +4774,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0246() throws Throwable {
+    public void test0259() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0246");
+            System.out.format("%n%s%n", "RegressionTest0.test0259");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException3);
@@ -4680,9 +4861,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0247() throws Throwable {
+    public void test0260() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0247");
+            System.out.format("%n%s%n", "RegressionTest0.test0260");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException5 = new codigos.LadoInvalidoException("");
@@ -4703,9 +4884,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0248() throws Throwable {
+    public void test0261() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0248");
+            System.out.format("%n%s%n", "RegressionTest0.test0261");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException3);
@@ -4770,9 +4951,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0249() throws Throwable {
+    public void test0262() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0249");
+            System.out.format("%n%s%n", "RegressionTest0.test0262");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str3 = codigos.Triangulo.classificaTriangulo((int) (short) 0, (int) (byte) -1, (-1));
@@ -4783,9 +4964,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0250() throws Throwable {
+    public void test0263() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0250");
+            System.out.format("%n%s%n", "RegressionTest0.test0263");
         codigos.Pedido pedido0 = new codigos.Pedido();
         float float4 = pedido0.calculaTaxaDesconto(true, "codigos.LadoInvalidoException: ", 1.0f);
         float float8 = pedido0.calculaTaxaDesconto(false, "codigos.LadoInvalidoException: hi!", (float) (short) 10);
@@ -4800,9 +4981,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0251() throws Throwable {
+    public void test0264() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0251");
+            System.out.format("%n%s%n", "RegressionTest0.test0264");
         codigos.Pedido pedido0 = new codigos.Pedido();
         float float4 = pedido0.calculaTaxaDesconto(true, "codigos.LadoInvalidoException: ", 1.0f);
         float float8 = pedido0.calculaTaxaDesconto(false, "", (float) 1);
@@ -4819,9 +5000,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0252() throws Throwable {
+    public void test0265() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0252");
+            System.out.format("%n%s%n", "RegressionTest0.test0265");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException3);
@@ -4874,9 +5055,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0253() throws Throwable {
+    public void test0266() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0253");
+            System.out.format("%n%s%n", "RegressionTest0.test0266");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 100, (-1.0f));
         float float3 = contaCorrente2.getLimite();
         float float4 = contaCorrente2.getSaldo();
@@ -4896,9 +5077,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0254() throws Throwable {
+    public void test0267() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0254");
+            System.out.format("%n%s%n", "RegressionTest0.test0267");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException3);
@@ -4985,17 +5166,17 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0255() throws Throwable {
+    public void test0268() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0255");
+            System.out.format("%n%s%n", "RegressionTest0.test0268");
         java.lang.String str3 = codigos.Triangulo.classificaTriangulo(3, (int) (byte) 1, (int) (short) 1);
         org.junit.Assert.assertEquals("'" + str3 + "' != '" + "NAO FORMA TRIANGULO" + "'", str3, "NAO FORMA TRIANGULO");
     }
 
     @Test
-    public void test0256() throws Throwable {
+    public void test0269() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0256");
+            System.out.format("%n%s%n", "RegressionTest0.test0269");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente(9.0f, 32.0f);
         float float3 = contaCorrente2.getLimite();
         // The following exception was thrown during execution in test generation
@@ -5009,9 +5190,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0257() throws Throwable {
+    public void test0270() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0257");
+            System.out.format("%n%s%n", "RegressionTest0.test0270");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 100, (-1.0f));
         float float3 = contaCorrente2.getLimite();
         float float4 = contaCorrente2.getSaldo();
@@ -5038,9 +5219,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0258() throws Throwable {
+    public void test0271() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0258");
+            System.out.format("%n%s%n", "RegressionTest0.test0271");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str3 = codigos.Triangulo.classificaTriangulo(0, (int) (short) 10, 0);
@@ -5051,9 +5232,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0259() throws Throwable {
+    public void test0272() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0259");
+            System.out.format("%n%s%n", "RegressionTest0.test0272");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException5 = new codigos.LadoInvalidoException("");
@@ -5068,9 +5249,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0260() throws Throwable {
+    public void test0273() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0260");
+            System.out.format("%n%s%n", "RegressionTest0.test0273");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str3 = codigos.Triangulo.classificaTriangulo((int) (byte) 0, 1, (int) (byte) 100);
@@ -5081,9 +5262,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0261() throws Throwable {
+    public void test0274() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0261");
+            System.out.format("%n%s%n", "RegressionTest0.test0274");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str3 = codigos.Triangulo.classificaTriangulo((int) (short) 0, (int) '4', 10);
@@ -5094,9 +5275,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0262() throws Throwable {
+    public void test0275() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0262");
+            System.out.format("%n%s%n", "RegressionTest0.test0275");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("hi!");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException5 = new codigos.LadoInvalidoException("");
@@ -5115,9 +5296,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0263() throws Throwable {
+    public void test0276() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0263");
+            System.out.format("%n%s%n", "RegressionTest0.test0276");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException3);
@@ -5198,9 +5379,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0264() throws Throwable {
+    public void test0277() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0264");
+            System.out.format("%n%s%n", "RegressionTest0.test0277");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 100, (-1.0f));
         float float3 = contaCorrente2.getLimite();
         float float4 = contaCorrente2.getSaldo();
@@ -5221,9 +5402,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0265() throws Throwable {
+    public void test0278() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0265");
+            System.out.format("%n%s%n", "RegressionTest0.test0278");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException3);
@@ -5268,9 +5449,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0266() throws Throwable {
+    public void test0279() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0266");
+            System.out.format("%n%s%n", "RegressionTest0.test0279");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 100, (-1.0f));
         float float3 = contaCorrente2.getLimite();
         float float4 = contaCorrente2.getSaldo();
@@ -5291,9 +5472,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0267() throws Throwable {
+    public void test0280() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0267");
+            System.out.format("%n%s%n", "RegressionTest0.test0280");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str3 = codigos.Triangulo.classificaTriangulo((int) (short) 0, (int) 'a', (int) 'a');
@@ -5304,9 +5485,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0268() throws Throwable {
+    public void test0281() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0268");
+            System.out.format("%n%s%n", "RegressionTest0.test0281");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("hi!");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException5 = new codigos.LadoInvalidoException("");
@@ -5341,9 +5522,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0269() throws Throwable {
+    public void test0282() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0269");
+            System.out.format("%n%s%n", "RegressionTest0.test0282");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str3 = codigos.Triangulo.classificaTriangulo((int) (short) 0, (int) (short) 0, (int) '4');
@@ -5354,9 +5535,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0270() throws Throwable {
+    public void test0283() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0270");
+            System.out.format("%n%s%n", "RegressionTest0.test0283");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException3);
@@ -5403,9 +5584,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0271() throws Throwable {
+    public void test0284() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0271");
+            System.out.format("%n%s%n", "RegressionTest0.test0284");
         codigos.Pedido pedido0 = new codigos.Pedido();
         float float4 = pedido0.calculaTaxaDesconto(true, "codigos.LadoInvalidoException: ", 1.0f);
         float float8 = pedido0.calculaTaxaDesconto(false, "NAO FORMA TRIANGULO", 10.0f);
@@ -5422,9 +5603,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0272() throws Throwable {
+    public void test0285() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0272");
+            System.out.format("%n%s%n", "RegressionTest0.test0285");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException3);
@@ -5437,16 +5618,30 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0273() throws Throwable {
+    public void test0286() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0273");
+            System.out.format("%n%s%n", "RegressionTest0.test0286");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente(65.0f, 89.0f);
     }
 
     @Test
-    public void test0274() throws Throwable {
+    public void test0287() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0274");
+            System.out.format("%n%s%n", "RegressionTest0.test0287");
+        codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente(97.0f, 99.0f);
+        float float3 = contaCorrente2.getSaldo();
+        contaCorrente2.setLimite(10.0f);
+        float float6 = contaCorrente2.getSaldo();
+        float float8 = contaCorrente2.saque(65.0f);
+        org.junit.Assert.assertTrue("'" + float3 + "' != '" + 97.0f + "'", float3 == 97.0f);
+        org.junit.Assert.assertTrue("'" + float6 + "' != '" + 97.0f + "'", float6 == 97.0f);
+        org.junit.Assert.assertTrue("'" + float8 + "' != '" + 32.0f + "'", float8 == 32.0f);
+    }
+
+    @Test
+    public void test0288() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test0288");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str3 = codigos.Triangulo.classificaTriangulo(4, 3, (-1));
@@ -5457,9 +5652,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0275() throws Throwable {
+    public void test0289() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0275");
+            System.out.format("%n%s%n", "RegressionTest0.test0289");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str3 = codigos.Triangulo.classificaTriangulo((int) ' ', 10, (int) (short) -1);
@@ -5470,27 +5665,27 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0276() throws Throwable {
+    public void test0290() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0276");
+            System.out.format("%n%s%n", "RegressionTest0.test0290");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente(67.0f, (float) 100);
         float float3 = contaCorrente2.getLimite();
         org.junit.Assert.assertTrue("'" + float3 + "' != '" + 100.0f + "'", float3 == 100.0f);
     }
 
     @Test
-    public void test0277() throws Throwable {
+    public void test0291() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0277");
+            System.out.format("%n%s%n", "RegressionTest0.test0291");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente(97.0f, 99.0f);
         java.lang.Class<?> wildcardClass3 = contaCorrente2.getClass();
         org.junit.Assert.assertNotNull(wildcardClass3);
     }
 
     @Test
-    public void test0278() throws Throwable {
+    public void test0292() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0278");
+            System.out.format("%n%s%n", "RegressionTest0.test0292");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) 100L, (float) 10);
         float float3 = contaCorrente2.getSaldo();
         float float4 = contaCorrente2.getSaldo();
@@ -5502,17 +5697,17 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0279() throws Throwable {
+    public void test0293() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0279");
+            System.out.format("%n%s%n", "RegressionTest0.test0293");
         java.lang.String str3 = codigos.Triangulo.classificaTriangulo((int) '4', (int) (short) 1, (int) (short) 0);
         org.junit.Assert.assertEquals("'" + str3 + "' != '" + "NAO FORMA TRIANGULO" + "'", str3, "NAO FORMA TRIANGULO");
     }
 
     @Test
-    public void test0280() throws Throwable {
+    public void test0294() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0280");
+            System.out.format("%n%s%n", "RegressionTest0.test0294");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException3);
@@ -5577,9 +5772,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0281() throws Throwable {
+    public void test0295() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0281");
+            System.out.format("%n%s%n", "RegressionTest0.test0295");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 0, (float) ' ');
         contaCorrente2.setSaldo((float) (short) 10);
         java.lang.Class<?> wildcardClass5 = contaCorrente2.getClass();
@@ -5587,43 +5782,43 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0282() throws Throwable {
+    public void test0296() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0282");
+            System.out.format("%n%s%n", "RegressionTest0.test0296");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente(1.0f, (float) '4');
         java.lang.Class<?> wildcardClass3 = contaCorrente2.getClass();
         org.junit.Assert.assertNotNull(wildcardClass3);
     }
 
     @Test
-    public void test0283() throws Throwable {
+    public void test0297() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0283");
+            System.out.format("%n%s%n", "RegressionTest0.test0297");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 10, 97.0f);
         java.lang.Class<?> wildcardClass3 = contaCorrente2.getClass();
         org.junit.Assert.assertNotNull(wildcardClass3);
     }
 
     @Test
-    public void test0284() throws Throwable {
+    public void test0298() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0284");
+            System.out.format("%n%s%n", "RegressionTest0.test0298");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente(90.0f, 65.0f);
         contaCorrente2.setSaldo((float) 100);
     }
 
     @Test
-    public void test0285() throws Throwable {
+    public void test0299() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0285");
+            System.out.format("%n%s%n", "RegressionTest0.test0299");
         java.lang.String str3 = codigos.Triangulo.classificaTriangulo(10, (int) 'a', (int) (short) 100);
         org.junit.Assert.assertEquals("'" + str3 + "' != '" + "ESCALENO" + "'", str3, "ESCALENO");
     }
 
     @Test
-    public void test0286() throws Throwable {
+    public void test0300() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0286");
+            System.out.format("%n%s%n", "RegressionTest0.test0300");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException3);
@@ -5676,16 +5871,28 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0287() throws Throwable {
+    public void test0301() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0287");
+            System.out.format("%n%s%n", "RegressionTest0.test0301");
+        codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) 100L, (float) 10);
+        float float3 = contaCorrente2.getSaldo();
+        float float4 = contaCorrente2.getSaldo();
+        contaCorrente2.setLimite((float) 3);
+        org.junit.Assert.assertTrue("'" + float3 + "' != '" + 100.0f + "'", float3 == 100.0f);
+        org.junit.Assert.assertTrue("'" + float4 + "' != '" + 100.0f + "'", float4 == 100.0f);
+    }
+
+    @Test
+    public void test0302() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test0302");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente(35.0f, 23.0f);
     }
 
     @Test
-    public void test0288() throws Throwable {
+    public void test0303() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0288");
+            System.out.format("%n%s%n", "RegressionTest0.test0303");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException3);
@@ -5758,9 +5965,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0289() throws Throwable {
+    public void test0304() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0289");
+            System.out.format("%n%s%n", "RegressionTest0.test0304");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str3 = codigos.Triangulo.classificaTriangulo(4, (int) (byte) -1, 100);
@@ -5771,9 +5978,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0290() throws Throwable {
+    public void test0305() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0290");
+            System.out.format("%n%s%n", "RegressionTest0.test0305");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str3 = codigos.Triangulo.classificaTriangulo((int) '#', (-1), (int) (short) 100);
@@ -5784,9 +5991,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0291() throws Throwable {
+    public void test0306() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0291");
+            System.out.format("%n%s%n", "RegressionTest0.test0306");
         codigos.Words words0 = new codigos.Words();
         int int2 = words0.countWords("codigos.LadoInvalidoException: hi!");
         int int4 = words0.countWords("codigos.LadoInvalidoException: hi!");
@@ -5799,9 +6006,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0292() throws Throwable {
+    public void test0307() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0292");
+            System.out.format("%n%s%n", "RegressionTest0.test0307");
         codigos.Words words0 = new codigos.Words();
         int int2 = words0.countWords("");
         int int4 = words0.countWords("NAO FORMA TRIANGULO");
@@ -5814,9 +6021,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0293() throws Throwable {
+    public void test0308() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0293");
+            System.out.format("%n%s%n", "RegressionTest0.test0308");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente(1.0f, (float) 0L);
         contaCorrente2.setSaldo((float) 'a');
         // The following exception was thrown during execution in test generation
@@ -5829,9 +6036,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0294() throws Throwable {
+    public void test0309() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0294");
+            System.out.format("%n%s%n", "RegressionTest0.test0309");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException3);
@@ -5892,9 +6099,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0295() throws Throwable {
+    public void test0310() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0295");
+            System.out.format("%n%s%n", "RegressionTest0.test0310");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 10, (float) 10L);
         // The following exception was thrown during execution in test generation
         try {
@@ -5906,9 +6113,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0296() throws Throwable {
+    public void test0311() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0296");
+            System.out.format("%n%s%n", "RegressionTest0.test0311");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 100, (-1.0f));
         float float3 = contaCorrente2.getLimite();
         float float4 = contaCorrente2.getSaldo();
@@ -5929,26 +6136,26 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0297() throws Throwable {
+    public void test0312() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0297");
+            System.out.format("%n%s%n", "RegressionTest0.test0312");
         java.lang.String str3 = codigos.Triangulo.classificaTriangulo(2, 3, 1);
         org.junit.Assert.assertEquals("'" + str3 + "' != '" + "NAO FORMA TRIANGULO" + "'", str3, "NAO FORMA TRIANGULO");
     }
 
     @Test
-    public void test0298() throws Throwable {
+    public void test0313() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0298");
+            System.out.format("%n%s%n", "RegressionTest0.test0313");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) '#', 1.0f);
         java.lang.Class<?> wildcardClass3 = contaCorrente2.getClass();
         org.junit.Assert.assertNotNull(wildcardClass3);
     }
 
     @Test
-    public void test0299() throws Throwable {
+    public void test0314() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0299");
+            System.out.format("%n%s%n", "RegressionTest0.test0314");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException3);
@@ -5967,9 +6174,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0300() throws Throwable {
+    public void test0315() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0300");
+            System.out.format("%n%s%n", "RegressionTest0.test0315");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException3);
@@ -5982,9 +6189,28 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0301() throws Throwable {
+    public void test0316() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0301");
+            System.out.format("%n%s%n", "RegressionTest0.test0316");
+        codigos.Pedido pedido0 = new codigos.Pedido();
+        float float4 = pedido0.calculaTaxaDesconto(true, "codigos.LadoInvalidoException: ", 1.0f);
+        float float8 = pedido0.calculaTaxaDesconto(false, "", (float) 1);
+        float float12 = pedido0.calculaTaxaDesconto(false, "hi!", (float) (short) 100);
+        float float16 = pedido0.calculaTaxaDesconto(true, "codigos.LadoInvalidoException: codigos.LadoInvalidoException: codigos.LadoInvalidoException: codigos.LadoInvalidoException: ", 42.0f);
+        float float20 = pedido0.calculaTaxaDesconto(true, "ESCALENO", 52.0f);
+        float float24 = pedido0.calculaTaxaDesconto(true, "codigos.LadoInvalidoException: codigos.LadoInvalidoException: codigos.LadoInvalidoException: codigos.LadoInvalidoException: ", (float) 'a');
+        org.junit.Assert.assertTrue("'" + float4 + "' != '" + 10.0f + "'", float4 == 10.0f);
+        org.junit.Assert.assertTrue("'" + float8 + "' != '" + 0.0f + "'", float8 == 0.0f);
+        org.junit.Assert.assertTrue("'" + float12 + "' != '" + 0.0f + "'", float12 == 0.0f);
+        org.junit.Assert.assertTrue("'" + float16 + "' != '" + 10.0f + "'", float16 == 10.0f);
+        org.junit.Assert.assertTrue("'" + float20 + "' != '" + 10.0f + "'", float20 == 10.0f);
+        org.junit.Assert.assertTrue("'" + float24 + "' != '" + 10.0f + "'", float24 == 10.0f);
+    }
+
+    @Test
+    public void test0317() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test0317");
         codigos.Words words0 = new codigos.Words();
         int int2 = words0.countWords("");
         int int4 = words0.countWords("codigos.LadoInvalidoException: codigos.LadoInvalidoException: hi!");
@@ -6001,9 +6227,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0302() throws Throwable {
+    public void test0318() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0302");
+            System.out.format("%n%s%n", "RegressionTest0.test0318");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException3);
@@ -6074,9 +6300,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0303() throws Throwable {
+    public void test0319() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0303");
+            System.out.format("%n%s%n", "RegressionTest0.test0319");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException5 = new codigos.LadoInvalidoException("");
@@ -6087,9 +6313,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0304() throws Throwable {
+    public void test0320() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0304");
+            System.out.format("%n%s%n", "RegressionTest0.test0320");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) 100L, (float) 10);
         float float3 = contaCorrente2.getSaldo();
         float float4 = contaCorrente2.getLimite();
@@ -6105,9 +6331,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0305() throws Throwable {
+    public void test0321() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0305");
+            System.out.format("%n%s%n", "RegressionTest0.test0321");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException3);
@@ -6158,9 +6384,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0306() throws Throwable {
+    public void test0322() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0306");
+            System.out.format("%n%s%n", "RegressionTest0.test0322");
         codigos.Pedido pedido0 = new codigos.Pedido();
         float float4 = pedido0.calculaTaxaDesconto(true, "codigos.LadoInvalidoException: ", 1.0f);
         float float8 = pedido0.calculaTaxaDesconto(false, "codigos.LadoInvalidoException: hi!", (float) (short) 10);
@@ -6177,27 +6403,27 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0307() throws Throwable {
+    public void test0323() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0307");
+            System.out.format("%n%s%n", "RegressionTest0.test0323");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("codigos.LadoInvalidoException: codigos.LadoInvalidoException: hi!");
         java.lang.Class<?> wildcardClass2 = ladoInvalidoException1.getClass();
         org.junit.Assert.assertNotNull(wildcardClass2);
     }
 
     @Test
-    public void test0308() throws Throwable {
+    public void test0324() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0308");
+            System.out.format("%n%s%n", "RegressionTest0.test0324");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 1, (float) (short) 0);
         java.lang.Class<?> wildcardClass3 = contaCorrente2.getClass();
         org.junit.Assert.assertNotNull(wildcardClass3);
     }
 
     @Test
-    public void test0309() throws Throwable {
+    public void test0325() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0309");
+            System.out.format("%n%s%n", "RegressionTest0.test0325");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str3 = codigos.Triangulo.classificaTriangulo((int) (short) 0, 0, (int) (short) -1);
@@ -6208,9 +6434,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0310() throws Throwable {
+    public void test0326() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0310");
+            System.out.format("%n%s%n", "RegressionTest0.test0326");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) 2, 9.0f);
         float float3 = contaCorrente2.getSaldo();
         float float4 = contaCorrente2.getLimite();
@@ -6226,9 +6452,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0311() throws Throwable {
+    public void test0327() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0311");
+            System.out.format("%n%s%n", "RegressionTest0.test0327");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str3 = codigos.Triangulo.classificaTriangulo((int) (byte) 0, 4, (int) (short) 10);
@@ -6239,9 +6465,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0312() throws Throwable {
+    public void test0328() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0312");
+            System.out.format("%n%s%n", "RegressionTest0.test0328");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 100, (-1.0f));
         float float3 = contaCorrente2.getSaldo();
         contaCorrente2.setSaldo(100.0f);
@@ -6258,9 +6484,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0313() throws Throwable {
+    public void test0329() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0313");
+            System.out.format("%n%s%n", "RegressionTest0.test0329");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (short) 10, 1.0f);
         // The following exception was thrown during execution in test generation
         try {
@@ -6272,25 +6498,44 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0314() throws Throwable {
+    public void test0330() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0314");
+            System.out.format("%n%s%n", "RegressionTest0.test0330");
         java.lang.String str3 = codigos.Triangulo.classificaTriangulo((int) (byte) 100, (int) (byte) 10, 0);
         org.junit.Assert.assertEquals("'" + str3 + "' != '" + "NAO FORMA TRIANGULO" + "'", str3, "NAO FORMA TRIANGULO");
     }
 
     @Test
-    public void test0315() throws Throwable {
+    public void test0331() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0315");
+            System.out.format("%n%s%n", "RegressionTest0.test0331");
         java.lang.String str3 = codigos.Triangulo.classificaTriangulo((int) (short) 10, (int) 'a', (int) 'a');
         org.junit.Assert.assertEquals("'" + str3 + "' != '" + "ISOSCELES" + "'", str3, "ISOSCELES");
     }
 
     @Test
-    public void test0316() throws Throwable {
+    public void test0332() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0316");
+            System.out.format("%n%s%n", "RegressionTest0.test0332");
+        codigos.Words words0 = new codigos.Words();
+        int int2 = words0.countWords("");
+        int int4 = words0.countWords("codigos.LadoInvalidoException: codigos.LadoInvalidoException: hi!");
+        int int6 = words0.countWords("codigos.LadoInvalidoException: codigos.LadoInvalidoException: ");
+        int int8 = words0.countWords("codigos.LadoInvalidoException: hi!");
+        int int10 = words0.countWords("");
+        int int12 = words0.countWords("NAO FORMA TRIANGULO");
+        org.junit.Assert.assertTrue("'" + int2 + "' != '" + 0 + "'", int2 == 0);
+        org.junit.Assert.assertTrue("'" + int4 + "' != '" + 2 + "'", int4 == 2);
+        org.junit.Assert.assertTrue("'" + int6 + "' != '" + 2 + "'", int6 == 2);
+        org.junit.Assert.assertTrue("'" + int8 + "' != '" + 1 + "'", int8 == 1);
+        org.junit.Assert.assertTrue("'" + int10 + "' != '" + 0 + "'", int10 == 0);
+        org.junit.Assert.assertTrue("'" + int12 + "' != '" + 0 + "'", int12 == 0);
+    }
+
+    @Test
+    public void test0333() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test0333");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str3 = codigos.Triangulo.classificaTriangulo(1, (int) (short) 0, 10);
@@ -6301,18 +6546,18 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0317() throws Throwable {
+    public void test0334() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0317");
+            System.out.format("%n%s%n", "RegressionTest0.test0334");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (short) -1, 97.0f);
         java.lang.Class<?> wildcardClass3 = contaCorrente2.getClass();
         org.junit.Assert.assertNotNull(wildcardClass3);
     }
 
     @Test
-    public void test0318() throws Throwable {
+    public void test0335() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0318");
+            System.out.format("%n%s%n", "RegressionTest0.test0335");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException3);
@@ -6371,9 +6616,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0319() throws Throwable {
+    public void test0336() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0319");
+            System.out.format("%n%s%n", "RegressionTest0.test0336");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str3 = codigos.Triangulo.classificaTriangulo((int) (byte) -1, 100, 3);
@@ -6384,17 +6629,17 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0320() throws Throwable {
+    public void test0337() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0320");
+            System.out.format("%n%s%n", "RegressionTest0.test0337");
         java.lang.String str3 = codigos.Triangulo.classificaTriangulo((int) ' ', (int) (short) 10, (int) (short) 1);
         org.junit.Assert.assertEquals("'" + str3 + "' != '" + "NAO FORMA TRIANGULO" + "'", str3, "NAO FORMA TRIANGULO");
     }
 
     @Test
-    public void test0321() throws Throwable {
+    public void test0338() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0321");
+            System.out.format("%n%s%n", "RegressionTest0.test0338");
         codigos.Words words0 = new codigos.Words();
         int int2 = words0.countWords("");
         int int4 = words0.countWords("codigos.LadoInvalidoException: codigos.LadoInvalidoException: hi!");
@@ -6409,9 +6654,22 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0322() throws Throwable {
+    public void test0339() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0322");
+            System.out.format("%n%s%n", "RegressionTest0.test0339");
+        codigos.Words words0 = new codigos.Words();
+        int int2 = words0.countWords("ESCALENO");
+        int int4 = words0.countWords("codigos.LadoInvalidoException: codigos.LadoInvalidoException: codigos.LadoInvalidoException: ");
+        int int6 = words0.countWords("ISOSCELES");
+        org.junit.Assert.assertTrue("'" + int2 + "' != '" + 0 + "'", int2 == 0);
+        org.junit.Assert.assertTrue("'" + int4 + "' != '" + 3 + "'", int4 == 3);
+        org.junit.Assert.assertTrue("'" + int6 + "' != '" + 0 + "'", int6 == 0);
+    }
+
+    @Test
+    public void test0340() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test0340");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 100, (-1.0f));
         float float3 = contaCorrente2.getSaldo();
         contaCorrente2.setSaldo(100.0f);
@@ -6431,9 +6689,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0323() throws Throwable {
+    public void test0341() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0323");
+            System.out.format("%n%s%n", "RegressionTest0.test0341");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("codigos.LadoInvalidoException: hi!");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("hi!");
         ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException3);
@@ -6504,9 +6762,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0324() throws Throwable {
+    public void test0342() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0324");
+            System.out.format("%n%s%n", "RegressionTest0.test0342");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str3 = codigos.Triangulo.classificaTriangulo((int) (byte) 0, (int) '4', (int) (short) -1);
@@ -6517,9 +6775,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0325() throws Throwable {
+    public void test0343() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0325");
+            System.out.format("%n%s%n", "RegressionTest0.test0343");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 100, (-1.0f));
         float float3 = contaCorrente2.getLimite();
         float float4 = contaCorrente2.getSaldo();
@@ -6541,9 +6799,54 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0326() throws Throwable {
+    public void test0344() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0326");
+            System.out.format("%n%s%n", "RegressionTest0.test0344");
+        codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 100, (-1.0f));
+        float float3 = contaCorrente2.getLimite();
+        float float4 = contaCorrente2.getSaldo();
+        float float5 = contaCorrente2.getLimite();
+        float float6 = contaCorrente2.getSaldo();
+        contaCorrente2.setLimite((float) (byte) 10);
+        contaCorrente2.setSaldo((float) 100L);
+        contaCorrente2.setSaldo(90.0f);
+        float float13 = contaCorrente2.getSaldo();
+        contaCorrente2.setSaldo(0.0f);
+        contaCorrente2.setLimite((-11.0f));
+        org.junit.Assert.assertTrue("'" + float3 + "' != '" + (-1.0f) + "'", float3 == (-1.0f));
+        org.junit.Assert.assertTrue("'" + float4 + "' != '" + 100.0f + "'", float4 == 100.0f);
+        org.junit.Assert.assertTrue("'" + float5 + "' != '" + (-1.0f) + "'", float5 == (-1.0f));
+        org.junit.Assert.assertTrue("'" + float6 + "' != '" + 100.0f + "'", float6 == 100.0f);
+        org.junit.Assert.assertTrue("'" + float13 + "' != '" + 90.0f + "'", float13 == 90.0f);
+    }
+
+    @Test
+    public void test0345() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test0345");
+        codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 100, (-1.0f));
+        float float3 = contaCorrente2.getLimite();
+        float float4 = contaCorrente2.getSaldo();
+        float float5 = contaCorrente2.getLimite();
+        float float6 = contaCorrente2.getSaldo();
+        contaCorrente2.setLimite((float) (byte) 10);
+        contaCorrente2.setSaldo((float) 100L);
+        contaCorrente2.setSaldo((float) (byte) 10);
+        contaCorrente2.setLimite((float) (byte) 100);
+        contaCorrente2.setLimite((float) 3);
+        float float17 = contaCorrente2.getSaldo();
+        contaCorrente2.setSaldo((float) (byte) 0);
+        org.junit.Assert.assertTrue("'" + float3 + "' != '" + (-1.0f) + "'", float3 == (-1.0f));
+        org.junit.Assert.assertTrue("'" + float4 + "' != '" + 100.0f + "'", float4 == 100.0f);
+        org.junit.Assert.assertTrue("'" + float5 + "' != '" + (-1.0f) + "'", float5 == (-1.0f));
+        org.junit.Assert.assertTrue("'" + float6 + "' != '" + 100.0f + "'", float6 == 100.0f);
+        org.junit.Assert.assertTrue("'" + float17 + "' != '" + 10.0f + "'", float17 == 10.0f);
+    }
+
+    @Test
+    public void test0346() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test0346");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str3 = codigos.Triangulo.classificaTriangulo(2, 0, (int) (byte) 1);
@@ -6554,9 +6857,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0327() throws Throwable {
+    public void test0347() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0327");
+            System.out.format("%n%s%n", "RegressionTest0.test0347");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 100, (-1.0f));
         float float3 = contaCorrente2.getLimite();
         float float4 = contaCorrente2.getSaldo();
@@ -6575,9 +6878,26 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0328() throws Throwable {
+    public void test0348() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0328");
+            System.out.format("%n%s%n", "RegressionTest0.test0348");
+        codigos.Pedido pedido0 = new codigos.Pedido();
+        float float4 = pedido0.calculaTaxaDesconto(true, "codigos.LadoInvalidoException: ", 1.0f);
+        float float8 = pedido0.calculaTaxaDesconto(false, "", (float) 1);
+        float float12 = pedido0.calculaTaxaDesconto(false, "hi!", (float) (short) 100);
+        float float16 = pedido0.calculaTaxaDesconto(true, "codigos.LadoInvalidoException: codigos.LadoInvalidoException: codigos.LadoInvalidoException: codigos.LadoInvalidoException: ", 42.0f);
+        float float20 = pedido0.calculaTaxaDesconto(false, "NAO FORMA TRIANGULO", (-48.0f));
+        org.junit.Assert.assertTrue("'" + float4 + "' != '" + 10.0f + "'", float4 == 10.0f);
+        org.junit.Assert.assertTrue("'" + float8 + "' != '" + 0.0f + "'", float8 == 0.0f);
+        org.junit.Assert.assertTrue("'" + float12 + "' != '" + 0.0f + "'", float12 == 0.0f);
+        org.junit.Assert.assertTrue("'" + float16 + "' != '" + 10.0f + "'", float16 == 10.0f);
+        org.junit.Assert.assertTrue("'" + float20 + "' != '" + 0.0f + "'", float20 == 0.0f);
+    }
+
+    @Test
+    public void test0349() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test0349");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException3);
@@ -6614,9 +6934,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0329() throws Throwable {
+    public void test0350() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0329");
+            System.out.format("%n%s%n", "RegressionTest0.test0350");
         codigos.Pedido pedido0 = new codigos.Pedido();
         float float4 = pedido0.calculaTaxaDesconto(false, "codigos.LadoInvalidoException: codigos.LadoInvalidoException: ", (float) (short) 10);
         float float8 = pedido0.calculaTaxaDesconto(true, "codigos.LadoInvalidoException: ", (float) (-1));
@@ -6625,17 +6945,17 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0330() throws Throwable {
+    public void test0351() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0330");
+            System.out.format("%n%s%n", "RegressionTest0.test0351");
         java.lang.String str3 = codigos.Triangulo.classificaTriangulo(10, (int) (short) 100, 0);
         org.junit.Assert.assertEquals("'" + str3 + "' != '" + "NAO FORMA TRIANGULO" + "'", str3, "NAO FORMA TRIANGULO");
     }
 
     @Test
-    public void test0331() throws Throwable {
+    public void test0352() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0331");
+            System.out.format("%n%s%n", "RegressionTest0.test0352");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str3 = codigos.Triangulo.classificaTriangulo(0, (-1), (int) (byte) 0);
@@ -6646,17 +6966,17 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0332() throws Throwable {
+    public void test0353() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0332");
+            System.out.format("%n%s%n", "RegressionTest0.test0353");
         java.lang.String str3 = codigos.Triangulo.classificaTriangulo(10, (int) (byte) 1, (int) (short) 0);
         org.junit.Assert.assertEquals("'" + str3 + "' != '" + "NAO FORMA TRIANGULO" + "'", str3, "NAO FORMA TRIANGULO");
     }
 
     @Test
-    public void test0333() throws Throwable {
+    public void test0354() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0333");
+            System.out.format("%n%s%n", "RegressionTest0.test0354");
         codigos.Pedido pedido0 = new codigos.Pedido();
         float float4 = pedido0.calculaTaxaDesconto(true, "codigos.LadoInvalidoException: ", (float) (short) -1);
         java.lang.Class<?> wildcardClass5 = pedido0.getClass();
@@ -6665,9 +6985,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0334() throws Throwable {
+    public void test0355() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0334");
+            System.out.format("%n%s%n", "RegressionTest0.test0355");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 100, (-1.0f));
         float float3 = contaCorrente2.getLimite();
         float float4 = contaCorrente2.getSaldo();
@@ -6693,16 +7013,16 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0335() throws Throwable {
+    public void test0356() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0335");
+            System.out.format("%n%s%n", "RegressionTest0.test0356");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) 0L, 91.0f);
     }
 
     @Test
-    public void test0336() throws Throwable {
+    public void test0357() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0336");
+            System.out.format("%n%s%n", "RegressionTest0.test0357");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException3);
@@ -6767,9 +7087,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0337() throws Throwable {
+    public void test0358() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0337");
+            System.out.format("%n%s%n", "RegressionTest0.test0358");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str3 = codigos.Triangulo.classificaTriangulo((int) 'a', (int) (short) -1, (int) (byte) -1);
@@ -6780,9 +7100,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0338() throws Throwable {
+    public void test0359() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0338");
+            System.out.format("%n%s%n", "RegressionTest0.test0359");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException3);
@@ -6803,9 +7123,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0339() throws Throwable {
+    public void test0360() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0339");
+            System.out.format("%n%s%n", "RegressionTest0.test0360");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) '#', 1.0f);
         contaCorrente2.setSaldo((float) (short) 10);
         java.lang.Class<?> wildcardClass5 = contaCorrente2.getClass();
@@ -6813,9 +7133,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0340() throws Throwable {
+    public void test0361() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0340");
+            System.out.format("%n%s%n", "RegressionTest0.test0361");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException3);
@@ -6836,17 +7156,40 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0341() throws Throwable {
+    public void test0362() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0341");
+            System.out.format("%n%s%n", "RegressionTest0.test0362");
         java.lang.String str3 = codigos.Triangulo.classificaTriangulo((int) ' ', 1, (int) ' ');
         org.junit.Assert.assertEquals("'" + str3 + "' != '" + "ISOSCELES" + "'", str3, "ISOSCELES");
     }
 
     @Test
-    public void test0342() throws Throwable {
+    public void test0363() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0342");
+            System.out.format("%n%s%n", "RegressionTest0.test0363");
+        codigos.Pedido pedido0 = new codigos.Pedido();
+        float float4 = pedido0.calculaTaxaDesconto(true, "codigos.LadoInvalidoException: ", 1.0f);
+        float float8 = pedido0.calculaTaxaDesconto(false, "codigos.LadoInvalidoException: hi!", (float) (short) 10);
+        float float12 = pedido0.calculaTaxaDesconto(true, "NAO FORMA TRIANGULO", (float) 0L);
+        float float16 = pedido0.calculaTaxaDesconto(true, "", 1.0f);
+        float float20 = pedido0.calculaTaxaDesconto(false, "NAO FORMA TRIANGULO", (float) (-1L));
+        float float24 = pedido0.calculaTaxaDesconto(false, "codigos.LadoInvalidoException: codigos.LadoInvalidoException: hi!", (float) 100);
+        float float28 = pedido0.calculaTaxaDesconto(false, "codigos.LadoInvalidoException: codigos.LadoInvalidoException: ", (float) (byte) 100);
+        float float32 = pedido0.calculaTaxaDesconto(false, "", 96.0f);
+        org.junit.Assert.assertTrue("'" + float4 + "' != '" + 10.0f + "'", float4 == 10.0f);
+        org.junit.Assert.assertTrue("'" + float8 + "' != '" + 0.0f + "'", float8 == 0.0f);
+        org.junit.Assert.assertTrue("'" + float12 + "' != '" + 10.0f + "'", float12 == 10.0f);
+        org.junit.Assert.assertTrue("'" + float16 + "' != '" + 10.0f + "'", float16 == 10.0f);
+        org.junit.Assert.assertTrue("'" + float20 + "' != '" + 0.0f + "'", float20 == 0.0f);
+        org.junit.Assert.assertTrue("'" + float24 + "' != '" + 0.0f + "'", float24 == 0.0f);
+        org.junit.Assert.assertTrue("'" + float28 + "' != '" + 0.0f + "'", float28 == 0.0f);
+        org.junit.Assert.assertTrue("'" + float32 + "' != '" + 0.0f + "'", float32 == 0.0f);
+    }
+
+    @Test
+    public void test0364() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test0364");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 100, (-1.0f));
         float float3 = contaCorrente2.getLimite();
         float float4 = contaCorrente2.getSaldo();
@@ -6867,9 +7210,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0343() throws Throwable {
+    public void test0365() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0343");
+            System.out.format("%n%s%n", "RegressionTest0.test0365");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str3 = codigos.Triangulo.classificaTriangulo((int) (short) 1, (-1), 0);
@@ -6880,9 +7223,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0344() throws Throwable {
+    public void test0366() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0344");
+            System.out.format("%n%s%n", "RegressionTest0.test0366");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) 0, (float) 10L);
         float float3 = contaCorrente2.getSaldo();
         contaCorrente2.setSaldo(0.0f);
@@ -6892,33 +7235,33 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0345() throws Throwable {
+    public void test0367() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0345");
+            System.out.format("%n%s%n", "RegressionTest0.test0367");
         boolean boolean1 = codigos.Identifier.validaIdentificador("ISOSCELES");
         org.junit.Assert.assertTrue("'" + boolean1 + "' != '" + false + "'", boolean1 == false);
     }
 
     @Test
-    public void test0346() throws Throwable {
+    public void test0368() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0346");
+            System.out.format("%n%s%n", "RegressionTest0.test0368");
         java.lang.String str3 = codigos.Triangulo.classificaTriangulo(4, 100, (int) '#');
         org.junit.Assert.assertEquals("'" + str3 + "' != '" + "NAO FORMA TRIANGULO" + "'", str3, "NAO FORMA TRIANGULO");
     }
 
     @Test
-    public void test0347() throws Throwable {
+    public void test0369() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0347");
+            System.out.format("%n%s%n", "RegressionTest0.test0369");
         java.lang.String str3 = codigos.Triangulo.classificaTriangulo(4, 100, (int) (short) 1);
         org.junit.Assert.assertEquals("'" + str3 + "' != '" + "NAO FORMA TRIANGULO" + "'", str3, "NAO FORMA TRIANGULO");
     }
 
     @Test
-    public void test0348() throws Throwable {
+    public void test0370() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0348");
+            System.out.format("%n%s%n", "RegressionTest0.test0370");
         codigos.Words words0 = new codigos.Words();
         int int2 = words0.countWords("codigos.LadoInvalidoException: hi!");
         int int4 = words0.countWords("codigos.LadoInvalidoException: hi!");
@@ -6931,9 +7274,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0349() throws Throwable {
+    public void test0371() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0349");
+            System.out.format("%n%s%n", "RegressionTest0.test0371");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("codigos.LadoInvalidoException: codigos.LadoInvalidoException: ");
         java.lang.Throwable[] throwableArray2 = ladoInvalidoException1.getSuppressed();
         codigos.LadoInvalidoException ladoInvalidoException4 = new codigos.LadoInvalidoException("");
@@ -7010,9 +7353,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0350() throws Throwable {
+    public void test0372() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0350");
+            System.out.format("%n%s%n", "RegressionTest0.test0372");
         codigos.Pedido pedido0 = new codigos.Pedido();
         float float4 = pedido0.calculaTaxaDesconto(true, "codigos.LadoInvalidoException: ", 1.0f);
         float float8 = pedido0.calculaTaxaDesconto(false, "", (float) 1);
@@ -7031,9 +7374,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0351() throws Throwable {
+    public void test0373() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0351");
+            System.out.format("%n%s%n", "RegressionTest0.test0373");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 100, (-1.0f));
         float float3 = contaCorrente2.getLimite();
         float float4 = contaCorrente2.getSaldo();
@@ -7049,9 +7392,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0352() throws Throwable {
+    public void test0374() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0352");
+            System.out.format("%n%s%n", "RegressionTest0.test0374");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 0, (float) ' ');
         float float4 = contaCorrente2.saque((float) (byte) 1);
         float float6 = contaCorrente2.saque((float) (short) 10);
@@ -7069,9 +7412,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0353() throws Throwable {
+    public void test0375() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0353");
+            System.out.format("%n%s%n", "RegressionTest0.test0375");
         codigos.Words words0 = new codigos.Words();
         int int2 = words0.countWords("codigos.LadoInvalidoException: hi!");
         int int4 = words0.countWords("NAO FORMA TRIANGULO");
@@ -7090,9 +7433,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0354() throws Throwable {
+    public void test0376() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0354");
+            System.out.format("%n%s%n", "RegressionTest0.test0376");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente(90.0f, (float) (-1));
         float float4 = contaCorrente2.saque(67.0f);
         java.lang.Class<?> wildcardClass5 = contaCorrente2.getClass();
@@ -7101,9 +7444,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0355() throws Throwable {
+    public void test0377() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0355");
+            System.out.format("%n%s%n", "RegressionTest0.test0377");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente(1.0f, (float) '4');
         float float3 = contaCorrente2.getSaldo();
         contaCorrente2.setLimite(2.0f);
@@ -7111,9 +7454,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0356() throws Throwable {
+    public void test0378() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0356");
+            System.out.format("%n%s%n", "RegressionTest0.test0378");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str3 = codigos.Triangulo.classificaTriangulo((int) (byte) 10, (int) (short) 10, (int) (byte) -1);
@@ -7124,17 +7467,17 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0357() throws Throwable {
+    public void test0379() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0357");
+            System.out.format("%n%s%n", "RegressionTest0.test0379");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (short) 0, (float) (short) 1);
         contaCorrente2.setSaldo((float) 1);
     }
 
     @Test
-    public void test0358() throws Throwable {
+    public void test0380() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0358");
+            System.out.format("%n%s%n", "RegressionTest0.test0380");
         codigos.Words words0 = new codigos.Words();
         int int2 = words0.countWords("");
         int int4 = words0.countWords("codigos.LadoInvalidoException: codigos.LadoInvalidoException: hi!");
@@ -7147,9 +7490,24 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0359() throws Throwable {
+    public void test0381() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0359");
+            System.out.format("%n%s%n", "RegressionTest0.test0381");
+        codigos.Pedido pedido0 = new codigos.Pedido();
+        float float4 = pedido0.calculaTaxaDesconto(true, "codigos.LadoInvalidoException: ", 1.0f);
+        float float8 = pedido0.calculaTaxaDesconto(false, "codigos.LadoInvalidoException: hi!", (float) (short) 10);
+        float float12 = pedido0.calculaTaxaDesconto(true, "NAO FORMA TRIANGULO", (float) 0L);
+        float float16 = pedido0.calculaTaxaDesconto(false, "hi!", (float) (short) 0);
+        org.junit.Assert.assertTrue("'" + float4 + "' != '" + 10.0f + "'", float4 == 10.0f);
+        org.junit.Assert.assertTrue("'" + float8 + "' != '" + 0.0f + "'", float8 == 0.0f);
+        org.junit.Assert.assertTrue("'" + float12 + "' != '" + 10.0f + "'", float12 == 10.0f);
+        org.junit.Assert.assertTrue("'" + float16 + "' != '" + 0.0f + "'", float16 == 0.0f);
+    }
+
+    @Test
+    public void test0382() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test0382");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 10, 0.0f);
         contaCorrente2.setSaldo((float) (byte) 0);
         // The following exception was thrown during execution in test generation
@@ -7162,9 +7520,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0360() throws Throwable {
+    public void test0383() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0360");
+            System.out.format("%n%s%n", "RegressionTest0.test0383");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 0, (float) ' ');
         float float4 = contaCorrente2.saque((float) (byte) 1);
         float float5 = contaCorrente2.getSaldo();
@@ -7180,9 +7538,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0361() throws Throwable {
+    public void test0384() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0361");
+            System.out.format("%n%s%n", "RegressionTest0.test0384");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException5 = new codigos.LadoInvalidoException("");
@@ -7261,9 +7619,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0362() throws Throwable {
+    public void test0385() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0362");
+            System.out.format("%n%s%n", "RegressionTest0.test0385");
         codigos.Words words0 = new codigos.Words();
         int int2 = words0.countWords("codigos.LadoInvalidoException: hi!");
         int int4 = words0.countWords("NAO FORMA TRIANGULO");
@@ -7282,9 +7640,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0363() throws Throwable {
+    public void test0386() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0363");
+            System.out.format("%n%s%n", "RegressionTest0.test0386");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente(32.0f, (float) (byte) 0);
         contaCorrente2.setSaldo(10.0f);
         // The following exception was thrown during execution in test generation
@@ -7297,9 +7655,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0364() throws Throwable {
+    public void test0387() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0364");
+            System.out.format("%n%s%n", "RegressionTest0.test0387");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException3);
@@ -7320,9 +7678,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0365() throws Throwable {
+    public void test0388() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0365");
+            System.out.format("%n%s%n", "RegressionTest0.test0388");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente(0.0f, (float) 100L);
         float float3 = contaCorrente2.getSaldo();
         // The following exception was thrown during execution in test generation
@@ -7336,9 +7694,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0366() throws Throwable {
+    public void test0389() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0366");
+            System.out.format("%n%s%n", "RegressionTest0.test0389");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) '#', 2.0f);
         contaCorrente2.setSaldo((float) 0L);
         contaCorrente2.setSaldo((float) (short) 1);
@@ -7352,9 +7710,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0367() throws Throwable {
+    public void test0390() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0367");
+            System.out.format("%n%s%n", "RegressionTest0.test0390");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str3 = codigos.Triangulo.classificaTriangulo((int) (byte) 10, 4, (int) (short) -1);
@@ -7365,9 +7723,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0368() throws Throwable {
+    public void test0391() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0368");
+            System.out.format("%n%s%n", "RegressionTest0.test0391");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException3);
@@ -7392,9 +7750,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0369() throws Throwable {
+    public void test0392() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0369");
+            System.out.format("%n%s%n", "RegressionTest0.test0392");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 100, (-1.0f));
         float float3 = contaCorrente2.getLimite();
         float float4 = contaCorrente2.getSaldo();
@@ -7420,9 +7778,86 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0370() throws Throwable {
+    public void test0393() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0370");
+            System.out.format("%n%s%n", "RegressionTest0.test0393");
+        codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("ESCALENO");
+        java.lang.Throwable[] throwableArray2 = ladoInvalidoException1.getSuppressed();
+        codigos.LadoInvalidoException ladoInvalidoException4 = new codigos.LadoInvalidoException("");
+        java.lang.Throwable[] throwableArray5 = ladoInvalidoException4.getSuppressed();
+        codigos.LadoInvalidoException ladoInvalidoException7 = new codigos.LadoInvalidoException("hi!");
+        codigos.LadoInvalidoException ladoInvalidoException9 = new codigos.LadoInvalidoException("");
+        codigos.LadoInvalidoException ladoInvalidoException11 = new codigos.LadoInvalidoException("");
+        ladoInvalidoException9.addSuppressed((java.lang.Throwable) ladoInvalidoException11);
+        codigos.LadoInvalidoException ladoInvalidoException14 = new codigos.LadoInvalidoException("");
+        codigos.LadoInvalidoException ladoInvalidoException16 = new codigos.LadoInvalidoException("");
+        codigos.LadoInvalidoException ladoInvalidoException18 = new codigos.LadoInvalidoException("");
+        ladoInvalidoException16.addSuppressed((java.lang.Throwable) ladoInvalidoException18);
+        ladoInvalidoException14.addSuppressed((java.lang.Throwable) ladoInvalidoException18);
+        java.lang.Throwable[] throwableArray21 = ladoInvalidoException18.getSuppressed();
+        ladoInvalidoException11.addSuppressed((java.lang.Throwable) ladoInvalidoException18);
+        ladoInvalidoException7.addSuppressed((java.lang.Throwable) ladoInvalidoException18);
+        codigos.LadoInvalidoException ladoInvalidoException25 = new codigos.LadoInvalidoException("codigos.LadoInvalidoException: codigos.LadoInvalidoException: hi!");
+        codigos.LadoInvalidoException ladoInvalidoException27 = new codigos.LadoInvalidoException("");
+        codigos.LadoInvalidoException ladoInvalidoException29 = new codigos.LadoInvalidoException("");
+        ladoInvalidoException27.addSuppressed((java.lang.Throwable) ladoInvalidoException29);
+        codigos.LadoInvalidoException ladoInvalidoException32 = new codigos.LadoInvalidoException("");
+        codigos.LadoInvalidoException ladoInvalidoException34 = new codigos.LadoInvalidoException("");
+        codigos.LadoInvalidoException ladoInvalidoException36 = new codigos.LadoInvalidoException("");
+        ladoInvalidoException34.addSuppressed((java.lang.Throwable) ladoInvalidoException36);
+        ladoInvalidoException32.addSuppressed((java.lang.Throwable) ladoInvalidoException36);
+        java.lang.Throwable[] throwableArray39 = ladoInvalidoException36.getSuppressed();
+        ladoInvalidoException29.addSuppressed((java.lang.Throwable) ladoInvalidoException36);
+        java.lang.Throwable[] throwableArray41 = ladoInvalidoException36.getSuppressed();
+        codigos.LadoInvalidoException ladoInvalidoException43 = new codigos.LadoInvalidoException("");
+        codigos.LadoInvalidoException ladoInvalidoException45 = new codigos.LadoInvalidoException("");
+        ladoInvalidoException43.addSuppressed((java.lang.Throwable) ladoInvalidoException45);
+        codigos.LadoInvalidoException ladoInvalidoException48 = new codigos.LadoInvalidoException("hi!");
+        ladoInvalidoException45.addSuppressed((java.lang.Throwable) ladoInvalidoException48);
+        codigos.LadoInvalidoException ladoInvalidoException51 = new codigos.LadoInvalidoException("");
+        codigos.LadoInvalidoException ladoInvalidoException53 = new codigos.LadoInvalidoException("");
+        ladoInvalidoException51.addSuppressed((java.lang.Throwable) ladoInvalidoException53);
+        codigos.LadoInvalidoException ladoInvalidoException56 = new codigos.LadoInvalidoException("");
+        codigos.LadoInvalidoException ladoInvalidoException58 = new codigos.LadoInvalidoException("");
+        codigos.LadoInvalidoException ladoInvalidoException60 = new codigos.LadoInvalidoException("");
+        ladoInvalidoException58.addSuppressed((java.lang.Throwable) ladoInvalidoException60);
+        ladoInvalidoException56.addSuppressed((java.lang.Throwable) ladoInvalidoException60);
+        java.lang.Throwable[] throwableArray63 = ladoInvalidoException60.getSuppressed();
+        ladoInvalidoException53.addSuppressed((java.lang.Throwable) ladoInvalidoException60);
+        codigos.LadoInvalidoException ladoInvalidoException66 = new codigos.LadoInvalidoException("");
+        codigos.LadoInvalidoException ladoInvalidoException68 = new codigos.LadoInvalidoException("");
+        ladoInvalidoException66.addSuppressed((java.lang.Throwable) ladoInvalidoException68);
+        codigos.LadoInvalidoException ladoInvalidoException71 = new codigos.LadoInvalidoException("");
+        codigos.LadoInvalidoException ladoInvalidoException73 = new codigos.LadoInvalidoException("");
+        codigos.LadoInvalidoException ladoInvalidoException75 = new codigos.LadoInvalidoException("");
+        ladoInvalidoException73.addSuppressed((java.lang.Throwable) ladoInvalidoException75);
+        ladoInvalidoException71.addSuppressed((java.lang.Throwable) ladoInvalidoException75);
+        java.lang.Throwable[] throwableArray78 = ladoInvalidoException75.getSuppressed();
+        ladoInvalidoException68.addSuppressed((java.lang.Throwable) ladoInvalidoException75);
+        java.lang.Throwable[] throwableArray80 = ladoInvalidoException75.getSuppressed();
+        ladoInvalidoException60.addSuppressed((java.lang.Throwable) ladoInvalidoException75);
+        ladoInvalidoException45.addSuppressed((java.lang.Throwable) ladoInvalidoException60);
+        ladoInvalidoException36.addSuppressed((java.lang.Throwable) ladoInvalidoException45);
+        ladoInvalidoException25.addSuppressed((java.lang.Throwable) ladoInvalidoException36);
+        ladoInvalidoException18.addSuppressed((java.lang.Throwable) ladoInvalidoException25);
+        ladoInvalidoException4.addSuppressed((java.lang.Throwable) ladoInvalidoException18);
+        ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException18);
+        java.lang.Throwable[] throwableArray88 = ladoInvalidoException1.getSuppressed();
+        org.junit.Assert.assertNotNull(throwableArray2);
+        org.junit.Assert.assertNotNull(throwableArray5);
+        org.junit.Assert.assertNotNull(throwableArray21);
+        org.junit.Assert.assertNotNull(throwableArray39);
+        org.junit.Assert.assertNotNull(throwableArray41);
+        org.junit.Assert.assertNotNull(throwableArray63);
+        org.junit.Assert.assertNotNull(throwableArray78);
+        org.junit.Assert.assertNotNull(throwableArray80);
+        org.junit.Assert.assertNotNull(throwableArray88);
+    }
+
+    @Test
+    public void test0394() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test0394");
         codigos.Pedido pedido0 = new codigos.Pedido();
         float float4 = pedido0.calculaTaxaDesconto(true, "codigos.LadoInvalidoException: ", 1.0f);
         float float8 = pedido0.calculaTaxaDesconto(false, "codigos.LadoInvalidoException: hi!", (float) (short) 10);
@@ -7435,9 +7870,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0371() throws Throwable {
+    public void test0395() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0371");
+            System.out.format("%n%s%n", "RegressionTest0.test0395");
         codigos.Pedido pedido0 = new codigos.Pedido();
         float float4 = pedido0.calculaTaxaDesconto(true, "codigos.LadoInvalidoException: ", 1.0f);
         float float8 = pedido0.calculaTaxaDesconto(false, "NAO FORMA TRIANGULO", 10.0f);
@@ -7448,9 +7883,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0372() throws Throwable {
+    public void test0396() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0372");
+            System.out.format("%n%s%n", "RegressionTest0.test0396");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str3 = codigos.Triangulo.classificaTriangulo(10, (int) (short) 0, 1);
@@ -7461,9 +7896,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0373() throws Throwable {
+    public void test0397() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0373");
+            System.out.format("%n%s%n", "RegressionTest0.test0397");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str3 = codigos.Triangulo.classificaTriangulo(0, 10, (int) '#');
@@ -7474,9 +7909,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0374() throws Throwable {
+    public void test0398() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0374");
+            System.out.format("%n%s%n", "RegressionTest0.test0398");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException3);
@@ -7563,9 +7998,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0375() throws Throwable {
+    public void test0399() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0375");
+            System.out.format("%n%s%n", "RegressionTest0.test0399");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("NAO FORMA TRIANGULO");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException5 = new codigos.LadoInvalidoException("");
@@ -7614,9 +8049,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0376() throws Throwable {
+    public void test0400() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0376");
+            System.out.format("%n%s%n", "RegressionTest0.test0400");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str3 = codigos.Triangulo.classificaTriangulo(0, (-1), (int) '#');
@@ -7627,9 +8062,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0377() throws Throwable {
+    public void test0401() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0377");
+            System.out.format("%n%s%n", "RegressionTest0.test0401");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (short) 100, (float) (short) 10);
         float float3 = contaCorrente2.getSaldo();
         contaCorrente2.setSaldo(10.0f);
@@ -7639,9 +8074,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0378() throws Throwable {
+    public void test0402() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0378");
+            System.out.format("%n%s%n", "RegressionTest0.test0402");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException3);
@@ -7700,9 +8135,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0379() throws Throwable {
+    public void test0403() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0379");
+            System.out.format("%n%s%n", "RegressionTest0.test0403");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente(1.0f, 42.0f);
         contaCorrente2.setLimite((-1.0f));
         java.lang.Class<?> wildcardClass5 = contaCorrente2.getClass();
@@ -7710,9 +8145,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0380() throws Throwable {
+    public void test0404() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0380");
+            System.out.format("%n%s%n", "RegressionTest0.test0404");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException3);
@@ -7773,9 +8208,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0381() throws Throwable {
+    public void test0405() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0381");
+            System.out.format("%n%s%n", "RegressionTest0.test0405");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 100, (-1.0f));
         float float3 = contaCorrente2.getSaldo();
         contaCorrente2.setSaldo(100.0f);
@@ -7790,9 +8225,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0382() throws Throwable {
+    public void test0406() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0382");
+            System.out.format("%n%s%n", "RegressionTest0.test0406");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (short) 10, (float) ' ');
         float float3 = contaCorrente2.getLimite();
         float float4 = contaCorrente2.getLimite();
@@ -7801,9 +8236,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0383() throws Throwable {
+    public void test0407() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0383");
+            System.out.format("%n%s%n", "RegressionTest0.test0407");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException3);
@@ -7876,9 +8311,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0384() throws Throwable {
+    public void test0408() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0384");
+            System.out.format("%n%s%n", "RegressionTest0.test0408");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 100, (-1.0f));
         float float3 = contaCorrente2.getLimite();
         float float4 = contaCorrente2.getLimite();
@@ -7895,9 +8330,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0385() throws Throwable {
+    public void test0409() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0385");
+            System.out.format("%n%s%n", "RegressionTest0.test0409");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente(91.0f, (float) (-1));
         // The following exception was thrown during execution in test generation
         try {
@@ -7909,9 +8344,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0386() throws Throwable {
+    public void test0410() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0386");
+            System.out.format("%n%s%n", "RegressionTest0.test0410");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException3);
@@ -7956,9 +8391,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0387() throws Throwable {
+    public void test0411() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0387");
+            System.out.format("%n%s%n", "RegressionTest0.test0411");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("codigos.LadoInvalidoException: codigos.LadoInvalidoException: ");
         java.lang.Throwable[] throwableArray2 = ladoInvalidoException1.getSuppressed();
         codigos.LadoInvalidoException ladoInvalidoException4 = new codigos.LadoInvalidoException("codigos.LadoInvalidoException: codigos.LadoInvalidoException: hi!");
@@ -8015,9 +8450,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0388() throws Throwable {
+    public void test0412() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0388");
+            System.out.format("%n%s%n", "RegressionTest0.test0412");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str3 = codigos.Triangulo.classificaTriangulo(1, (int) (byte) -1, (-1));
@@ -8028,17 +8463,17 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0389() throws Throwable {
+    public void test0413() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0389");
+            System.out.format("%n%s%n", "RegressionTest0.test0413");
         java.lang.String str3 = codigos.Triangulo.classificaTriangulo((int) ' ', (int) (short) 100, 0);
         org.junit.Assert.assertEquals("'" + str3 + "' != '" + "NAO FORMA TRIANGULO" + "'", str3, "NAO FORMA TRIANGULO");
     }
 
     @Test
-    public void test0390() throws Throwable {
+    public void test0414() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0390");
+            System.out.format("%n%s%n", "RegressionTest0.test0414");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException3);
@@ -8067,9 +8502,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0391() throws Throwable {
+    public void test0415() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0391");
+            System.out.format("%n%s%n", "RegressionTest0.test0415");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("ESCALENO");
         java.lang.Throwable[] throwableArray2 = ladoInvalidoException1.getSuppressed();
         codigos.LadoInvalidoException ladoInvalidoException4 = new codigos.LadoInvalidoException("");
@@ -8144,9 +8579,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0392() throws Throwable {
+    public void test0416() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0392");
+            System.out.format("%n%s%n", "RegressionTest0.test0416");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) '#', 2.0f);
         float float3 = contaCorrente2.getLimite();
         float float4 = contaCorrente2.getLimite();
@@ -8157,9 +8592,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0393() throws Throwable {
+    public void test0417() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0393");
+            System.out.format("%n%s%n", "RegressionTest0.test0417");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente(99.0f, (float) 'a');
         float float3 = contaCorrente2.getLimite();
         contaCorrente2.setSaldo((float) 100);
@@ -8173,9 +8608,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0394() throws Throwable {
+    public void test0418() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0394");
+            System.out.format("%n%s%n", "RegressionTest0.test0418");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str3 = codigos.Triangulo.classificaTriangulo((int) '#', (int) (byte) -1, (int) (short) 10);
@@ -8186,9 +8621,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0395() throws Throwable {
+    public void test0419() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0395");
+            System.out.format("%n%s%n", "RegressionTest0.test0419");
         codigos.Words words0 = new codigos.Words();
         int int2 = words0.countWords("codigos.LadoInvalidoException: ");
         int int4 = words0.countWords("hi!");
@@ -8199,16 +8634,16 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0396() throws Throwable {
+    public void test0420() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0396");
+            System.out.format("%n%s%n", "RegressionTest0.test0420");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((-48.0f), 23.0f);
     }
 
     @Test
-    public void test0397() throws Throwable {
+    public void test0421() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0397");
+            System.out.format("%n%s%n", "RegressionTest0.test0421");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 10, 0.0f);
         contaCorrente2.setSaldo((float) (byte) 0);
         float float5 = contaCorrente2.getSaldo();
@@ -8223,17 +8658,17 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0398() throws Throwable {
+    public void test0422() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0398");
+            System.out.format("%n%s%n", "RegressionTest0.test0422");
         java.lang.String str3 = codigos.Triangulo.classificaTriangulo(4, (int) (short) 100, 10);
         org.junit.Assert.assertEquals("'" + str3 + "' != '" + "NAO FORMA TRIANGULO" + "'", str3, "NAO FORMA TRIANGULO");
     }
 
     @Test
-    public void test0399() throws Throwable {
+    public void test0423() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0399");
+            System.out.format("%n%s%n", "RegressionTest0.test0423");
         codigos.Pedido pedido0 = new codigos.Pedido();
         float float4 = pedido0.calculaTaxaDesconto(true, "codigos.LadoInvalidoException: ", 1.0f);
         float float8 = pedido0.calculaTaxaDesconto(false, "codigos.LadoInvalidoException: hi!", (float) (short) 10);
@@ -8254,9 +8689,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0400() throws Throwable {
+    public void test0424() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0400");
+            System.out.format("%n%s%n", "RegressionTest0.test0424");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str3 = codigos.Triangulo.classificaTriangulo((int) (short) 100, (int) (byte) -1, (int) '#');
@@ -8267,9 +8702,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0401() throws Throwable {
+    public void test0425() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0401");
+            System.out.format("%n%s%n", "RegressionTest0.test0425");
         codigos.Pedido pedido0 = new codigos.Pedido();
         float float4 = pedido0.calculaTaxaDesconto(true, "codigos.LadoInvalidoException: ", 1.0f);
         float float8 = pedido0.calculaTaxaDesconto(false, "NAO FORMA TRIANGULO", 10.0f);
@@ -8282,9 +8717,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0402() throws Throwable {
+    public void test0426() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0402");
+            System.out.format("%n%s%n", "RegressionTest0.test0426");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException3);
@@ -8317,9 +8752,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0403() throws Throwable {
+    public void test0427() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0403");
+            System.out.format("%n%s%n", "RegressionTest0.test0427");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) '#', 2.0f);
         contaCorrente2.setLimite(88.0f);
         float float5 = contaCorrente2.getSaldo();
@@ -8328,17 +8763,28 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0404() throws Throwable {
+    public void test0428() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0404");
+            System.out.format("%n%s%n", "RegressionTest0.test0428");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 10, 97.0f);
         contaCorrente2.setLimite((-11.0f));
     }
 
     @Test
-    public void test0405() throws Throwable {
+    public void test0429() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0405");
+            System.out.format("%n%s%n", "RegressionTest0.test0429");
+        codigos.Pedido pedido0 = new codigos.Pedido();
+        float float4 = pedido0.calculaTaxaDesconto(true, "codigos.LadoInvalidoException: ", 1.0f);
+        float float8 = pedido0.calculaTaxaDesconto(false, "NAO FORMA TRIANGULO", (float) (short) -1);
+        org.junit.Assert.assertTrue("'" + float4 + "' != '" + 10.0f + "'", float4 == 10.0f);
+        org.junit.Assert.assertTrue("'" + float8 + "' != '" + 0.0f + "'", float8 == 0.0f);
+    }
+
+    @Test
+    public void test0430() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test0430");
         codigos.Words words0 = new codigos.Words();
         int int2 = words0.countWords("codigos.LadoInvalidoException: ");
         int int4 = words0.countWords("");
@@ -8349,26 +8795,26 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0406() throws Throwable {
+    public void test0431() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0406");
+            System.out.format("%n%s%n", "RegressionTest0.test0431");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("codigos.LadoInvalidoException: codigos.LadoInvalidoException: hi!");
         java.lang.String str2 = ladoInvalidoException1.toString();
         org.junit.Assert.assertEquals("'" + str2 + "' != '" + "codigos.LadoInvalidoException: codigos.LadoInvalidoException: codigos.LadoInvalidoException: hi!" + "'", str2, "codigos.LadoInvalidoException: codigos.LadoInvalidoException: codigos.LadoInvalidoException: hi!");
     }
 
     @Test
-    public void test0407() throws Throwable {
+    public void test0432() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0407");
+            System.out.format("%n%s%n", "RegressionTest0.test0432");
         boolean boolean1 = codigos.Identifier.validaIdentificador("codigos.LadoInvalidoException: codigos.LadoInvalidoException: codigos.LadoInvalidoException: hi!");
         org.junit.Assert.assertTrue("'" + boolean1 + "' != '" + false + "'", boolean1 == false);
     }
 
     @Test
-    public void test0408() throws Throwable {
+    public void test0433() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0408");
+            System.out.format("%n%s%n", "RegressionTest0.test0433");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str3 = codigos.Triangulo.classificaTriangulo(0, (int) (byte) 100, (int) '4');
@@ -8379,9 +8825,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0409() throws Throwable {
+    public void test0434() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0409");
+            System.out.format("%n%s%n", "RegressionTest0.test0434");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str3 = codigos.Triangulo.classificaTriangulo(1, (int) (short) 100, (-1));
@@ -8392,9 +8838,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0410() throws Throwable {
+    public void test0435() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0410");
+            System.out.format("%n%s%n", "RegressionTest0.test0435");
         codigos.Words words0 = new codigos.Words();
         int int2 = words0.countWords("codigos.LadoInvalidoException: hi!");
         int int4 = words0.countWords("NAO FORMA TRIANGULO");
@@ -8407,9 +8853,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0411() throws Throwable {
+    public void test0436() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0411");
+            System.out.format("%n%s%n", "RegressionTest0.test0436");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 100, (-1.0f));
         float float3 = contaCorrente2.getLimite();
         float float4 = contaCorrente2.getSaldo();
@@ -8434,9 +8880,24 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0412() throws Throwable {
+    public void test0437() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0412");
+            System.out.format("%n%s%n", "RegressionTest0.test0437");
+        codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente(99.0f, (float) 'a');
+        float float3 = contaCorrente2.getLimite();
+        contaCorrente2.setSaldo((float) '4');
+        float float6 = contaCorrente2.getLimite();
+        float float8 = contaCorrente2.saque((float) 10);
+        contaCorrente2.setSaldo(96.0f);
+        org.junit.Assert.assertTrue("'" + float3 + "' != '" + 97.0f + "'", float3 == 97.0f);
+        org.junit.Assert.assertTrue("'" + float6 + "' != '" + 97.0f + "'", float6 == 97.0f);
+        org.junit.Assert.assertTrue("'" + float8 + "' != '" + 42.0f + "'", float8 == 42.0f);
+    }
+
+    @Test
+    public void test0438() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test0438");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 10, 0.0f);
         contaCorrente2.setSaldo((float) (byte) 0);
         float float5 = contaCorrente2.getSaldo();
@@ -8455,9 +8916,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0413() throws Throwable {
+    public void test0439() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0413");
+            System.out.format("%n%s%n", "RegressionTest0.test0439");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("codigos.LadoInvalidoException: codigos.LadoInvalidoException: codigos.LadoInvalidoException: codigos.LadoInvalidoException: ");
         java.lang.Throwable[] throwableArray2 = ladoInvalidoException1.getSuppressed();
         java.lang.String str3 = ladoInvalidoException1.toString();
@@ -8466,9 +8927,30 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0414() throws Throwable {
+    public void test0440() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0414");
+            System.out.format("%n%s%n", "RegressionTest0.test0440");
+        codigos.Words words0 = new codigos.Words();
+        int int2 = words0.countWords("codigos.LadoInvalidoException: hi!");
+        int int4 = words0.countWords("NAO FORMA TRIANGULO");
+        int int6 = words0.countWords("codigos.LadoInvalidoException: hi!");
+        int int8 = words0.countWords("NAO FORMA TRIANGULO");
+        int int10 = words0.countWords("");
+        int int12 = words0.countWords("hi!");
+        int int14 = words0.countWords("codigos.LadoInvalidoException: codigos.LadoInvalidoException: codigos.LadoInvalidoException: hi!");
+        org.junit.Assert.assertTrue("'" + int2 + "' != '" + 1 + "'", int2 == 1);
+        org.junit.Assert.assertTrue("'" + int4 + "' != '" + 0 + "'", int4 == 0);
+        org.junit.Assert.assertTrue("'" + int6 + "' != '" + 1 + "'", int6 == 1);
+        org.junit.Assert.assertTrue("'" + int8 + "' != '" + 0 + "'", int8 == 0);
+        org.junit.Assert.assertTrue("'" + int10 + "' != '" + 0 + "'", int10 == 0);
+        org.junit.Assert.assertTrue("'" + int12 + "' != '" + 0 + "'", int12 == 0);
+        org.junit.Assert.assertTrue("'" + int14 + "' != '" + 3 + "'", int14 == 3);
+    }
+
+    @Test
+    public void test0441() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test0441");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) 100, (float) (short) 100);
         contaCorrente2.setSaldo(96.0f);
         contaCorrente2.setLimite((-32.0f));
@@ -8482,9 +8964,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0415() throws Throwable {
+    public void test0442() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0415");
+            System.out.format("%n%s%n", "RegressionTest0.test0442");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException5 = new codigos.LadoInvalidoException("");
@@ -8547,9 +9029,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0416() throws Throwable {
+    public void test0443() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0416");
+            System.out.format("%n%s%n", "RegressionTest0.test0443");
         codigos.Words words0 = new codigos.Words();
         int int2 = words0.countWords("codigos.LadoInvalidoException: hi!");
         int int4 = words0.countWords("NAO FORMA TRIANGULO");
@@ -8570,9 +9052,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0417() throws Throwable {
+    public void test0444() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0417");
+            System.out.format("%n%s%n", "RegressionTest0.test0444");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 100, (-1.0f));
         float float3 = contaCorrente2.getLimite();
         float float4 = contaCorrente2.getLimite();
@@ -8586,9 +9068,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0418() throws Throwable {
+    public void test0445() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0418");
+            System.out.format("%n%s%n", "RegressionTest0.test0445");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("codigos.LadoInvalidoException: codigos.LadoInvalidoException: codigos.LadoInvalidoException: codigos.LadoInvalidoException: ");
         java.lang.Throwable[] throwableArray2 = ladoInvalidoException1.getSuppressed();
         codigos.LadoInvalidoException ladoInvalidoException4 = new codigos.LadoInvalidoException("");
@@ -8609,9 +9091,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0419() throws Throwable {
+    public void test0446() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0419");
+            System.out.format("%n%s%n", "RegressionTest0.test0446");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException3);
@@ -8654,9 +9136,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0420() throws Throwable {
+    public void test0447() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0420");
+            System.out.format("%n%s%n", "RegressionTest0.test0447");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException3);
@@ -8707,9 +9189,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0421() throws Throwable {
+    public void test0448() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0421");
+            System.out.format("%n%s%n", "RegressionTest0.test0448");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) '#', 2.0f);
         contaCorrente2.setLimite(88.0f);
         float float5 = contaCorrente2.getSaldo();
@@ -8719,9 +9201,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0422() throws Throwable {
+    public void test0449() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0422");
+            System.out.format("%n%s%n", "RegressionTest0.test0449");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (short) 100, 99.0f);
         contaCorrente2.setSaldo((float) 10);
         float float6 = contaCorrente2.saque((float) (byte) 100);
@@ -8731,9 +9213,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0423() throws Throwable {
+    public void test0450() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0423");
+            System.out.format("%n%s%n", "RegressionTest0.test0450");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("codigos.LadoInvalidoException: hi!");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("hi!");
         ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException3);
@@ -8744,9 +9226,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0424() throws Throwable {
+    public void test0451() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0424");
+            System.out.format("%n%s%n", "RegressionTest0.test0451");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente(99.0f, (float) 'a');
         float float3 = contaCorrente2.getLimite();
         contaCorrente2.setSaldo((float) '4');
@@ -8759,9 +9241,88 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0425() throws Throwable {
+    public void test0452() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0425");
+            System.out.format("%n%s%n", "RegressionTest0.test0452");
+        codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("codigos.LadoInvalidoException: codigos.LadoInvalidoException: hi!");
+        java.lang.Throwable[] throwableArray2 = ladoInvalidoException1.getSuppressed();
+        codigos.LadoInvalidoException ladoInvalidoException4 = new codigos.LadoInvalidoException("hi!");
+        codigos.LadoInvalidoException ladoInvalidoException6 = new codigos.LadoInvalidoException("");
+        codigos.LadoInvalidoException ladoInvalidoException8 = new codigos.LadoInvalidoException("");
+        ladoInvalidoException6.addSuppressed((java.lang.Throwable) ladoInvalidoException8);
+        codigos.LadoInvalidoException ladoInvalidoException11 = new codigos.LadoInvalidoException("");
+        codigos.LadoInvalidoException ladoInvalidoException13 = new codigos.LadoInvalidoException("");
+        codigos.LadoInvalidoException ladoInvalidoException15 = new codigos.LadoInvalidoException("");
+        ladoInvalidoException13.addSuppressed((java.lang.Throwable) ladoInvalidoException15);
+        ladoInvalidoException11.addSuppressed((java.lang.Throwable) ladoInvalidoException15);
+        java.lang.Throwable[] throwableArray18 = ladoInvalidoException15.getSuppressed();
+        ladoInvalidoException8.addSuppressed((java.lang.Throwable) ladoInvalidoException15);
+        ladoInvalidoException4.addSuppressed((java.lang.Throwable) ladoInvalidoException15);
+        codigos.LadoInvalidoException ladoInvalidoException22 = new codigos.LadoInvalidoException("");
+        codigos.LadoInvalidoException ladoInvalidoException24 = new codigos.LadoInvalidoException("");
+        codigos.LadoInvalidoException ladoInvalidoException26 = new codigos.LadoInvalidoException("");
+        ladoInvalidoException24.addSuppressed((java.lang.Throwable) ladoInvalidoException26);
+        ladoInvalidoException22.addSuppressed((java.lang.Throwable) ladoInvalidoException26);
+        java.lang.Throwable[] throwableArray29 = ladoInvalidoException26.getSuppressed();
+        codigos.LadoInvalidoException ladoInvalidoException31 = new codigos.LadoInvalidoException("");
+        codigos.LadoInvalidoException ladoInvalidoException33 = new codigos.LadoInvalidoException("");
+        ladoInvalidoException31.addSuppressed((java.lang.Throwable) ladoInvalidoException33);
+        codigos.LadoInvalidoException ladoInvalidoException36 = new codigos.LadoInvalidoException("hi!");
+        ladoInvalidoException33.addSuppressed((java.lang.Throwable) ladoInvalidoException36);
+        ladoInvalidoException26.addSuppressed((java.lang.Throwable) ladoInvalidoException36);
+        java.lang.Throwable[] throwableArray39 = ladoInvalidoException26.getSuppressed();
+        ladoInvalidoException4.addSuppressed((java.lang.Throwable) ladoInvalidoException26);
+        codigos.LadoInvalidoException ladoInvalidoException42 = new codigos.LadoInvalidoException("");
+        codigos.LadoInvalidoException ladoInvalidoException44 = new codigos.LadoInvalidoException("");
+        ladoInvalidoException42.addSuppressed((java.lang.Throwable) ladoInvalidoException44);
+        codigos.LadoInvalidoException ladoInvalidoException47 = new codigos.LadoInvalidoException("");
+        codigos.LadoInvalidoException ladoInvalidoException49 = new codigos.LadoInvalidoException("");
+        ladoInvalidoException47.addSuppressed((java.lang.Throwable) ladoInvalidoException49);
+        codigos.LadoInvalidoException ladoInvalidoException52 = new codigos.LadoInvalidoException("");
+        codigos.LadoInvalidoException ladoInvalidoException54 = new codigos.LadoInvalidoException("");
+        codigos.LadoInvalidoException ladoInvalidoException56 = new codigos.LadoInvalidoException("");
+        ladoInvalidoException54.addSuppressed((java.lang.Throwable) ladoInvalidoException56);
+        ladoInvalidoException52.addSuppressed((java.lang.Throwable) ladoInvalidoException56);
+        java.lang.Throwable[] throwableArray59 = ladoInvalidoException56.getSuppressed();
+        ladoInvalidoException49.addSuppressed((java.lang.Throwable) ladoInvalidoException56);
+        ladoInvalidoException44.addSuppressed((java.lang.Throwable) ladoInvalidoException49);
+        java.lang.Throwable[] throwableArray62 = ladoInvalidoException44.getSuppressed();
+        codigos.LadoInvalidoException ladoInvalidoException64 = new codigos.LadoInvalidoException("");
+        codigos.LadoInvalidoException ladoInvalidoException66 = new codigos.LadoInvalidoException("");
+        ladoInvalidoException64.addSuppressed((java.lang.Throwable) ladoInvalidoException66);
+        codigos.LadoInvalidoException ladoInvalidoException69 = new codigos.LadoInvalidoException("hi!");
+        ladoInvalidoException66.addSuppressed((java.lang.Throwable) ladoInvalidoException69);
+        ladoInvalidoException44.addSuppressed((java.lang.Throwable) ladoInvalidoException69);
+        ladoInvalidoException4.addSuppressed((java.lang.Throwable) ladoInvalidoException44);
+        codigos.LadoInvalidoException ladoInvalidoException74 = new codigos.LadoInvalidoException("");
+        codigos.LadoInvalidoException ladoInvalidoException76 = new codigos.LadoInvalidoException("");
+        ladoInvalidoException74.addSuppressed((java.lang.Throwable) ladoInvalidoException76);
+        codigos.LadoInvalidoException ladoInvalidoException79 = new codigos.LadoInvalidoException("");
+        codigos.LadoInvalidoException ladoInvalidoException81 = new codigos.LadoInvalidoException("");
+        codigos.LadoInvalidoException ladoInvalidoException83 = new codigos.LadoInvalidoException("");
+        ladoInvalidoException81.addSuppressed((java.lang.Throwable) ladoInvalidoException83);
+        ladoInvalidoException79.addSuppressed((java.lang.Throwable) ladoInvalidoException83);
+        java.lang.Throwable[] throwableArray86 = ladoInvalidoException83.getSuppressed();
+        ladoInvalidoException76.addSuppressed((java.lang.Throwable) ladoInvalidoException83);
+        java.lang.Throwable[] throwableArray88 = ladoInvalidoException76.getSuppressed();
+        java.lang.Throwable[] throwableArray89 = ladoInvalidoException76.getSuppressed();
+        ladoInvalidoException4.addSuppressed((java.lang.Throwable) ladoInvalidoException76);
+        ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException76);
+        org.junit.Assert.assertNotNull(throwableArray2);
+        org.junit.Assert.assertNotNull(throwableArray18);
+        org.junit.Assert.assertNotNull(throwableArray29);
+        org.junit.Assert.assertNotNull(throwableArray39);
+        org.junit.Assert.assertNotNull(throwableArray59);
+        org.junit.Assert.assertNotNull(throwableArray62);
+        org.junit.Assert.assertNotNull(throwableArray86);
+        org.junit.Assert.assertNotNull(throwableArray88);
+        org.junit.Assert.assertNotNull(throwableArray89);
+    }
+
+    @Test
+    public void test0453() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test0453");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("ESCALENO");
         java.lang.Throwable[] throwableArray2 = ladoInvalidoException1.getSuppressed();
         codigos.LadoInvalidoException ladoInvalidoException4 = new codigos.LadoInvalidoException("");
@@ -8772,26 +9333,26 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0426() throws Throwable {
+    public void test0454() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0426");
+            System.out.format("%n%s%n", "RegressionTest0.test0454");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) ' ', 100.0f);
         java.lang.Class<?> wildcardClass3 = contaCorrente2.getClass();
         org.junit.Assert.assertNotNull(wildcardClass3);
     }
 
     @Test
-    public void test0427() throws Throwable {
+    public void test0455() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0427");
+            System.out.format("%n%s%n", "RegressionTest0.test0455");
         boolean boolean1 = codigos.Identifier.validaIdentificador("codigos.LadoInvalidoException: codigos.LadoInvalidoException: codigos.LadoInvalidoException: codigos.LadoInvalidoException: codigos.LadoInvalidoException: ");
         org.junit.Assert.assertTrue("'" + boolean1 + "' != '" + false + "'", boolean1 == false);
     }
 
     @Test
-    public void test0428() throws Throwable {
+    public void test0456() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0428");
+            System.out.format("%n%s%n", "RegressionTest0.test0456");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException3);
@@ -8854,9 +9415,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0429() throws Throwable {
+    public void test0457() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0429");
+            System.out.format("%n%s%n", "RegressionTest0.test0457");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException5 = new codigos.LadoInvalidoException("");
@@ -8915,9 +9476,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0430() throws Throwable {
+    public void test0458() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0430");
+            System.out.format("%n%s%n", "RegressionTest0.test0458");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente(0.0f, 100.0f);
         float float3 = contaCorrente2.getLimite();
         // The following exception was thrown during execution in test generation
@@ -8931,9 +9492,16 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0431() throws Throwable {
+    public void test0459() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0431");
+            System.out.format("%n%s%n", "RegressionTest0.test0459");
+        codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente(96.0f, 42.0f);
+    }
+
+    @Test
+    public void test0460() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test0460");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str3 = codigos.Triangulo.classificaTriangulo((int) (short) 100, (int) (short) 0, (-1));
@@ -8944,9 +9512,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0432() throws Throwable {
+    public void test0461() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0432");
+            System.out.format("%n%s%n", "RegressionTest0.test0461");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("codigos.LadoInvalidoException: hi!");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("hi!");
         ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException3);
@@ -9015,9 +9583,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0433() throws Throwable {
+    public void test0462() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0433");
+            System.out.format("%n%s%n", "RegressionTest0.test0462");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str3 = codigos.Triangulo.classificaTriangulo((int) (short) 1, (-1), (int) (short) 0);
@@ -9028,9 +9596,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0434() throws Throwable {
+    public void test0463() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0434");
+            System.out.format("%n%s%n", "RegressionTest0.test0463");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException3);
@@ -9091,9 +9659,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0435() throws Throwable {
+    public void test0464() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0435");
+            System.out.format("%n%s%n", "RegressionTest0.test0464");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str3 = codigos.Triangulo.classificaTriangulo((int) (short) -1, (-1), 1);
@@ -9104,9 +9672,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0436() throws Throwable {
+    public void test0465() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0436");
+            System.out.format("%n%s%n", "RegressionTest0.test0465");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) 0L, (float) 10);
         float float3 = contaCorrente2.getSaldo();
         float float4 = contaCorrente2.getSaldo();
@@ -9117,9 +9685,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0437() throws Throwable {
+    public void test0466() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0437");
+            System.out.format("%n%s%n", "RegressionTest0.test0466");
         // The following exception was thrown during execution in test generation
         try {
             java.lang.String str3 = codigos.Triangulo.classificaTriangulo((int) (byte) 0, 2, 1);
@@ -9130,18 +9698,18 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0438() throws Throwable {
+    public void test0467() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0438");
+            System.out.format("%n%s%n", "RegressionTest0.test0467");
         codigos.Pedido pedido0 = new codigos.Pedido();
         float float4 = pedido0.calculaTaxaDesconto(true, "codigos.LadoInvalidoException: codigos.LadoInvalidoException: hi!", 90.0f);
         org.junit.Assert.assertTrue("'" + float4 + "' != '" + 10.0f + "'", float4 == 10.0f);
     }
 
     @Test
-    public void test0439() throws Throwable {
+    public void test0468() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0439");
+            System.out.format("%n%s%n", "RegressionTest0.test0468");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 100, (-1.0f));
         float float3 = contaCorrente2.getLimite();
         float float4 = contaCorrente2.getSaldo();
@@ -9159,17 +9727,17 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0440() throws Throwable {
+    public void test0469() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0440");
+            System.out.format("%n%s%n", "RegressionTest0.test0469");
         java.lang.String str3 = codigos.Triangulo.classificaTriangulo(2, (int) (byte) 1, 2);
         org.junit.Assert.assertEquals("'" + str3 + "' != '" + "ISOSCELES" + "'", str3, "ISOSCELES");
     }
 
     @Test
-    public void test0441() throws Throwable {
+    public void test0470() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0441");
+            System.out.format("%n%s%n", "RegressionTest0.test0470");
         codigos.Pedido pedido0 = new codigos.Pedido();
         float float4 = pedido0.calculaTaxaDesconto(true, "codigos.LadoInvalidoException: ", 1.0f);
         float float8 = pedido0.calculaTaxaDesconto(false, "codigos.LadoInvalidoException: hi!", (float) (short) 10);
@@ -9184,18 +9752,18 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0442() throws Throwable {
+    public void test0471() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0442");
+            System.out.format("%n%s%n", "RegressionTest0.test0471");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente(32.0f, (-32.0f));
         java.lang.Class<?> wildcardClass3 = contaCorrente2.getClass();
         org.junit.Assert.assertNotNull(wildcardClass3);
     }
 
     @Test
-    public void test0443() throws Throwable {
+    public void test0472() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0443");
+            System.out.format("%n%s%n", "RegressionTest0.test0472");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 100, (-1.0f));
         float float3 = contaCorrente2.getLimite();
         float float4 = contaCorrente2.getSaldo();
@@ -9215,9 +9783,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0444() throws Throwable {
+    public void test0473() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0444");
+            System.out.format("%n%s%n", "RegressionTest0.test0473");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException5 = new codigos.LadoInvalidoException("");
@@ -9262,9 +9830,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0445() throws Throwable {
+    public void test0474() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0445");
+            System.out.format("%n%s%n", "RegressionTest0.test0474");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente(65.0f, (-87.0f));
         // The following exception was thrown during execution in test generation
         try {
@@ -9276,18 +9844,18 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0446() throws Throwable {
+    public void test0475() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0446");
+            System.out.format("%n%s%n", "RegressionTest0.test0475");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("codigos.LadoInvalidoException: codigos.LadoInvalidoException: ");
         java.lang.String str2 = ladoInvalidoException1.toString();
         org.junit.Assert.assertEquals("'" + str2 + "' != '" + "codigos.LadoInvalidoException: codigos.LadoInvalidoException: codigos.LadoInvalidoException: " + "'", str2, "codigos.LadoInvalidoException: codigos.LadoInvalidoException: codigos.LadoInvalidoException: ");
     }
 
     @Test
-    public void test0447() throws Throwable {
+    public void test0476() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0447");
+            System.out.format("%n%s%n", "RegressionTest0.test0476");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente(90.0f, (float) (-1));
         float float4 = contaCorrente2.saque(67.0f);
         float float5 = contaCorrente2.getSaldo();
@@ -9304,9 +9872,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0448() throws Throwable {
+    public void test0477() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0448");
+            System.out.format("%n%s%n", "RegressionTest0.test0477");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException3);
@@ -9377,9 +9945,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0449() throws Throwable {
+    public void test0478() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0449");
+            System.out.format("%n%s%n", "RegressionTest0.test0478");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException3);
@@ -9444,17 +10012,17 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0450() throws Throwable {
+    public void test0479() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0450");
+            System.out.format("%n%s%n", "RegressionTest0.test0479");
         java.lang.String str3 = codigos.Triangulo.classificaTriangulo((int) 'a', 100, (int) ' ');
         org.junit.Assert.assertEquals("'" + str3 + "' != '" + "ESCALENO" + "'", str3, "ESCALENO");
     }
 
     @Test
-    public void test0451() throws Throwable {
+    public void test0480() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0451");
+            System.out.format("%n%s%n", "RegressionTest0.test0480");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 100, (-1.0f));
         float float3 = contaCorrente2.getLimite();
         float float4 = contaCorrente2.getSaldo();
@@ -9478,17 +10046,17 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0452() throws Throwable {
+    public void test0481() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0452");
+            System.out.format("%n%s%n", "RegressionTest0.test0481");
         java.lang.String str3 = codigos.Triangulo.classificaTriangulo((int) (short) 1, 2, (int) (byte) 0);
         org.junit.Assert.assertEquals("'" + str3 + "' != '" + "NAO FORMA TRIANGULO" + "'", str3, "NAO FORMA TRIANGULO");
     }
 
     @Test
-    public void test0453() throws Throwable {
+    public void test0482() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0453");
+            System.out.format("%n%s%n", "RegressionTest0.test0482");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException3);
@@ -9549,9 +10117,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0454() throws Throwable {
+    public void test0483() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0454");
+            System.out.format("%n%s%n", "RegressionTest0.test0483");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("hi!");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException5 = new codigos.LadoInvalidoException("");
@@ -9590,16 +10158,16 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0455() throws Throwable {
+    public void test0484() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0455");
+            System.out.format("%n%s%n", "RegressionTest0.test0484");
         codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente(0.0f, (float) 1L);
     }
 
     @Test
-    public void test0456() throws Throwable {
+    public void test0485() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0456");
+            System.out.format("%n%s%n", "RegressionTest0.test0485");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("hi!");
         codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
         codigos.LadoInvalidoException ladoInvalidoException5 = new codigos.LadoInvalidoException("");
@@ -9658,377 +10226,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test0457() throws Throwable {
+    public void test0486() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0457");
-        codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 100, (-1.0f));
-        contaCorrente2.setLimite((float) 0L);
-        float float6 = contaCorrente2.saque((float) 10L);
-        // The following exception was thrown during execution in test generation
-        try {
-            float float8 = contaCorrente2.saque(0.0f);
-            org.junit.Assert.fail("Expected exception of type java.lang.Exception; message: Valor invalido");
-        } catch (java.lang.Exception e) {
-            // Expected exception.
-        }
-        org.junit.Assert.assertTrue("'" + float6 + "' != '" + 90.0f + "'", float6 == 90.0f);
-    }
-
-    @Test
-    public void test0458() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0458");
-        codigos.Pedido pedido0 = new codigos.Pedido();
-        float float4 = pedido0.calculaTaxaDesconto(true, "hi!", (float) 1L);
-        float float8 = pedido0.calculaTaxaDesconto(false, "hi!", 2.0f);
-        float float12 = pedido0.calculaTaxaDesconto(true, "codigos.LadoInvalidoException: hi!", 97.0f);
-        float float16 = pedido0.calculaTaxaDesconto(false, "codigos.LadoInvalidoException: codigos.LadoInvalidoException: ", (float) '#');
-        org.junit.Assert.assertTrue("'" + float4 + "' != '" + 10.0f + "'", float4 == 10.0f);
-        org.junit.Assert.assertTrue("'" + float8 + "' != '" + 0.0f + "'", float8 == 0.0f);
-        org.junit.Assert.assertTrue("'" + float12 + "' != '" + 10.0f + "'", float12 == 10.0f);
-        org.junit.Assert.assertTrue("'" + float16 + "' != '" + 0.0f + "'", float16 == 0.0f);
-    }
-
-    @Test
-    public void test0459() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0459");
-        codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
-        codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
-        codigos.LadoInvalidoException ladoInvalidoException5 = new codigos.LadoInvalidoException("");
-        ladoInvalidoException3.addSuppressed((java.lang.Throwable) ladoInvalidoException5);
-        ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException5);
-        java.lang.Throwable[] throwableArray8 = ladoInvalidoException5.getSuppressed();
-        codigos.LadoInvalidoException ladoInvalidoException10 = new codigos.LadoInvalidoException("");
-        codigos.LadoInvalidoException ladoInvalidoException12 = new codigos.LadoInvalidoException("");
-        ladoInvalidoException10.addSuppressed((java.lang.Throwable) ladoInvalidoException12);
-        codigos.LadoInvalidoException ladoInvalidoException15 = new codigos.LadoInvalidoException("hi!");
-        ladoInvalidoException12.addSuppressed((java.lang.Throwable) ladoInvalidoException15);
-        ladoInvalidoException5.addSuppressed((java.lang.Throwable) ladoInvalidoException15);
-        java.lang.Throwable[] throwableArray18 = ladoInvalidoException15.getSuppressed();
-        java.lang.String str19 = ladoInvalidoException15.toString();
-        org.junit.Assert.assertNotNull(throwableArray8);
-        org.junit.Assert.assertNotNull(throwableArray18);
-        org.junit.Assert.assertEquals("'" + str19 + "' != '" + "codigos.LadoInvalidoException: hi!" + "'", str19, "codigos.LadoInvalidoException: hi!");
-    }
-
-    @Test
-    public void test0460() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0460");
-        // The following exception was thrown during execution in test generation
-        try {
-            java.lang.String str3 = codigos.Triangulo.classificaTriangulo((int) (byte) 100, (int) (short) 0, (int) ' ');
-            org.junit.Assert.fail("Expected exception of type codigos.LadoInvalidoException; message: lado invalido");
-        } catch (codigos.LadoInvalidoException e) {
-            // Expected exception.
-        }
-    }
-
-    @Test
-    public void test0461() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0461");
-        codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("ESCALENO");
-        java.lang.Throwable[] throwableArray2 = ladoInvalidoException1.getSuppressed();
-        codigos.LadoInvalidoException ladoInvalidoException4 = new codigos.LadoInvalidoException("");
-        ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException4);
-        java.lang.String str6 = ladoInvalidoException1.toString();
-        org.junit.Assert.assertNotNull(throwableArray2);
-        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "codigos.LadoInvalidoException: ESCALENO" + "'", str6, "codigos.LadoInvalidoException: ESCALENO");
-    }
-
-    @Test
-    public void test0462() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0462");
-        codigos.Words words0 = new codigos.Words();
-        int int2 = words0.countWords("");
-        int int4 = words0.countWords("");
-        int int6 = words0.countWords("codigos.LadoInvalidoException: ");
-        java.lang.Class<?> wildcardClass7 = words0.getClass();
-        org.junit.Assert.assertTrue("'" + int2 + "' != '" + 0 + "'", int2 == 0);
-        org.junit.Assert.assertTrue("'" + int4 + "' != '" + 0 + "'", int4 == 0);
-        org.junit.Assert.assertTrue("'" + int6 + "' != '" + 1 + "'", int6 == 1);
-        org.junit.Assert.assertNotNull(wildcardClass7);
-    }
-
-    @Test
-    public void test0463() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0463");
-        codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) 100, 2.0f);
-        contaCorrente2.setLimite(65.0f);
-    }
-
-    @Test
-    public void test0464() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0464");
-        codigos.Pedido pedido0 = new codigos.Pedido();
-        float float4 = pedido0.calculaTaxaDesconto(true, "codigos.LadoInvalidoException: ", 1.0f);
-        float float8 = pedido0.calculaTaxaDesconto(false, "", (float) 1);
-        float float12 = pedido0.calculaTaxaDesconto(false, "hi!", (float) (short) 100);
-        float float16 = pedido0.calculaTaxaDesconto(true, "ESCALENO", (float) 2);
-        java.lang.Class<?> wildcardClass17 = pedido0.getClass();
-        org.junit.Assert.assertTrue("'" + float4 + "' != '" + 10.0f + "'", float4 == 10.0f);
-        org.junit.Assert.assertTrue("'" + float8 + "' != '" + 0.0f + "'", float8 == 0.0f);
-        org.junit.Assert.assertTrue("'" + float12 + "' != '" + 0.0f + "'", float12 == 0.0f);
-        org.junit.Assert.assertTrue("'" + float16 + "' != '" + 10.0f + "'", float16 == 10.0f);
-        org.junit.Assert.assertNotNull(wildcardClass17);
-    }
-
-    @Test
-    public void test0465() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0465");
-        codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 100, (-1.0f));
-        float float3 = contaCorrente2.getLimite();
-        float float4 = contaCorrente2.getSaldo();
-        float float5 = contaCorrente2.getLimite();
-        contaCorrente2.setSaldo((-1.0f));
-        float float8 = contaCorrente2.getSaldo();
-        float float9 = contaCorrente2.getLimite();
-        // The following exception was thrown during execution in test generation
-        try {
-            float float11 = contaCorrente2.saque(88.0f);
-            org.junit.Assert.fail("Expected exception of type java.lang.Exception; message: Saldo Insuficiente");
-        } catch (java.lang.Exception e) {
-            // Expected exception.
-        }
-        org.junit.Assert.assertTrue("'" + float3 + "' != '" + (-1.0f) + "'", float3 == (-1.0f));
-        org.junit.Assert.assertTrue("'" + float4 + "' != '" + 100.0f + "'", float4 == 100.0f);
-        org.junit.Assert.assertTrue("'" + float5 + "' != '" + (-1.0f) + "'", float5 == (-1.0f));
-        org.junit.Assert.assertTrue("'" + float8 + "' != '" + (-1.0f) + "'", float8 == (-1.0f));
-        org.junit.Assert.assertTrue("'" + float9 + "' != '" + (-1.0f) + "'", float9 == (-1.0f));
-    }
-
-    @Test
-    public void test0466() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0466");
-        codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
-        codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
-        ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException3);
-        codigos.LadoInvalidoException ladoInvalidoException6 = new codigos.LadoInvalidoException("");
-        codigos.LadoInvalidoException ladoInvalidoException8 = new codigos.LadoInvalidoException("");
-        codigos.LadoInvalidoException ladoInvalidoException10 = new codigos.LadoInvalidoException("");
-        ladoInvalidoException8.addSuppressed((java.lang.Throwable) ladoInvalidoException10);
-        ladoInvalidoException6.addSuppressed((java.lang.Throwable) ladoInvalidoException10);
-        java.lang.Throwable[] throwableArray13 = ladoInvalidoException10.getSuppressed();
-        ladoInvalidoException3.addSuppressed((java.lang.Throwable) ladoInvalidoException10);
-        codigos.LadoInvalidoException ladoInvalidoException16 = new codigos.LadoInvalidoException("");
-        codigos.LadoInvalidoException ladoInvalidoException18 = new codigos.LadoInvalidoException("");
-        ladoInvalidoException16.addSuppressed((java.lang.Throwable) ladoInvalidoException18);
-        codigos.LadoInvalidoException ladoInvalidoException21 = new codigos.LadoInvalidoException("");
-        codigos.LadoInvalidoException ladoInvalidoException23 = new codigos.LadoInvalidoException("");
-        codigos.LadoInvalidoException ladoInvalidoException25 = new codigos.LadoInvalidoException("");
-        ladoInvalidoException23.addSuppressed((java.lang.Throwable) ladoInvalidoException25);
-        ladoInvalidoException21.addSuppressed((java.lang.Throwable) ladoInvalidoException25);
-        java.lang.Throwable[] throwableArray28 = ladoInvalidoException25.getSuppressed();
-        ladoInvalidoException18.addSuppressed((java.lang.Throwable) ladoInvalidoException25);
-        java.lang.Throwable[] throwableArray30 = ladoInvalidoException25.getSuppressed();
-        ladoInvalidoException10.addSuppressed((java.lang.Throwable) ladoInvalidoException25);
-        codigos.LadoInvalidoException ladoInvalidoException33 = new codigos.LadoInvalidoException("ESCALENO");
-        ladoInvalidoException25.addSuppressed((java.lang.Throwable) ladoInvalidoException33);
-        java.lang.String str35 = ladoInvalidoException25.toString();
-        org.junit.Assert.assertNotNull(throwableArray13);
-        org.junit.Assert.assertNotNull(throwableArray28);
-        org.junit.Assert.assertNotNull(throwableArray30);
-        org.junit.Assert.assertEquals("'" + str35 + "' != '" + "codigos.LadoInvalidoException: " + "'", str35, "codigos.LadoInvalidoException: ");
-    }
-
-    @Test
-    public void test0467() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0467");
-        codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("codigos.LadoInvalidoException: hi!");
-        codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("hi!");
-        ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException3);
-        codigos.LadoInvalidoException ladoInvalidoException6 = new codigos.LadoInvalidoException("ESCALENO");
-        java.lang.Throwable[] throwableArray7 = ladoInvalidoException6.getSuppressed();
-        codigos.LadoInvalidoException ladoInvalidoException9 = new codigos.LadoInvalidoException("");
-        java.lang.Throwable[] throwableArray10 = ladoInvalidoException9.getSuppressed();
-        codigos.LadoInvalidoException ladoInvalidoException12 = new codigos.LadoInvalidoException("hi!");
-        codigos.LadoInvalidoException ladoInvalidoException14 = new codigos.LadoInvalidoException("");
-        codigos.LadoInvalidoException ladoInvalidoException16 = new codigos.LadoInvalidoException("");
-        ladoInvalidoException14.addSuppressed((java.lang.Throwable) ladoInvalidoException16);
-        codigos.LadoInvalidoException ladoInvalidoException19 = new codigos.LadoInvalidoException("");
-        codigos.LadoInvalidoException ladoInvalidoException21 = new codigos.LadoInvalidoException("");
-        codigos.LadoInvalidoException ladoInvalidoException23 = new codigos.LadoInvalidoException("");
-        ladoInvalidoException21.addSuppressed((java.lang.Throwable) ladoInvalidoException23);
-        ladoInvalidoException19.addSuppressed((java.lang.Throwable) ladoInvalidoException23);
-        java.lang.Throwable[] throwableArray26 = ladoInvalidoException23.getSuppressed();
-        ladoInvalidoException16.addSuppressed((java.lang.Throwable) ladoInvalidoException23);
-        ladoInvalidoException12.addSuppressed((java.lang.Throwable) ladoInvalidoException23);
-        codigos.LadoInvalidoException ladoInvalidoException30 = new codigos.LadoInvalidoException("codigos.LadoInvalidoException: codigos.LadoInvalidoException: hi!");
-        codigos.LadoInvalidoException ladoInvalidoException32 = new codigos.LadoInvalidoException("");
-        codigos.LadoInvalidoException ladoInvalidoException34 = new codigos.LadoInvalidoException("");
-        ladoInvalidoException32.addSuppressed((java.lang.Throwable) ladoInvalidoException34);
-        codigos.LadoInvalidoException ladoInvalidoException37 = new codigos.LadoInvalidoException("");
-        codigos.LadoInvalidoException ladoInvalidoException39 = new codigos.LadoInvalidoException("");
-        codigos.LadoInvalidoException ladoInvalidoException41 = new codigos.LadoInvalidoException("");
-        ladoInvalidoException39.addSuppressed((java.lang.Throwable) ladoInvalidoException41);
-        ladoInvalidoException37.addSuppressed((java.lang.Throwable) ladoInvalidoException41);
-        java.lang.Throwable[] throwableArray44 = ladoInvalidoException41.getSuppressed();
-        ladoInvalidoException34.addSuppressed((java.lang.Throwable) ladoInvalidoException41);
-        java.lang.Throwable[] throwableArray46 = ladoInvalidoException41.getSuppressed();
-        codigos.LadoInvalidoException ladoInvalidoException48 = new codigos.LadoInvalidoException("");
-        codigos.LadoInvalidoException ladoInvalidoException50 = new codigos.LadoInvalidoException("");
-        ladoInvalidoException48.addSuppressed((java.lang.Throwable) ladoInvalidoException50);
-        codigos.LadoInvalidoException ladoInvalidoException53 = new codigos.LadoInvalidoException("hi!");
-        ladoInvalidoException50.addSuppressed((java.lang.Throwable) ladoInvalidoException53);
-        codigos.LadoInvalidoException ladoInvalidoException56 = new codigos.LadoInvalidoException("");
-        codigos.LadoInvalidoException ladoInvalidoException58 = new codigos.LadoInvalidoException("");
-        ladoInvalidoException56.addSuppressed((java.lang.Throwable) ladoInvalidoException58);
-        codigos.LadoInvalidoException ladoInvalidoException61 = new codigos.LadoInvalidoException("");
-        codigos.LadoInvalidoException ladoInvalidoException63 = new codigos.LadoInvalidoException("");
-        codigos.LadoInvalidoException ladoInvalidoException65 = new codigos.LadoInvalidoException("");
-        ladoInvalidoException63.addSuppressed((java.lang.Throwable) ladoInvalidoException65);
-        ladoInvalidoException61.addSuppressed((java.lang.Throwable) ladoInvalidoException65);
-        java.lang.Throwable[] throwableArray68 = ladoInvalidoException65.getSuppressed();
-        ladoInvalidoException58.addSuppressed((java.lang.Throwable) ladoInvalidoException65);
-        codigos.LadoInvalidoException ladoInvalidoException71 = new codigos.LadoInvalidoException("");
-        codigos.LadoInvalidoException ladoInvalidoException73 = new codigos.LadoInvalidoException("");
-        ladoInvalidoException71.addSuppressed((java.lang.Throwable) ladoInvalidoException73);
-        codigos.LadoInvalidoException ladoInvalidoException76 = new codigos.LadoInvalidoException("");
-        codigos.LadoInvalidoException ladoInvalidoException78 = new codigos.LadoInvalidoException("");
-        codigos.LadoInvalidoException ladoInvalidoException80 = new codigos.LadoInvalidoException("");
-        ladoInvalidoException78.addSuppressed((java.lang.Throwable) ladoInvalidoException80);
-        ladoInvalidoException76.addSuppressed((java.lang.Throwable) ladoInvalidoException80);
-        java.lang.Throwable[] throwableArray83 = ladoInvalidoException80.getSuppressed();
-        ladoInvalidoException73.addSuppressed((java.lang.Throwable) ladoInvalidoException80);
-        java.lang.Throwable[] throwableArray85 = ladoInvalidoException80.getSuppressed();
-        ladoInvalidoException65.addSuppressed((java.lang.Throwable) ladoInvalidoException80);
-        ladoInvalidoException50.addSuppressed((java.lang.Throwable) ladoInvalidoException65);
-        ladoInvalidoException41.addSuppressed((java.lang.Throwable) ladoInvalidoException50);
-        ladoInvalidoException30.addSuppressed((java.lang.Throwable) ladoInvalidoException41);
-        ladoInvalidoException23.addSuppressed((java.lang.Throwable) ladoInvalidoException30);
-        ladoInvalidoException9.addSuppressed((java.lang.Throwable) ladoInvalidoException23);
-        ladoInvalidoException6.addSuppressed((java.lang.Throwable) ladoInvalidoException23);
-        ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException23);
-        java.lang.String str94 = ladoInvalidoException23.toString();
-        org.junit.Assert.assertNotNull(throwableArray7);
-        org.junit.Assert.assertNotNull(throwableArray10);
-        org.junit.Assert.assertNotNull(throwableArray26);
-        org.junit.Assert.assertNotNull(throwableArray44);
-        org.junit.Assert.assertNotNull(throwableArray46);
-        org.junit.Assert.assertNotNull(throwableArray68);
-        org.junit.Assert.assertNotNull(throwableArray83);
-        org.junit.Assert.assertNotNull(throwableArray85);
-        org.junit.Assert.assertEquals("'" + str94 + "' != '" + "codigos.LadoInvalidoException: " + "'", str94, "codigos.LadoInvalidoException: ");
-    }
-
-    @Test
-    public void test0468() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0468");
-        codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) 'a', (float) (-1L));
-        float float3 = contaCorrente2.getLimite();
-        float float4 = contaCorrente2.getSaldo();
-        org.junit.Assert.assertTrue("'" + float3 + "' != '" + (-1.0f) + "'", float3 == (-1.0f));
-        org.junit.Assert.assertTrue("'" + float4 + "' != '" + 97.0f + "'", float4 == 97.0f);
-    }
-
-    @Test
-    public void test0469() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0469");
-        codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 100, (-1.0f));
-        float float3 = contaCorrente2.getSaldo();
-        contaCorrente2.setSaldo(100.0f);
-        contaCorrente2.setLimite(10.0f);
-        float float9 = contaCorrente2.saque((float) 1L);
-        float float10 = contaCorrente2.getLimite();
-        float float11 = contaCorrente2.getLimite();
-        float float12 = contaCorrente2.getSaldo();
-        contaCorrente2.setLimite((float) 0L);
-        org.junit.Assert.assertTrue("'" + float3 + "' != '" + 100.0f + "'", float3 == 100.0f);
-        org.junit.Assert.assertTrue("'" + float9 + "' != '" + 99.0f + "'", float9 == 99.0f);
-        org.junit.Assert.assertTrue("'" + float10 + "' != '" + 10.0f + "'", float10 == 10.0f);
-        org.junit.Assert.assertTrue("'" + float11 + "' != '" + 10.0f + "'", float11 == 10.0f);
-        org.junit.Assert.assertTrue("'" + float12 + "' != '" + 99.0f + "'", float12 == 99.0f);
-    }
-
-    @Test
-    public void test0470() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0470");
-        codigos.Pedido pedido0 = new codigos.Pedido();
-        float float4 = pedido0.calculaTaxaDesconto(true, "codigos.LadoInvalidoException: ", 1.0f);
-        float float8 = pedido0.calculaTaxaDesconto(false, "codigos.LadoInvalidoException: hi!", (float) (short) 10);
-        float float12 = pedido0.calculaTaxaDesconto(false, "codigos.LadoInvalidoException: hi!", (float) 2);
-        java.lang.Class<?> wildcardClass13 = pedido0.getClass();
-        org.junit.Assert.assertTrue("'" + float4 + "' != '" + 10.0f + "'", float4 == 10.0f);
-        org.junit.Assert.assertTrue("'" + float8 + "' != '" + 0.0f + "'", float8 == 0.0f);
-        org.junit.Assert.assertTrue("'" + float12 + "' != '" + 0.0f + "'", float12 == 0.0f);
-        org.junit.Assert.assertNotNull(wildcardClass13);
-    }
-
-    @Test
-    public void test0471() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0471");
-        // The following exception was thrown during execution in test generation
-        try {
-            java.lang.String str3 = codigos.Triangulo.classificaTriangulo(1, (int) (short) 0, 4);
-            org.junit.Assert.fail("Expected exception of type codigos.LadoInvalidoException; message: lado invalido");
-        } catch (codigos.LadoInvalidoException e) {
-            // Expected exception.
-        }
-    }
-
-    @Test
-    public void test0472() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0472");
-        // The following exception was thrown during execution in test generation
-        try {
-            java.lang.String str3 = codigos.Triangulo.classificaTriangulo(5, (int) (short) -1, (int) 'a');
-            org.junit.Assert.fail("Expected exception of type codigos.LadoInvalidoException; message: lado invalido");
-        } catch (codigos.LadoInvalidoException e) {
-            // Expected exception.
-        }
-    }
-
-    @Test
-    public void test0473() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0473");
-        codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) 100L, (float) 10);
-        float float3 = contaCorrente2.getSaldo();
-        float float4 = contaCorrente2.getSaldo();
-        float float5 = contaCorrente2.getLimite();
-        org.junit.Assert.assertTrue("'" + float3 + "' != '" + 100.0f + "'", float3 == 100.0f);
-        org.junit.Assert.assertTrue("'" + float4 + "' != '" + 100.0f + "'", float4 == 100.0f);
-        org.junit.Assert.assertTrue("'" + float5 + "' != '" + 10.0f + "'", float5 == 10.0f);
-    }
-
-    @Test
-    public void test0474() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0474");
-        codigos.Words words0 = new codigos.Words();
-        int int2 = words0.countWords("codigos.LadoInvalidoException: hi!");
-        int int4 = words0.countWords("NAO FORMA TRIANGULO");
-        int int6 = words0.countWords("codigos.LadoInvalidoException: hi!");
-        int int8 = words0.countWords("hi!");
-        int int10 = words0.countWords("hi!");
-        int int12 = words0.countWords("codigos.LadoInvalidoException: hi!");
-        java.lang.Class<?> wildcardClass13 = words0.getClass();
-        org.junit.Assert.assertTrue("'" + int2 + "' != '" + 1 + "'", int2 == 1);
-        org.junit.Assert.assertTrue("'" + int4 + "' != '" + 0 + "'", int4 == 0);
-        org.junit.Assert.assertTrue("'" + int6 + "' != '" + 1 + "'", int6 == 1);
-        org.junit.Assert.assertTrue("'" + int8 + "' != '" + 0 + "'", int8 == 0);
-        org.junit.Assert.assertTrue("'" + int10 + "' != '" + 0 + "'", int10 == 0);
-        org.junit.Assert.assertTrue("'" + int12 + "' != '" + 1 + "'", int12 == 1);
-        org.junit.Assert.assertNotNull(wildcardClass13);
-    }
-
-    @Test
-    public void test0475() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0475");
+            System.out.format("%n%s%n", "RegressionTest0.test0486");
         codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("ESCALENO");
         java.lang.Throwable[] throwableArray2 = ladoInvalidoException1.getSuppressed();
         codigos.LadoInvalidoException ladoInvalidoException4 = new codigos.LadoInvalidoException("");
@@ -10090,7 +10290,7 @@ public class RegressionTest0 {
         ladoInvalidoException18.addSuppressed((java.lang.Throwable) ladoInvalidoException25);
         ladoInvalidoException4.addSuppressed((java.lang.Throwable) ladoInvalidoException18);
         ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException18);
-        java.lang.String str88 = ladoInvalidoException1.toString();
+        java.lang.Throwable[] throwableArray88 = ladoInvalidoException18.getSuppressed();
         org.junit.Assert.assertNotNull(throwableArray2);
         org.junit.Assert.assertNotNull(throwableArray5);
         org.junit.Assert.assertNotNull(throwableArray21);
@@ -10099,295 +10299,31 @@ public class RegressionTest0 {
         org.junit.Assert.assertNotNull(throwableArray63);
         org.junit.Assert.assertNotNull(throwableArray78);
         org.junit.Assert.assertNotNull(throwableArray80);
-        org.junit.Assert.assertEquals("'" + str88 + "' != '" + "codigos.LadoInvalidoException: ESCALENO" + "'", str88, "codigos.LadoInvalidoException: ESCALENO");
-    }
-
-    @Test
-    public void test0476() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0476");
-        codigos.Words words0 = new codigos.Words();
-        int int2 = words0.countWords("codigos.LadoInvalidoException: hi!");
-        int int4 = words0.countWords("NAO FORMA TRIANGULO");
-        int int6 = words0.countWords("codigos.LadoInvalidoException: hi!");
-        int int8 = words0.countWords("NAO FORMA TRIANGULO");
-        int int10 = words0.countWords("");
-        int int12 = words0.countWords("codigos.LadoInvalidoException: hi!");
-        int int14 = words0.countWords("codigos.LadoInvalidoException: ");
-        int int16 = words0.countWords("NAO FORMA TRIANGULO");
-        int int18 = words0.countWords("codigos.LadoInvalidoException: codigos.LadoInvalidoException: codigos.LadoInvalidoException: codigos.LadoInvalidoException: codigos.LadoInvalidoException: ");
-        org.junit.Assert.assertTrue("'" + int2 + "' != '" + 1 + "'", int2 == 1);
-        org.junit.Assert.assertTrue("'" + int4 + "' != '" + 0 + "'", int4 == 0);
-        org.junit.Assert.assertTrue("'" + int6 + "' != '" + 1 + "'", int6 == 1);
-        org.junit.Assert.assertTrue("'" + int8 + "' != '" + 0 + "'", int8 == 0);
-        org.junit.Assert.assertTrue("'" + int10 + "' != '" + 0 + "'", int10 == 0);
-        org.junit.Assert.assertTrue("'" + int12 + "' != '" + 1 + "'", int12 == 1);
-        org.junit.Assert.assertTrue("'" + int14 + "' != '" + 1 + "'", int14 == 1);
-        org.junit.Assert.assertTrue("'" + int16 + "' != '" + 0 + "'", int16 == 0);
-        org.junit.Assert.assertTrue("'" + int18 + "' != '" + 5 + "'", int18 == 5);
-    }
-
-    @Test
-    public void test0477() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0477");
-        codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 100, (-1.0f));
-        float float3 = contaCorrente2.getSaldo();
-        contaCorrente2.setSaldo(100.0f);
-        contaCorrente2.setLimite(10.0f);
-        float float9 = contaCorrente2.saque((float) 1L);
-        contaCorrente2.setLimite((float) (byte) 10);
-        contaCorrente2.setLimite((float) (-1));
-        float float14 = contaCorrente2.getLimite();
-        contaCorrente2.setLimite((float) 100L);
-        // The following exception was thrown during execution in test generation
-        try {
-            float float18 = contaCorrente2.saque((-2.0f));
-            org.junit.Assert.fail("Expected exception of type java.lang.Exception; message: Valor invalido");
-        } catch (java.lang.Exception e) {
-            // Expected exception.
-        }
-        org.junit.Assert.assertTrue("'" + float3 + "' != '" + 100.0f + "'", float3 == 100.0f);
-        org.junit.Assert.assertTrue("'" + float9 + "' != '" + 99.0f + "'", float9 == 99.0f);
-        org.junit.Assert.assertTrue("'" + float14 + "' != '" + (-1.0f) + "'", float14 == (-1.0f));
-    }
-
-    @Test
-    public void test0478() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0478");
-        codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
-        codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
-        codigos.LadoInvalidoException ladoInvalidoException5 = new codigos.LadoInvalidoException("");
-        ladoInvalidoException3.addSuppressed((java.lang.Throwable) ladoInvalidoException5);
-        ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException5);
-        java.lang.Throwable[] throwableArray8 = ladoInvalidoException1.getSuppressed();
-        codigos.LadoInvalidoException ladoInvalidoException10 = new codigos.LadoInvalidoException("");
-        codigos.LadoInvalidoException ladoInvalidoException12 = new codigos.LadoInvalidoException("");
-        ladoInvalidoException10.addSuppressed((java.lang.Throwable) ladoInvalidoException12);
-        codigos.LadoInvalidoException ladoInvalidoException15 = new codigos.LadoInvalidoException("");
-        codigos.LadoInvalidoException ladoInvalidoException17 = new codigos.LadoInvalidoException("");
-        codigos.LadoInvalidoException ladoInvalidoException19 = new codigos.LadoInvalidoException("");
-        ladoInvalidoException17.addSuppressed((java.lang.Throwable) ladoInvalidoException19);
-        ladoInvalidoException15.addSuppressed((java.lang.Throwable) ladoInvalidoException19);
-        java.lang.Throwable[] throwableArray22 = ladoInvalidoException19.getSuppressed();
-        ladoInvalidoException12.addSuppressed((java.lang.Throwable) ladoInvalidoException19);
-        codigos.LadoInvalidoException ladoInvalidoException25 = new codigos.LadoInvalidoException("");
-        codigos.LadoInvalidoException ladoInvalidoException27 = new codigos.LadoInvalidoException("");
-        ladoInvalidoException25.addSuppressed((java.lang.Throwable) ladoInvalidoException27);
-        codigos.LadoInvalidoException ladoInvalidoException30 = new codigos.LadoInvalidoException("");
-        codigos.LadoInvalidoException ladoInvalidoException32 = new codigos.LadoInvalidoException("");
-        codigos.LadoInvalidoException ladoInvalidoException34 = new codigos.LadoInvalidoException("");
-        ladoInvalidoException32.addSuppressed((java.lang.Throwable) ladoInvalidoException34);
-        ladoInvalidoException30.addSuppressed((java.lang.Throwable) ladoInvalidoException34);
-        java.lang.Throwable[] throwableArray37 = ladoInvalidoException34.getSuppressed();
-        ladoInvalidoException27.addSuppressed((java.lang.Throwable) ladoInvalidoException34);
-        java.lang.Throwable[] throwableArray39 = ladoInvalidoException34.getSuppressed();
-        ladoInvalidoException19.addSuppressed((java.lang.Throwable) ladoInvalidoException34);
-        codigos.LadoInvalidoException ladoInvalidoException42 = new codigos.LadoInvalidoException("codigos.LadoInvalidoException: hi!");
-        ladoInvalidoException34.addSuppressed((java.lang.Throwable) ladoInvalidoException42);
-        java.lang.Throwable[] throwableArray44 = ladoInvalidoException42.getSuppressed();
-        ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException42);
-        java.lang.Class<?> wildcardClass46 = ladoInvalidoException42.getClass();
-        org.junit.Assert.assertNotNull(throwableArray8);
-        org.junit.Assert.assertNotNull(throwableArray22);
-        org.junit.Assert.assertNotNull(throwableArray37);
-        org.junit.Assert.assertNotNull(throwableArray39);
-        org.junit.Assert.assertNotNull(throwableArray44);
-        org.junit.Assert.assertNotNull(wildcardClass46);
-    }
-
-    @Test
-    public void test0479() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0479");
-        codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente(0.0f, (-87.0f));
-        java.lang.Class<?> wildcardClass3 = contaCorrente2.getClass();
-        org.junit.Assert.assertNotNull(wildcardClass3);
-    }
-
-    @Test
-    public void test0480() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0480");
-        // The following exception was thrown during execution in test generation
-        try {
-            java.lang.String str3 = codigos.Triangulo.classificaTriangulo(0, (int) (short) 10, 2);
-            org.junit.Assert.fail("Expected exception of type codigos.LadoInvalidoException; message: lado invalido");
-        } catch (codigos.LadoInvalidoException e) {
-            // Expected exception.
-        }
-    }
-
-    @Test
-    public void test0481() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0481");
-        codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (short) 100, (float) (short) 10);
-        java.lang.Class<?> wildcardClass3 = contaCorrente2.getClass();
-        org.junit.Assert.assertNotNull(wildcardClass3);
-    }
-
-    @Test
-    public void test0482() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0482");
-        codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente(9.0f, 32.0f);
-        contaCorrente2.setSaldo(45.0f);
-    }
-
-    @Test
-    public void test0483() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0483");
-        codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente(32.0f, (float) (byte) 0);
-        contaCorrente2.setSaldo(10.0f);
-        contaCorrente2.setLimite(9.0f);
-        contaCorrente2.setLimite((float) ' ');
-        float float9 = contaCorrente2.getLimite();
-        java.lang.Class<?> wildcardClass10 = contaCorrente2.getClass();
-        org.junit.Assert.assertTrue("'" + float9 + "' != '" + 32.0f + "'", float9 == 32.0f);
-        org.junit.Assert.assertNotNull(wildcardClass10);
-    }
-
-    @Test
-    public void test0484() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0484");
-        codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("hi!");
-        codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
-        codigos.LadoInvalidoException ladoInvalidoException5 = new codigos.LadoInvalidoException("");
-        ladoInvalidoException3.addSuppressed((java.lang.Throwable) ladoInvalidoException5);
-        codigos.LadoInvalidoException ladoInvalidoException8 = new codigos.LadoInvalidoException("");
-        codigos.LadoInvalidoException ladoInvalidoException10 = new codigos.LadoInvalidoException("");
-        codigos.LadoInvalidoException ladoInvalidoException12 = new codigos.LadoInvalidoException("");
-        ladoInvalidoException10.addSuppressed((java.lang.Throwable) ladoInvalidoException12);
-        ladoInvalidoException8.addSuppressed((java.lang.Throwable) ladoInvalidoException12);
-        java.lang.Throwable[] throwableArray15 = ladoInvalidoException12.getSuppressed();
-        ladoInvalidoException5.addSuppressed((java.lang.Throwable) ladoInvalidoException12);
-        ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException12);
-        codigos.LadoInvalidoException ladoInvalidoException19 = new codigos.LadoInvalidoException("");
-        codigos.LadoInvalidoException ladoInvalidoException21 = new codigos.LadoInvalidoException("");
-        codigos.LadoInvalidoException ladoInvalidoException23 = new codigos.LadoInvalidoException("");
-        ladoInvalidoException21.addSuppressed((java.lang.Throwable) ladoInvalidoException23);
-        ladoInvalidoException19.addSuppressed((java.lang.Throwable) ladoInvalidoException23);
-        java.lang.Throwable[] throwableArray26 = ladoInvalidoException23.getSuppressed();
-        codigos.LadoInvalidoException ladoInvalidoException28 = new codigos.LadoInvalidoException("");
-        codigos.LadoInvalidoException ladoInvalidoException30 = new codigos.LadoInvalidoException("");
-        ladoInvalidoException28.addSuppressed((java.lang.Throwable) ladoInvalidoException30);
-        codigos.LadoInvalidoException ladoInvalidoException33 = new codigos.LadoInvalidoException("hi!");
-        ladoInvalidoException30.addSuppressed((java.lang.Throwable) ladoInvalidoException33);
-        ladoInvalidoException23.addSuppressed((java.lang.Throwable) ladoInvalidoException33);
-        java.lang.Throwable[] throwableArray36 = ladoInvalidoException23.getSuppressed();
-        ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException23);
-        codigos.LadoInvalidoException ladoInvalidoException39 = new codigos.LadoInvalidoException("");
-        codigos.LadoInvalidoException ladoInvalidoException41 = new codigos.LadoInvalidoException("");
-        ladoInvalidoException39.addSuppressed((java.lang.Throwable) ladoInvalidoException41);
-        codigos.LadoInvalidoException ladoInvalidoException44 = new codigos.LadoInvalidoException("");
-        codigos.LadoInvalidoException ladoInvalidoException46 = new codigos.LadoInvalidoException("");
-        ladoInvalidoException44.addSuppressed((java.lang.Throwable) ladoInvalidoException46);
-        codigos.LadoInvalidoException ladoInvalidoException49 = new codigos.LadoInvalidoException("");
-        codigos.LadoInvalidoException ladoInvalidoException51 = new codigos.LadoInvalidoException("");
-        codigos.LadoInvalidoException ladoInvalidoException53 = new codigos.LadoInvalidoException("");
-        ladoInvalidoException51.addSuppressed((java.lang.Throwable) ladoInvalidoException53);
-        ladoInvalidoException49.addSuppressed((java.lang.Throwable) ladoInvalidoException53);
-        java.lang.Throwable[] throwableArray56 = ladoInvalidoException53.getSuppressed();
-        ladoInvalidoException46.addSuppressed((java.lang.Throwable) ladoInvalidoException53);
-        ladoInvalidoException41.addSuppressed((java.lang.Throwable) ladoInvalidoException46);
-        java.lang.Throwable[] throwableArray59 = ladoInvalidoException41.getSuppressed();
-        codigos.LadoInvalidoException ladoInvalidoException61 = new codigos.LadoInvalidoException("");
-        codigos.LadoInvalidoException ladoInvalidoException63 = new codigos.LadoInvalidoException("");
-        ladoInvalidoException61.addSuppressed((java.lang.Throwable) ladoInvalidoException63);
-        codigos.LadoInvalidoException ladoInvalidoException66 = new codigos.LadoInvalidoException("hi!");
-        ladoInvalidoException63.addSuppressed((java.lang.Throwable) ladoInvalidoException66);
-        ladoInvalidoException41.addSuppressed((java.lang.Throwable) ladoInvalidoException66);
-        ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException41);
-        codigos.LadoInvalidoException ladoInvalidoException71 = new codigos.LadoInvalidoException("");
-        codigos.LadoInvalidoException ladoInvalidoException73 = new codigos.LadoInvalidoException("");
-        ladoInvalidoException71.addSuppressed((java.lang.Throwable) ladoInvalidoException73);
-        codigos.LadoInvalidoException ladoInvalidoException76 = new codigos.LadoInvalidoException("");
-        codigos.LadoInvalidoException ladoInvalidoException78 = new codigos.LadoInvalidoException("");
-        codigos.LadoInvalidoException ladoInvalidoException80 = new codigos.LadoInvalidoException("");
-        ladoInvalidoException78.addSuppressed((java.lang.Throwable) ladoInvalidoException80);
-        ladoInvalidoException76.addSuppressed((java.lang.Throwable) ladoInvalidoException80);
-        java.lang.Throwable[] throwableArray83 = ladoInvalidoException80.getSuppressed();
-        ladoInvalidoException73.addSuppressed((java.lang.Throwable) ladoInvalidoException80);
-        java.lang.Throwable[] throwableArray85 = ladoInvalidoException73.getSuppressed();
-        java.lang.Throwable[] throwableArray86 = ladoInvalidoException73.getSuppressed();
-        ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException73);
-        java.lang.String str88 = ladoInvalidoException73.toString();
-        org.junit.Assert.assertNotNull(throwableArray15);
-        org.junit.Assert.assertNotNull(throwableArray26);
-        org.junit.Assert.assertNotNull(throwableArray36);
-        org.junit.Assert.assertNotNull(throwableArray56);
-        org.junit.Assert.assertNotNull(throwableArray59);
-        org.junit.Assert.assertNotNull(throwableArray83);
-        org.junit.Assert.assertNotNull(throwableArray85);
-        org.junit.Assert.assertNotNull(throwableArray86);
-        org.junit.Assert.assertEquals("'" + str88 + "' != '" + "codigos.LadoInvalidoException: " + "'", str88, "codigos.LadoInvalidoException: ");
-    }
-
-    @Test
-    public void test0485() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0485");
-        codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente(9.0f, 32.0f);
-        float float3 = contaCorrente2.getLimite();
-        // The following exception was thrown during execution in test generation
-        try {
-            float float5 = contaCorrente2.saque((float) 0);
-            org.junit.Assert.fail("Expected exception of type java.lang.Exception; message: Valor invalido");
-        } catch (java.lang.Exception e) {
-            // Expected exception.
-        }
-        org.junit.Assert.assertTrue("'" + float3 + "' != '" + 32.0f + "'", float3 == 32.0f);
-    }
-
-    @Test
-    public void test0486() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0486");
-        codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (short) 10, (float) ' ');
-        contaCorrente2.setLimite((float) (byte) 0);
-        float float5 = contaCorrente2.getSaldo();
-        float float6 = contaCorrente2.getSaldo();
-        // The following exception was thrown during execution in test generation
-        try {
-            float float8 = contaCorrente2.saque((float) (byte) -1);
-            org.junit.Assert.fail("Expected exception of type java.lang.Exception; message: Valor invalido");
-        } catch (java.lang.Exception e) {
-            // Expected exception.
-        }
-        org.junit.Assert.assertTrue("'" + float5 + "' != '" + 10.0f + "'", float5 == 10.0f);
-        org.junit.Assert.assertTrue("'" + float6 + "' != '" + 10.0f + "'", float6 == 10.0f);
+        org.junit.Assert.assertNotNull(throwableArray88);
     }
 
     @Test
     public void test0487() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test0487");
-        codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 100, (-1.0f));
-        float float3 = contaCorrente2.getLimite();
-        float float4 = contaCorrente2.getLimite();
-        float float5 = contaCorrente2.getSaldo();
-        // The following exception was thrown during execution in test generation
-        try {
-            float float7 = contaCorrente2.saque((float) 100);
-            org.junit.Assert.fail("Expected exception of type java.lang.Exception; message: Saldo Insuficiente");
-        } catch (java.lang.Exception e) {
-            // Expected exception.
-        }
-        org.junit.Assert.assertTrue("'" + float3 + "' != '" + (-1.0f) + "'", float3 == (-1.0f));
-        org.junit.Assert.assertTrue("'" + float4 + "' != '" + (-1.0f) + "'", float4 == (-1.0f));
-        org.junit.Assert.assertTrue("'" + float5 + "' != '" + 100.0f + "'", float5 == 100.0f);
+        codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente(10.0f, (-87.0f));
     }
 
     @Test
     public void test0488() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test0488");
-        codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) 100, 2.0f);
-        contaCorrente2.setLimite((-90.0f));
+        codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 100, (-1.0f));
+        contaCorrente2.setLimite((float) 0L);
+        float float6 = contaCorrente2.saque((float) 10L);
+        // The following exception was thrown during execution in test generation
+        try {
+            float float8 = contaCorrente2.saque(0.0f);
+            org.junit.Assert.fail("Expected exception of type java.lang.Exception; message: Valor invalido");
+        } catch (java.lang.Exception e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertTrue("'" + float6 + "' != '" + 90.0f + "'", float6 == 90.0f);
     }
 
     @Test
@@ -10395,170 +10331,53 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test0489");
         codigos.Pedido pedido0 = new codigos.Pedido();
-        float float4 = pedido0.calculaTaxaDesconto(true, "codigos.LadoInvalidoException: ", 1.0f);
-        float float8 = pedido0.calculaTaxaDesconto(false, "codigos.LadoInvalidoException: hi!", (float) (short) 10);
-        float float12 = pedido0.calculaTaxaDesconto(false, "NAO FORMA TRIANGULO", (-48.0f));
-        float float16 = pedido0.calculaTaxaDesconto(false, "hi!", 10.0f);
-        float float20 = pedido0.calculaTaxaDesconto(true, "codigos.LadoInvalidoException: codigos.LadoInvalidoException: codigos.LadoInvalidoException: hi!", (float) (byte) 100);
-        float float24 = pedido0.calculaTaxaDesconto(false, "codigos.LadoInvalidoException: codigos.LadoInvalidoException: hi!", 9.0f);
+        float float4 = pedido0.calculaTaxaDesconto(true, "hi!", (float) 1L);
+        float float8 = pedido0.calculaTaxaDesconto(false, "hi!", 2.0f);
+        float float12 = pedido0.calculaTaxaDesconto(true, "codigos.LadoInvalidoException: hi!", 97.0f);
+        float float16 = pedido0.calculaTaxaDesconto(false, "codigos.LadoInvalidoException: codigos.LadoInvalidoException: ", (float) '#');
         org.junit.Assert.assertTrue("'" + float4 + "' != '" + 10.0f + "'", float4 == 10.0f);
         org.junit.Assert.assertTrue("'" + float8 + "' != '" + 0.0f + "'", float8 == 0.0f);
-        org.junit.Assert.assertTrue("'" + float12 + "' != '" + 0.0f + "'", float12 == 0.0f);
+        org.junit.Assert.assertTrue("'" + float12 + "' != '" + 10.0f + "'", float12 == 10.0f);
         org.junit.Assert.assertTrue("'" + float16 + "' != '" + 0.0f + "'", float16 == 0.0f);
-        org.junit.Assert.assertTrue("'" + float20 + "' != '" + 10.0f + "'", float20 == 10.0f);
-        org.junit.Assert.assertTrue("'" + float24 + "' != '" + 0.0f + "'", float24 == 0.0f);
     }
 
     @Test
     public void test0490() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test0490");
-        // The following exception was thrown during execution in test generation
-        try {
-            java.lang.String str3 = codigos.Triangulo.classificaTriangulo((int) (short) -1, (int) (byte) 10, (int) '4');
-            org.junit.Assert.fail("Expected exception of type codigos.LadoInvalidoException; message: lado invalido");
-        } catch (codigos.LadoInvalidoException e) {
-            // Expected exception.
-        }
+        codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
+        codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
+        codigos.LadoInvalidoException ladoInvalidoException5 = new codigos.LadoInvalidoException("");
+        ladoInvalidoException3.addSuppressed((java.lang.Throwable) ladoInvalidoException5);
+        ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException5);
+        java.lang.Throwable[] throwableArray8 = ladoInvalidoException5.getSuppressed();
+        codigos.LadoInvalidoException ladoInvalidoException10 = new codigos.LadoInvalidoException("");
+        codigos.LadoInvalidoException ladoInvalidoException12 = new codigos.LadoInvalidoException("");
+        ladoInvalidoException10.addSuppressed((java.lang.Throwable) ladoInvalidoException12);
+        codigos.LadoInvalidoException ladoInvalidoException15 = new codigos.LadoInvalidoException("hi!");
+        ladoInvalidoException12.addSuppressed((java.lang.Throwable) ladoInvalidoException15);
+        ladoInvalidoException5.addSuppressed((java.lang.Throwable) ladoInvalidoException15);
+        java.lang.Throwable[] throwableArray18 = ladoInvalidoException15.getSuppressed();
+        java.lang.String str19 = ladoInvalidoException15.toString();
+        org.junit.Assert.assertNotNull(throwableArray8);
+        org.junit.Assert.assertNotNull(throwableArray18);
+        org.junit.Assert.assertEquals("'" + str19 + "' != '" + "codigos.LadoInvalidoException: hi!" + "'", str19, "codigos.LadoInvalidoException: hi!");
     }
 
     @Test
     public void test0491() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test0491");
-        codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente(96.0f, (float) 10L);
-        contaCorrente2.setLimite((-90.0f));
-        float float5 = contaCorrente2.getLimite();
-        org.junit.Assert.assertTrue("'" + float5 + "' != '" + (-90.0f) + "'", float5 == (-90.0f));
+        codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 1, (-87.0f));
     }
 
     @Test
     public void test0492() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test0492");
-        java.lang.String str3 = codigos.Triangulo.classificaTriangulo((int) (short) 10, (int) ' ', 3);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "NAO FORMA TRIANGULO" + "'", str3, "NAO FORMA TRIANGULO");
-    }
-
-    @Test
-    public void test0493() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0493");
-        codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("codigos.LadoInvalidoException: hi!");
-        codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("hi!");
-        ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException3);
-        codigos.LadoInvalidoException ladoInvalidoException6 = new codigos.LadoInvalidoException("codigos.LadoInvalidoException: codigos.LadoInvalidoException: codigos.LadoInvalidoException: ");
-        java.lang.Throwable[] throwableArray7 = ladoInvalidoException6.getSuppressed();
-        codigos.LadoInvalidoException ladoInvalidoException9 = new codigos.LadoInvalidoException("");
-        codigos.LadoInvalidoException ladoInvalidoException11 = new codigos.LadoInvalidoException("");
-        ladoInvalidoException9.addSuppressed((java.lang.Throwable) ladoInvalidoException11);
-        codigos.LadoInvalidoException ladoInvalidoException14 = new codigos.LadoInvalidoException("");
-        codigos.LadoInvalidoException ladoInvalidoException16 = new codigos.LadoInvalidoException("");
-        ladoInvalidoException14.addSuppressed((java.lang.Throwable) ladoInvalidoException16);
-        codigos.LadoInvalidoException ladoInvalidoException19 = new codigos.LadoInvalidoException("");
-        codigos.LadoInvalidoException ladoInvalidoException21 = new codigos.LadoInvalidoException("");
-        codigos.LadoInvalidoException ladoInvalidoException23 = new codigos.LadoInvalidoException("");
-        ladoInvalidoException21.addSuppressed((java.lang.Throwable) ladoInvalidoException23);
-        ladoInvalidoException19.addSuppressed((java.lang.Throwable) ladoInvalidoException23);
-        java.lang.Throwable[] throwableArray26 = ladoInvalidoException23.getSuppressed();
-        ladoInvalidoException16.addSuppressed((java.lang.Throwable) ladoInvalidoException23);
-        ladoInvalidoException11.addSuppressed((java.lang.Throwable) ladoInvalidoException16);
-        java.lang.Throwable[] throwableArray29 = ladoInvalidoException11.getSuppressed();
-        codigos.LadoInvalidoException ladoInvalidoException31 = new codigos.LadoInvalidoException("");
-        codigos.LadoInvalidoException ladoInvalidoException33 = new codigos.LadoInvalidoException("");
-        ladoInvalidoException31.addSuppressed((java.lang.Throwable) ladoInvalidoException33);
-        codigos.LadoInvalidoException ladoInvalidoException36 = new codigos.LadoInvalidoException("");
-        codigos.LadoInvalidoException ladoInvalidoException38 = new codigos.LadoInvalidoException("");
-        ladoInvalidoException36.addSuppressed((java.lang.Throwable) ladoInvalidoException38);
-        codigos.LadoInvalidoException ladoInvalidoException41 = new codigos.LadoInvalidoException("");
-        codigos.LadoInvalidoException ladoInvalidoException43 = new codigos.LadoInvalidoException("");
-        codigos.LadoInvalidoException ladoInvalidoException45 = new codigos.LadoInvalidoException("");
-        ladoInvalidoException43.addSuppressed((java.lang.Throwable) ladoInvalidoException45);
-        ladoInvalidoException41.addSuppressed((java.lang.Throwable) ladoInvalidoException45);
-        java.lang.Throwable[] throwableArray48 = ladoInvalidoException45.getSuppressed();
-        ladoInvalidoException38.addSuppressed((java.lang.Throwable) ladoInvalidoException45);
-        java.lang.Throwable[] throwableArray50 = ladoInvalidoException45.getSuppressed();
-        ladoInvalidoException33.addSuppressed((java.lang.Throwable) ladoInvalidoException45);
-        java.lang.Throwable[] throwableArray52 = ladoInvalidoException45.getSuppressed();
-        codigos.LadoInvalidoException ladoInvalidoException54 = new codigos.LadoInvalidoException("");
-        codigos.LadoInvalidoException ladoInvalidoException56 = new codigos.LadoInvalidoException("");
-        ladoInvalidoException54.addSuppressed((java.lang.Throwable) ladoInvalidoException56);
-        codigos.LadoInvalidoException ladoInvalidoException59 = new codigos.LadoInvalidoException("");
-        codigos.LadoInvalidoException ladoInvalidoException61 = new codigos.LadoInvalidoException("");
-        codigos.LadoInvalidoException ladoInvalidoException63 = new codigos.LadoInvalidoException("");
-        ladoInvalidoException61.addSuppressed((java.lang.Throwable) ladoInvalidoException63);
-        ladoInvalidoException59.addSuppressed((java.lang.Throwable) ladoInvalidoException63);
-        java.lang.Throwable[] throwableArray66 = ladoInvalidoException63.getSuppressed();
-        ladoInvalidoException56.addSuppressed((java.lang.Throwable) ladoInvalidoException63);
-        java.lang.Throwable[] throwableArray68 = ladoInvalidoException63.getSuppressed();
-        ladoInvalidoException45.addSuppressed((java.lang.Throwable) ladoInvalidoException63);
-        java.lang.Throwable[] throwableArray70 = ladoInvalidoException63.getSuppressed();
-        ladoInvalidoException11.addSuppressed((java.lang.Throwable) ladoInvalidoException63);
-        java.lang.Throwable[] throwableArray72 = ladoInvalidoException63.getSuppressed();
-        ladoInvalidoException6.addSuppressed((java.lang.Throwable) ladoInvalidoException63);
-        ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException6);
-        java.lang.String str75 = ladoInvalidoException1.toString();
-        org.junit.Assert.assertNotNull(throwableArray7);
-        org.junit.Assert.assertNotNull(throwableArray26);
-        org.junit.Assert.assertNotNull(throwableArray29);
-        org.junit.Assert.assertNotNull(throwableArray48);
-        org.junit.Assert.assertNotNull(throwableArray50);
-        org.junit.Assert.assertNotNull(throwableArray52);
-        org.junit.Assert.assertNotNull(throwableArray66);
-        org.junit.Assert.assertNotNull(throwableArray68);
-        org.junit.Assert.assertNotNull(throwableArray70);
-        org.junit.Assert.assertNotNull(throwableArray72);
-        org.junit.Assert.assertEquals("'" + str75 + "' != '" + "codigos.LadoInvalidoException: codigos.LadoInvalidoException: hi!" + "'", str75, "codigos.LadoInvalidoException: codigos.LadoInvalidoException: hi!");
-    }
-
-    @Test
-    public void test0494() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0494");
-        codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente(1.0f, (float) 0L);
-        java.lang.Class<?> wildcardClass3 = contaCorrente2.getClass();
-        org.junit.Assert.assertNotNull(wildcardClass3);
-    }
-
-    @Test
-    public void test0495() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0495");
-        codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente(91.0f, 0.0f);
-    }
-
-    @Test
-    public void test0496() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0496");
-        codigos.Words words0 = new codigos.Words();
-        int int2 = words0.countWords("codigos.LadoInvalidoException: ");
-        int int4 = words0.countWords("");
-        int int6 = words0.countWords("codigos.LadoInvalidoException: codigos.LadoInvalidoException: hi!");
-        int int8 = words0.countWords("codigos.LadoInvalidoException: hi!");
-        int int10 = words0.countWords("ISOSCELES");
-        org.junit.Assert.assertTrue("'" + int2 + "' != '" + 1 + "'", int2 == 1);
-        org.junit.Assert.assertTrue("'" + int4 + "' != '" + 0 + "'", int4 == 0);
-        org.junit.Assert.assertTrue("'" + int6 + "' != '" + 2 + "'", int6 == 2);
-        org.junit.Assert.assertTrue("'" + int8 + "' != '" + 1 + "'", int8 == 1);
-        org.junit.Assert.assertTrue("'" + int10 + "' != '" + 0 + "'", int10 == 0);
-    }
-
-    @Test
-    public void test0497() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0497");
-        java.lang.String str3 = codigos.Triangulo.classificaTriangulo(5, (int) (short) 100, (int) (short) 100);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "ISOSCELES" + "'", str3, "ISOSCELES");
-    }
-
-    @Test
-    public void test0498() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test0498");
         // The following exception was thrown during execution in test generation
         try {
-            java.lang.String str3 = codigos.Triangulo.classificaTriangulo(3, (int) (short) 1, (int) (short) -1);
+            java.lang.String str3 = codigos.Triangulo.classificaTriangulo((int) (byte) 100, (int) (short) 0, (int) ' ');
             org.junit.Assert.fail("Expected exception of type codigos.LadoInvalidoException; message: lado invalido");
         } catch (codigos.LadoInvalidoException e) {
             // Expected exception.
@@ -10566,28 +10385,141 @@ public class RegressionTest0 {
     }
 
     @Test
+    public void test0493() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test0493");
+        codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("ESCALENO");
+        java.lang.Throwable[] throwableArray2 = ladoInvalidoException1.getSuppressed();
+        codigos.LadoInvalidoException ladoInvalidoException4 = new codigos.LadoInvalidoException("");
+        ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException4);
+        java.lang.String str6 = ladoInvalidoException1.toString();
+        org.junit.Assert.assertNotNull(throwableArray2);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "codigos.LadoInvalidoException: ESCALENO" + "'", str6, "codigos.LadoInvalidoException: ESCALENO");
+    }
+
+    @Test
+    public void test0494() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test0494");
+        codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (short) 10, (float) ' ');
+        contaCorrente2.setLimite(0.0f);
+    }
+
+    @Test
+    public void test0495() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test0495");
+        codigos.Words words0 = new codigos.Words();
+        int int2 = words0.countWords("");
+        int int4 = words0.countWords("");
+        int int6 = words0.countWords("codigos.LadoInvalidoException: ");
+        java.lang.Class<?> wildcardClass7 = words0.getClass();
+        org.junit.Assert.assertTrue("'" + int2 + "' != '" + 0 + "'", int2 == 0);
+        org.junit.Assert.assertTrue("'" + int4 + "' != '" + 0 + "'", int4 == 0);
+        org.junit.Assert.assertTrue("'" + int6 + "' != '" + 1 + "'", int6 == 1);
+        org.junit.Assert.assertNotNull(wildcardClass7);
+    }
+
+    @Test
+    public void test0496() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test0496");
+        codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) 100, 2.0f);
+        contaCorrente2.setLimite(65.0f);
+    }
+
+    @Test
+    public void test0497() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test0497");
+        codigos.Pedido pedido0 = new codigos.Pedido();
+        float float4 = pedido0.calculaTaxaDesconto(true, "codigos.LadoInvalidoException: ", 1.0f);
+        float float8 = pedido0.calculaTaxaDesconto(false, "", (float) 1);
+        float float12 = pedido0.calculaTaxaDesconto(false, "hi!", (float) (short) 100);
+        float float16 = pedido0.calculaTaxaDesconto(true, "ESCALENO", (float) 2);
+        java.lang.Class<?> wildcardClass17 = pedido0.getClass();
+        org.junit.Assert.assertTrue("'" + float4 + "' != '" + 10.0f + "'", float4 == 10.0f);
+        org.junit.Assert.assertTrue("'" + float8 + "' != '" + 0.0f + "'", float8 == 0.0f);
+        org.junit.Assert.assertTrue("'" + float12 + "' != '" + 0.0f + "'", float12 == 0.0f);
+        org.junit.Assert.assertTrue("'" + float16 + "' != '" + 10.0f + "'", float16 == 10.0f);
+        org.junit.Assert.assertNotNull(wildcardClass17);
+    }
+
+    @Test
+    public void test0498() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test0498");
+        codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 100, (-1.0f));
+        float float3 = contaCorrente2.getLimite();
+        float float4 = contaCorrente2.getSaldo();
+        float float5 = contaCorrente2.getLimite();
+        contaCorrente2.setSaldo((-1.0f));
+        float float8 = contaCorrente2.getSaldo();
+        float float9 = contaCorrente2.getLimite();
+        // The following exception was thrown during execution in test generation
+        try {
+            float float11 = contaCorrente2.saque(88.0f);
+            org.junit.Assert.fail("Expected exception of type java.lang.Exception; message: Saldo Insuficiente");
+        } catch (java.lang.Exception e) {
+            // Expected exception.
+        }
+        org.junit.Assert.assertTrue("'" + float3 + "' != '" + (-1.0f) + "'", float3 == (-1.0f));
+        org.junit.Assert.assertTrue("'" + float4 + "' != '" + 100.0f + "'", float4 == 100.0f);
+        org.junit.Assert.assertTrue("'" + float5 + "' != '" + (-1.0f) + "'", float5 == (-1.0f));
+        org.junit.Assert.assertTrue("'" + float8 + "' != '" + (-1.0f) + "'", float8 == (-1.0f));
+        org.junit.Assert.assertTrue("'" + float9 + "' != '" + (-1.0f) + "'", float9 == (-1.0f));
+    }
+
+    @Test
     public void test0499() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test0499");
-        codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) 0L, (float) (short) 100);
-        contaCorrente2.setLimite(90.0f);
-        contaCorrente2.setLimite(52.0f);
+        codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente((float) (byte) 100, (-1.0f));
+        float float3 = contaCorrente2.getSaldo();
+        contaCorrente2.setSaldo(100.0f);
+        float float7 = contaCorrente2.saque((float) (byte) 10);
+        float float9 = contaCorrente2.saque((float) (short) 1);
+        contaCorrente2.setLimite((float) 1);
+        float float12 = contaCorrente2.getSaldo();
+        org.junit.Assert.assertTrue("'" + float3 + "' != '" + 100.0f + "'", float3 == 100.0f);
+        org.junit.Assert.assertTrue("'" + float7 + "' != '" + 90.0f + "'", float7 == 90.0f);
+        org.junit.Assert.assertTrue("'" + float9 + "' != '" + 89.0f + "'", float9 == 89.0f);
+        org.junit.Assert.assertTrue("'" + float12 + "' != '" + 89.0f + "'", float12 == 89.0f);
     }
 
     @Test
     public void test0500() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test0500");
-        codigos.ContaCorrente contaCorrente2 = new codigos.ContaCorrente(90.0f, (float) (-1));
-        contaCorrente2.setLimite((float) 0);
-        contaCorrente2.setSaldo(98.0f);
-        // The following exception was thrown during execution in test generation
-        try {
-            float float8 = contaCorrente2.saque((-10.0f));
-            org.junit.Assert.fail("Expected exception of type java.lang.Exception; message: Valor invalido");
-        } catch (java.lang.Exception e) {
-            // Expected exception.
-        }
+        codigos.LadoInvalidoException ladoInvalidoException1 = new codigos.LadoInvalidoException("");
+        codigos.LadoInvalidoException ladoInvalidoException3 = new codigos.LadoInvalidoException("");
+        ladoInvalidoException1.addSuppressed((java.lang.Throwable) ladoInvalidoException3);
+        codigos.LadoInvalidoException ladoInvalidoException6 = new codigos.LadoInvalidoException("");
+        codigos.LadoInvalidoException ladoInvalidoException8 = new codigos.LadoInvalidoException("");
+        codigos.LadoInvalidoException ladoInvalidoException10 = new codigos.LadoInvalidoException("");
+        ladoInvalidoException8.addSuppressed((java.lang.Throwable) ladoInvalidoException10);
+        ladoInvalidoException6.addSuppressed((java.lang.Throwable) ladoInvalidoException10);
+        java.lang.Throwable[] throwableArray13 = ladoInvalidoException10.getSuppressed();
+        ladoInvalidoException3.addSuppressed((java.lang.Throwable) ladoInvalidoException10);
+        codigos.LadoInvalidoException ladoInvalidoException16 = new codigos.LadoInvalidoException("");
+        codigos.LadoInvalidoException ladoInvalidoException18 = new codigos.LadoInvalidoException("");
+        ladoInvalidoException16.addSuppressed((java.lang.Throwable) ladoInvalidoException18);
+        codigos.LadoInvalidoException ladoInvalidoException21 = new codigos.LadoInvalidoException("");
+        codigos.LadoInvalidoException ladoInvalidoException23 = new codigos.LadoInvalidoException("");
+        codigos.LadoInvalidoException ladoInvalidoException25 = new codigos.LadoInvalidoException("");
+        ladoInvalidoException23.addSuppressed((java.lang.Throwable) ladoInvalidoException25);
+        ladoInvalidoException21.addSuppressed((java.lang.Throwable) ladoInvalidoException25);
+        java.lang.Throwable[] throwableArray28 = ladoInvalidoException25.getSuppressed();
+        ladoInvalidoException18.addSuppressed((java.lang.Throwable) ladoInvalidoException25);
+        java.lang.Throwable[] throwableArray30 = ladoInvalidoException25.getSuppressed();
+        ladoInvalidoException10.addSuppressed((java.lang.Throwable) ladoInvalidoException25);
+        codigos.LadoInvalidoException ladoInvalidoException33 = new codigos.LadoInvalidoException("ESCALENO");
+        ladoInvalidoException25.addSuppressed((java.lang.Throwable) ladoInvalidoException33);
+        java.lang.String str35 = ladoInvalidoException25.toString();
+        org.junit.Assert.assertNotNull(throwableArray13);
+        org.junit.Assert.assertNotNull(throwableArray28);
+        org.junit.Assert.assertNotNull(throwableArray30);
+        org.junit.Assert.assertEquals("'" + str35 + "' != '" + "codigos.LadoInvalidoException: " + "'", str35, "codigos.LadoInvalidoException: ");
     }
 }
 
